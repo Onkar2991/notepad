@@ -1,0 +1,19 @@
+spring 
+
+framework 
+
+acid properties 
+
+a--automicity
+c--consistancy
+i--isolation
+d--durability
+
+
+mvc-->model view controller
+ioc/di--> inversion of control or dependency injection
+
+
+M- MODEL(BUSINESS LOGIC /BACKEND CODE)
+V-VIEW (JSP/ANGULAR/REACT)
+C- CONTROLLER(DISPACTER SERVLET/FRONT CONTROLLER/DESIGN PATTERNS)

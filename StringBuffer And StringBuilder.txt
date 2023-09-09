@@ -1,0 +1,61 @@
+StringBuffer And StringBuilder
+==============================================================================================================================================================================================
+
+String objects created using java.lang.String class are immutable. Once they are created, they can not be modified. If you try to modify them, a new string object will be created with modified content. This property of String class may cause some memory issues for applications which need frequent modification of string objects. To overcome this behavior of String class, two more classes are introduced in Java to represent the strings. They are StringBuffer and StringBuilder. Both these classes are also members of  java.lang package same as String class.
+
+==============================================================================================================================================================================================
+
+Immutability :
+
+This is main reason why StringBuffer and StringBuilder are introduced. As objects of String class are immutable, objects of StringBuffer and StringBuilder class are mutable. You can change the contents of StringBuffer and StringBuider objects at any time of execution. When you change the content, new objects are not created. Instead of that the changes are applied to existing object. Thus solving memory issues may caused by String class.
+
+==============================================================================================================================================================================================
+
+Object Creation :
+
+You have to use ‘new‘ operator to create objects to StringBuffer and StringBuilder classes. You can’t use string literals to create objects to these classes. For example, you can’t write StringBuffer sb = “JAVA” or StringBuilder sb = “JAVA”. It gives compile time error. But, you can use both string literals and new operator to create objects to String class.
+
+============================================================================================================================================================================================
+
+Storage Area :
+
+As objects of StringBuffer and StringBuilder are created using only new operator, they are stored in heap memory. Where as objects of String class are created using both string literals and new operator, they are stored in string constant pool as well as heap memory.
+
+============================================================================================================================================================================================
+
+
+
+
+
+     StringBuffer    	||	StringBuilder
+			||
+1> thread safe		||1> not thread safe
+			||
+2> Synchronized		||2> not synchronized
+			||
+3> java 1.0		||3> java 1.5
+			||
+4> slower		||4> faster
+			||
+
+
+
+===========================================================
+
+equalsIgnoreCase() method.---->for case insensitive checks
+
+===========================================================
+
+
+They provide append(), insert(), delete(), and substring() methods for String manipulation.
+
+
+
+
+
+
+
+
+
+
+

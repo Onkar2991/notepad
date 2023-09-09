@@ -1,0 +1,29 @@
+Collector interface
+====================
+
+java.util.stream.Collector interface contains four functions that work together to accumulate input elements into a mutable result container and optionally performs a final transformation on the result. Those four functions are,
+
+a) Supplier() :
+
+A function that creates and returns a new mutable result container.
+
+
+b) accumulator() :
+
+A function that accumulates a value into a mutable result container.
+
+c) combiner() :
+
+A function that accepts two partial results and merges them.
+
+d) finisher() :
+
+A function that performs final transformation from the intermediate accumulation type to the final result type.
+
+==============================================================================================================================================================================================
+
+
+Collectors class 
+=================
+
+

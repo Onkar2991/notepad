@@ -1,0 +1,12 @@
+Threading 
+
+
+instead of using synchronization use synchronized block 
+
+
+Deadlock:->
+
+
+producer consumer problem:->
+
+

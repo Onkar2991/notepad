@@ -1,0 +1,15 @@
+//3 array only unique element only using for loop 
+
+//2/3 matrix 
+
+comparing and then compairing
+ 
+collection and collections difference 
+
+collectors class methods 
+
+comparator comparable difference 
+
+concurrent package 
+
+concurrent hashmap

@@ -1,0 +1,26 @@
+https://aws.amazon.com/about-aws/global-infrastructure/
+
+
+568641767306== aws account id
+
+IAM user ==identity and acess management user 
+EC2== elastic compute cloud
+SSH== secure socket shell / secure shell 
+
+
+
+
+Awailibility zone 
+IP v4
+IP v6
+
+
+lambda-- server less computing 
+ api types -- http api > rest api
+
+http methods
+
+
+AutoScalling 
+
+security group-> key pair-> launch templete->target group->autoscaling group

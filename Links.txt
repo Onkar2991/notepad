@@ -1,0 +1,65 @@
+Links 
+=========================================================================================================================================
+
+https://www.oracle.com/java/technologies/javase/codeconventions-programmingpractices.html
+https://javatechonline.com/java-coding-best-practices-and-standards/
+coding standards
+
+https://www.codingninjas.com/studio/library/what-is-hibernate-caching
+https://stackoverflow.com/questions/42688020/schedule-spring-cache-eviction
+caching
+
+https://www.linkedin.com/pulse/three-popular-caching-strategies-donny-widjaja-mspm-cspo
+https://codeahoy.com/2017/08/11/caching-strategies-and-how-to-choose-the-right-one/
+CACHING STRATERGY
+
+https://medium.com/swlh/what-is-hibernate-caching-introduction-of-level-1-level-2-cache-8ea7339a5052
+EH CACHE 
+
+https://www.digitalocean.com/community/tutorials/java-jvm-memory-model-memory-management-in-java
+JAVA MEMORY MANAGEMENT
+
+https://www.javaguides.net/2019/10/hibernate-query-language-tutorial.html#google_vignette
+HQL EXAMPLES
+
+https://www.geeksforgeeks.org/producer-consumer-solution-using-threads-java/
+producer consumer 
+
+https://www.scaler.com/topics/deadlock-in-java/
+https://www.tutorialspoint.com/Deadlock-in-Java-Multithreading#:~:text=Deadlock%20occurs%20when%20multiple%20threads,associated%20with%20the%20specified%20object
+Deadlock
+
+
+https://www.digitalocean.com/community/tutorials/hibernate-interview-questions-and-answers
+https://java2blog.com/hibernate-interview-questions-and-answers/
+https://www.simplilearn.com/hibernate-interview-questions-article
+https://java2blog.com/hibernate-interview-questions-and-answers/
+https://career.guru99.com/hibernate-interview-questions/
+Hibernate questions
+
+
+https://www.interviewbit.com/java-8-interview-questions/#java-8-mcqs
+https://quescol.com/interview-preparations/java-8-coding-interview-question
+https://www.interviewbit.com/java-8-interview-questions/
+https://www.javaguides.net/2018/07/java-8-optional-class.html
+https://javaconceptoftheday.com/java-8-collectors-tutorial/#google_vignette
+JAVA 8 questions 
+
+https://codeburst.io/100-coding-interview-questions-for-programmers-b1cf74885fb7
+CODING INTERVIEW QUESTIONS
+
+https://javarevisited.blogspot.com/2014/07/top-50-java-multithreading-interview-questions-answers.html#axzz4jaJmaqbE
+MULTI-THREADING QUESTION
+
+
+https://www.developer.com/java/concurrenthashmap-java/#:~:text=How%20Does%20ConcurrentHashMap%20Work%20in,worry%20about%20other%20threads%20interfering
+Concurrent hashmap
+
+https://www.baeldung.com/cs/concurrency-vs-parallelism
+concurrency-vs-parallelism
+
+https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.collections-and-iterables.streamable-wrapper
+JPA DOCUMENTATION
+==========================================================================================================================================
+
+

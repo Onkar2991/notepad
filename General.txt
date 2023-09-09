@@ -1,0 +1,117 @@
+
+JPA--java persistance api
+
+jpa is interface
+jpa -- specification 
+hibernate is implimentation of jpa
+
+============================================================================================================================================================================================
+
+Docor
+=========
+Docker is isolation software
+hyperwiser
+why should we use docker 
+itd- interactive terminal and detachment
+-v ==volume 
+
+
+port range====100-55000
+
+
+============================================================================================================================================================================================
+
+contract between hashcode and equals method
+
+java -compiler and interpreted language 
+js - is interpretted language 
+
+jvm is platform independant 
+jdk and jre platform dependant
+
+ear - Enterprise archive
+war - Web application Archive
+jar - java archieve 
+
+
+MAVEN -central repo
+pom-project object model
+
+
+*****you should open cmd where your projects pom.xml file is present and then run the commands******
+
+maven commands 
+===================
+
+mvn clean install-- to compile and insatll the package to local repo
+mvn clean install -DskipTests=true    skiping test cases 
+<version>1.5.8.RELEASE</version>
+
+
+ctr+a 
+ctr+shift+
+
+
+https://blogs.oracle.com/sql/post/how-to-create-users-grant-them-privileges-and-remove-them-in-oracle-database
+
+============================================================================================================================================================================================
+
+JPA--java persistance api
+
+jpa is interface
+jpa -- specification 
+hibernate is implimentation of jpa
+============================================================================================================================================================================================
+
+Jenkins config 
+========================
+
+docker run -itd -p 7080:8082 -p 40000:40000 -v D:/Jenkins jenkins/jenkins:lts
+
+7641a61ed70fef7116ccabe138798434331e701203714b20797b7c8c84fe5d4f  //full reference id of container
+
+
+b26716d2773d44f3a5b8063d298f8087 // jenkins password
+
+============================================================================================================================================================================================
+
+
+Types of keys:-
+=======================
+Primary Key
+Candidate Key
+Super Key
+Foreign Key
+Composite Key
+Alternate Key
+Unique Key
+
+
+============================================================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

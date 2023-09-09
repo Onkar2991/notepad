@@ -1,0 +1,354 @@
+#spring.jpa.hibernate.ddl-auto=update
+#spring.jpa.show-sql=true
+#spring.datasource.url = jdbc:postgresql://localhost:5432/postgres
+##spring.datasource.url = jdbc:postgresql://localhost:5432/postgres
+#spring.jpa.database-platform = org.hibernate.dialect.PostgreSQLDialect
+#spring.datasource.username = postgres
+#spring.datasource.password = Hariom@3417
+#spring.datasource.driver-class-name = org.postgresql.Driver
+#server.port=8081
+
+spring.datasource.url=jdbc:h2:mem:omdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=om
+spring.datasource.password=om
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+hibernate configuration
+
+============================================================================================================================================================================================
+
+
+3 tier or n tier application== UI + server + database 
+============================================================================================================================================================================================
+
+@Data annotation
+
+--->bundles the features of @ToString , @EqualsAndHashCode , @Getter / @Setter and @RequiredArgsConstructor
+
+--->@Data generates all the boilerplate that is normally associated with simple POJOs (Plain Old Java Objects) and beans: getters for all fields, setters for all non-final fields, and appropriate toString, equals and hashCode implementations that involve the fields of the class, and a constructor that initializes all final fields, as well as all non-final fields with no initializer that have been marked with @NonNull, in order to ensure the field is never null.
+
+============================================================================================================================================================================================
+
+@Id annotation
+
+===>offer the simplest mechanism to define the mapping to the primary key.
+
+============================================================================================================================================================================================
+
+@GeneratedValue
+
+==>The GeneratedValue annotation may be applied to a primary key property or field of an entity or mapped superclass in conjunction with the Id annotation.
+
+==>The use of the GeneratedValue annotation is only required to be supported for simple primary keys. Use of the GeneratedValue annotation is not supported for derived primary keys.
+
+==>This annotation is used to specify the primary key generation strategy to use. i.e Instructs database to generate a value for this field automatically. If the strategy is not specified by default AUTO will be used.
+
+==>accepts two parameters 
+ 
+1>stratergy
+
+==> accepts following parameter 
+
+	Generation Type. TABLE,
+	Generation Type. SEQUENCE,
+	Generation Type. IDENTITY,
+	Generation Type. AUTO
+
+==>GenerationType.SEQUENCE
+
+	With this strategy, underlying persistence provider must use a database sequence to get the next unique primary key for the entities.
+
+==>GenerationType.TABLE
+
+	With this strategy, the underlying persistence provider must use a database table to generate/keep the next unique primary key for the entities.
+
+==>GenerationType.IDENTITY
+
+	This GenerationType indicates that the persistence provider must assign primary keys for the entity using a database identity column. IDENTITY column is typically used in SQL Server. This special type column is populated internally by the table itself without using a separate sequence. If underlying database doesn't support IDENTITY column or some similar variant then the persistence provider can choose an alternative appropriate strategy. In this examples we are using H2 database which doesn't support IDENTITY column.
+
+==>GenerationType.AUTO
+
+	This GenerationType indicates that the persistence provider should automatically pick an appropriate strategy for the particular database. This is the default GenerationType, i.e. if we just use @GeneratedValue annotation then this value of GenerationType will be used.
+
+
+2>generator
+
+
+============================================================================================================================================================================================
+
+@Entity
+
+==>@Entity annotation defines that a class can be mapped to a table.
+
+==>An entity represents a table stored in a database. 
+
+
+============================================================================================================================================================================================
+
+cascading types:-
+
+1> CascadeType.ALL
+
+	==>a cascading type in Hibernate that specifies that all state transitions (create, update, delete, and refresh) should be cascaded from the parent entity to the child entities.
+	
+	==>When CascadeType.ALL is used, and any operation performed on the parent entity will be automatically propagated to all child entities. This means that if you persist, update, or 	   delete a parent entity, all child entities associated with it will also be persisted, updated, or deleted accordingly.
+
+
+2> CascadeType.PERSIST
+
+	==>CascadeType.PERSIST is a cascading type in Hibernate that specifies that the create (or persist) operation should be cascaded from the parent entity to the child entities.
+
+	==>When CascadeType.PERSIST is used, any new child entities associated with a parent entity will be automatically persisted when the parent entity is persisted. However, updates or 	   deletions made to the parent entity will not be cascaded to the child entities.
+
+	(only for parent create child create,updation or delition is not done )
+
+
+3> CascadeType.MERGE
+
+	==> a cascading type in Hibernate that specifies that the update (or merge) operation should be cascaded from the parent entity to the child entities.
+
+	(only for updation parent update child update )	
+
+
+4> CascadeType.REMOVE(parent delete child delete)
+
+5> CascadeType.REFRESH
+
+	==>a cascading type in Hibernate that specifies that the refresh operation should be cascaded from the parent entity to the child entities.
+
+	==>When CascadeType.REFRESH is used, any child entities associated with a parent entity will be automatically refreshed when the parent entity is refreshed. This means that the 	   latest state of the child entities will be loaded from the database and any changes made to the child entities will be discarded.
+
+
+6> CascadeType.DETACH
+
+	==> a cascading type in Hibernate that specifies that the detach operation should be cascaded from the parent entity to the child entities.
+
+	==>When CascadeType.DETACH is used, any child entities associated with a parent entity will be automatically detached when the parent entity is detached. 
+
+			-->This means that the child entities will become detached from the persistence context and their state will no longer be managed by Hibernate.
+
+
+
+7>CascadeType.REPLICATE
+
+	==>a cascading type in Hibernate that specifies that the replicate operation should be cascaded from the parent entity to the child entities.
+
+	=>When CascadeType.REPLICATE is used, any child entities associated with a parent entity will be automatically replicated when the parent entity is replicated. 
+			
+			-->This means that new child entities will be created and persisted in the database with the same state as the original child entities.
+
+
+
+8>CascadeType.SAVE_UPDATE
+
+	==>a cascading type in Hibernate that specifies that the save or update operation should be cascaded from the parent entity to the child entities.
+
+	==>When CascadeType.SAVE_UPDATE is used, any child entities associated with a parent entity will be automatically saved or updated when the parent entity is saved or updated. 
+			
+			-->This means that any changes made to the child entities will be persisted in the database along with the parent entity.
+
+
+============================================================================================================================================================================================
+
+==> always write mapped by in parent side or ownerside
+
+//==> parent delete child delete, parent update child update =>cascade type = all
+
+==>fetch type lazy and eager ==> use lazy for most of the times ==> it gives only asked parameters 
+                             ==>use eager for getting all the parameters 
+
+==> dialect-->provides the environment which converts hql to sql
+
+==> ddl-auto--> use create for first time 
+            --> else use update for most of the times
+
+==>show sql-->true-- for getting all the scripts in console -->use it for getting loggs 
+           --> false-- for avoiding all the scripts in console -->use for most of the times 
+
+
+============================================================================================================================================================================================
+
+https://www.javaguides.net/2019/10/hibernate-query-language-tutorial.html#google_vignette
+HQL EXAMPLES
+
+
+============================================================================================================================================================================================
+
+CACHING:->
+===========
+
+//==>used where we want to update the data rarely
+
+//==>temperory memory which is present betweeh application and db
+
+==>caching is a mechanism to store copies of data or files in such a manner so that they can be served quickly.
+
+==> caching will act as a buffered memory that remains between the application and the database. It stores recently demanded/inquired data in system memory to reduce the numbers of calls                   to the actual database.
+
+==>It is very useful when you need to fetch the same kind of data multiple times.
+
+==>caching is performance optimization technique
+
+==>database oprerations are always expensive hence we use caching mechanism 
+
+query optimization
+jprofilers 
+profiling tools
+thread dump
+
+
+cache Stratergy:->
+==================
+1> cahce-aside:->
+
+	==>When a client requests data, first, the system checks if the data is in the cache. Suppose the data is unavailable (a cache miss). In that case, it fetches the data from the 	   database, stores it in the cache, and then returns it to the client.
+
+	==>It avoids filling up the cache with unnecessary data, as only the requested data is loaded.
+
+	==>It results in higher latency whenever there's a cache miss, as the data has to be retrieved from the database and then loaded into the cache.
+
+	==>The cache can quickly become outdated if the data is frequently updated, leading to stale data.
+	
+	==>he Cache-Aside strategy is best used when cache misses are rare, and the cost of a cache miss is not overly detrimental to performance.
+
+
+2> read through:->
+
+	==> When a client requests data, the system checks the cache first. Suppose the data is not available (a cache miss). In that case, the cache itself retrieves the data from the 	    database, stores it, and then returns it to the client.
+
+	==>It provides a consistent approach to loading data, as the cache, not the client, handles the data loading process.
+
+	==>It's beneficial when you have a high rate of cache misses, as the cache handles the data loading, reducing the load on the client.		
+	
+	==>The Read-Through strategy is ideal when you have complex data loading requirements, and you want to maintain a clean separation between the cache and the client.
+
+
+3> write through:->
+	
+	==>Every write operation synchronously updates the cache and underlying database in a Write-Through caching setup. The cache and the database immediately reflect any addition, 	   update, or deletion made to the data.
+	
+	==>Write-Through ensures data consistency between the cache and the database.
+
+	==>Write-Through is best when data consistency is vital, and the impact on write latency is tolerable.
+
+
+cache types:->
+===============
+
+1> First level cache:->
+
+	==>The First level cache is by default enabled by Hibernate itself.
+	
+	==>session is the first level cache which is enabled by default.
+
+	==>you can use the first-level cache to store local data i.e. required by the session itself.
+
+	==>Data hold by one session object is not accessible to the entire application — means the data of a particular session is not shared with other sessions of the application. 
+	
+	==>when you query an entity or object, for the very first time it is retrieved from the database and stored into the first-level cache associated with the hibernate session.
+
+	==>If we query for the same entity or object again with the same session object, it will be loaded from cache and no SQL query will be executed.
+
+	==>Hibernate entities or database rows remain in cache only until Session is open, once Session is closed, all associated cached data is removed.
+
+	==>You can not disable the first-level cache			
+
+
+2> Second level cache:->
+
+	==>The second-level cache is by default disabled, the developer needs to enable it explicitly, and the SessionFactory object is responsible to maintain it.
+
+	==>The second-level cache is accessible by the entire application means data hold by SessionFactory can be accessible to all the sessions
+
+	==>once the session factory is closed all the cache associated with that is also removed from the memory.
+
+
+
+Note:->
+=========
+
+==>Hibernate does not provide any default implementation for the second-level cache. It gives CacheProvider interface, so any third party Cache which implements CacheProvider interface can be hooked as Second level cache, like EHCache or NCache.
+
+==>In the Hibernate session is the hibernate’s first-level cache and SessionFactory is a second-level cache. So both (session/session-factory) are objects in a heap area. That means the cache is stored in the RAM only. And because of that, it gives faster access to data rather than databases.
+
+
+
+methods:->
+============
+
+1> Session.evict(): to remove the cached/stored entity.
+2> refresh(): method to refresh the cache.
+3> clear(): method to remove all the entities from the cache.
+
+
+
+cache eviction:->
+==================
+
+==> it is the technique to free up the memory when the space is needed to be freed up to add new data to the cache 
+
+
+techniques for cache eviction:->
+====================================
+
+1> Using @CacheEvict:->
+
+
+@CacheEvict(value = "first", allEntries = true)
+public void evictAllCacheValues() {}
+
+
+2> Using CacheManager
+
+
+@Autowired
+CacheManager cacheManager;
+
+public void evictSingleCacheValue(String cacheName, String cacheKey) {
+    cacheManager.getCache(cacheName).evict(cacheKey);
+}
+
+public void evictAllCacheValues(String cacheName) {
+    cacheManager.getCache(cacheName).clear();
+}
+
+
+
+
+3> Automatic Eviction
+
+@Scheduled(fixedRate = 6000)
+public void evictAllcachesAtIntervals() {
+    evictAllCaches();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

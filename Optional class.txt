@@ -1,0 +1,7 @@
+Optional class 
+
+==>It is a public final class
+
+==>to avoid NullPointerException we use optional class
+
+==>The purpose of the class is to provide a type-level solution for representing optional values instead of using null references.

@@ -1,0 +1,75 @@
+Garbage collection 
+============================================================================================================================================================================================
+
+==>Garbage collection in Java is the automated process of deleting code that's no longer needed or used. 
+
+==>Automatic garbage collection is the process of looking at heap memory, identifying which objects are in use and which are not, and deleting the unused objects.
+
+==>Two types of garbage collection activity usually happen in Java. These are:
+
+	==>Minor or incremental Garbage Collection:
+ 		 It is said to have occurred when unreachable objects in the young generation heap memory are removed.
+
+	==>Major or Full Garbage Collection: 
+	 	It is said to have occurred when the objects that survived the minor garbage collection are copied into the old generation or permanent generation heap memory are removed. When compared to the young generation, garbage collection happens less frequently in the old generation.
+
+==>There are generally four ways to make an object eligible for garbage collection.
+
+1.Nullifying the reference variable
+2.Re-assigning the reference variable
+3.An object created inside the method
+4.Island of Isolation
+
+==>We can also request JVM to run Garbage Collector. There are two ways to do it : 
+	==>Using System.gc() method:
+	   System class contain static method gc() for requesting JVM to run Garbage Collector.
+
+	==>Using Runtime.getRuntime().gc() method:
+	   Runtime class allows the application to interface with the JVM in which the application is running. Hence by using its gc() method, we can request JVM to run Garbage Collector.
+
+	==>There is no guarantee that any of the above two methods will run Garbage Collector.
+	==>The call System.gc() is effectively equivalent to the call : Runtime.getRuntime().gc()
+
+============================================================================================================================================================================================
+
+Finalization
+
+==>Just before destroying an object, Garbage Collector calls finalize() method on the object to perform cleanup activities. Once finalize() method completes, Garbage Collector destroys that object.
+
+==>finalize() method is present in Object class with the following prototype.
+      	
+		==>protected void finalize() throws Throwable
+
+
+==>Based on our requirement, we can override finalize() method for performing our cleanup activities like closing connection from the database. 
+
+	==>The finalize() method is called by Garbage Collector, not JVM. However, Garbage Collector is one of the modules of JVM.
+
+	==>Object class finalize() method has an empty implementation. Thus, it is recommended to override the finalize() method to dispose of system resources or perform other cleanups.
+
+	==>The finalize() method is never invoked more than once for any object.
+
+	==>If an uncaught exception is thrown by the finalize() method, the exception is ignored, and the finalization of that object terminates.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
