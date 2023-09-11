@@ -1,0 +1,58 @@
+Ticketing tool
+================
+
+==>enduser reports a compaint and we have to work on it 
+
+
+two types of request
+======================
+
+1> Incident request==>enduser has problem and we have to resolve it  
+ 
+2> Service request==>enduser requires something and we have to provide it
+
+
+==>when a request raised a compaint is made and a complaint no is generated for further reference
+
+
+SLA(Service Layer Agreement):->
+================================
+==>A service layer agreement is a commitement between a service provider and a client.
+
+==>particular aspects of the service quality , availibility , responsibilities are agreed between the service provider and the service user.  
+
+
+SLC(Service Layer Commitment)
+==============================
+
+it is agreement between service provider and a customer expectations to resolve an issue raised by the customer within the given interval of time 
+
+
+
+tools
+========
+1>service now
+2>symphony submit
+3>manage engine
+4>easy vi sta
+5>solarwinds
+
+
+============================================================================================================================================================================================
+
+
+SOLARWINDS:->
+=================
+=================
+
+
+
+==>help desk
+==>incident management
+==> inventory system
+
+
+
+
+
+

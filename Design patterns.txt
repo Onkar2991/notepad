@@ -1,0 +1,83 @@
+Design patterns:->
+===================
+
+==> Design patterns are the well proved solutions for commonly occuring problems in software design 
+
+
+==> Design Patterns are divided into three categories:
+
+1> Creational: The design patterns that deal with the creation of an object.
+
+2> Structural: The design patterns in this category deals with the class structure such as Inheritance and Composition.
+
+3> Behavioral: This type of design patterns provide solution for the better interaction between objects, how to provide lose coupling, and flexibility to extend easily in future.
+
+
+1> creational design patterns:->
+=====================================
+
+There are 5 design patterns in the creational design patterns category.
+
+
+i> Singleton:->	
+=================
+
+	==>The singleton pattern restricts the initialization of a class to ensure that only one instance of the class can be created.
+	==>session factory is the example of singletone 
+	==> sharing a single washing machine among all the residents in a hotel
+
+
+
+
+ii> Factory:->
+===============
+
+	==>when there is superclass and many subclasses and we want to get the object of sub classes based on input and requirement, then we create factory classes in order to take the 	   responsibility of creating object of class based on input  
+	==>loosly coupled and more robust
+	==>The factory pattern takes out the responsibility of instantiating a object from the class to a Factory class.
+	==>getInstance() method of java.util.Calendar, NumberFormat, and ResourceBundle uses factory method design pattern. 
+	==>All the wrapper classes like Integer, Boolean etc, in Java uses this pattern to evaluate the values using valueOf() method. 
+	
+		
+iii> Abstract Factory:->
+=========================
+
+	==>Allows us to create a Factory for factory classes.
+	==>Abstract Factory pattern is almost similar to Factory Pattern and is considered as another layer of abstraction over factory pattern.
+	==>Abstract Factory patterns work around a super-factory which creates other factories.
+
+
+Differnce between factory and abstract factory
+================================================
+
+==> The main difference between a “factory method” and an “abstract factory” is that the factory method is a single method, and an abstract factory is an object. 
+
+==> The factory method is just a method, it can be overridden in a subclass, whereas the abstract factory is an object that has multiple factory methods on it.
+
+==> The Factory Method pattern uses inheritance and relies on a subclass to handle the desired object instantiation.
+
+
+iv> Builder:->  Creating an object step by step and a method to finally get the object instance.
+
+v> Prototype:->	Creating a new object instance from another similar instance and then modify according to our requirements.
+
+
+2> Structural Design Patterns:->
+==================================
+
+There are 7 structural design patterns defined in the Gangs of Four design patterns book.
+
+
+i> Adapter:->  Provides an interface between two unrelated entities so that they can work together.
+
+ii> Composite:->  Used when we have to implement a part-whole hierarchy. For example, a diagram made of other pieces such as circle, square, triangle, etc.
+
+iii> Proxy:->  Provide a surrogate or placeholder for another object to control access to it.
+
+iv> Flyweight:-> Caching and reusing object instances, used with immutable objects. For example, string pool.
+
+v> Facade:->  Creating a wrapper interfaces on top of existing interfaces to help client applications.
+
+vi> Bridge:->  The bridge design pattern is used to decouple the interfaces from implementation and hiding the implementation details from the client program.
+
+vii> Decorator:->  The decorator design pattern is used to modify the functionality of an object at runtime.
