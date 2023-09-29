@@ -1,0 +1,32 @@
+SASS (Syntatically Awesome Stylesheet)
+========================================
+
+==> extenstion to css
+==> SASS is the pre-processor of CSS means that SASS is converted into CSS
+==> SASS reduces the repetation of css
+
+
+
+FEATURES of SASS:
+=====================
+
+==> nesting 
+==> variables
+	==> we can create variables so that we can declare it and use it for further references
+
+==> operators
+==> @use
+==>@import
+	==>we can import the various files which are related to our project by using import 
+
+==> @mixin 
+	==> instead of creating various variables and using is for further we put that elements for which we are crating a variables in the @mixin tag/annotation 
+        ==> @mixin name 
+	==> we write reusable code in it 
+	   
+==> @include
+	==> it is used to acces the parameters which are present in the @mixin tag 
+	==>@include name
+	==>here the name it contains is the name of the @mixin tag
+
+==> @extend

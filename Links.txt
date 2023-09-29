@@ -60,6 +60,92 @@ concurrency-vs-parallelism
 
 https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.collections-and-iterables.streamable-wrapper
 JPA DOCUMENTATION
-==========================================================================================================================================
 
+
+https://javaconceptoftheday.com/java-oop-concepts-cheat-sheet/
+oops 
+
+https://medium.com/knoldus/how-to-integrate-your-maven-project-with-sonarqube-79f7368f8c7a
+https://blog.knoldus.com/integrate-maven-project-sonarqube/
+How to integrate your MAVEN project with SonarQube
+
+
+
+https://www.studytonight.com/servlet/httpsession.php
+Servlet: What is HttpSession?
+
+
+https://www.infoworld.com/article/2077647/make-java-fast-optimize.html
+Make Java fast! Performance tuning Java
+
+
+Customer Relationship Manager
+https://www.salesforce.com/in/crm/what-is-crm/
+https://www.crio.do/projects/project-crm-spring/
+
+
+============================================================================================================================================================================================
+
+PROJECT LINKS
+===================
+
+
+
+https://youtu.be/-C4qn2LyE2I?si=h26cuVhCg2WQ9X9T
+https://youtu.be/UGhcB02FgbU?si=aYmT1H5ysghYCSow
+Ticketing tool 
+
+
+https://youtu.be/arSTcmc-JcI?si=KnRTT_dV12AzmbF6
+https://youtu.be/N6IcHi_-sTs?si=DnyOEIAQVK4twO77
+SAAS language 
+
+
+https://youtu.be/RkCJqeW581k?si=wCPuhbYJ4advky5_
+medicaid 
+
+
+https://youtu.be/frmXZYsRPC0?si=txYXHs7fuzK4fVez
+obamacare
+
+https://youtu.be/sshK1P7qkoc?si=kRIy71mgSw_BjK0z
+medicare 
+
+
+https://youtu.be/mXI48QOTRqs?si=Jsw8_NeB1FtoCEeb
+bank lending 
+
+
+https://youtu.be/849XrqAbg6c?si=ezSpk5VhNCxxjR39
+https://youtu.be/X7CGyBZrEh8
+project architechture
+
+
+https://youtu.be/rv4LlmLmVWk?si=5CCw-aphuvnuD-Cl
+microservices
+
+
+https://youtu.be/VnvRFRk_51k?si=R-SLYThp6Sj0lHTn
+https://youtu.be/Krpb44XR0bk?si=18SLp16t4dxBZR8t
+kubernates
+
+
+
+https://youtu.be/4vLxWqE94l4?si=63nOW6RkFuaj9izh
+api architecture
+
+
+https://youtu.be/zvWKqUiovAM?si=xCRnLPygzU3k0ixh
+https://youtu.be/1Wl-rtew1_E?si=OZ-YXO8vLmlNHnT6
+api performance 
+
+
+
+https://youtu.be/AWVTKBUnoIg?si=kFdqAU6M3360V6Ir
+deployement stratergies
+
+
+
+
+============================================================================================================================================================================================
 
