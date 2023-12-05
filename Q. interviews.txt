@@ -1,0 +1,87 @@
+ Q. introduction 
+
+Q.what are technologies you are aware of or worked on ?
+ans: java , java8 , spring , spring boot , hibernate , jpa , junit , microservices (tell the technologies in serial wise or sequence wise)
+
+Q.difference between concurrent hashmap and hashmap
+
+Q. difference between iterator and list iterator 
+
+Q. what is fail safe and fail fast
+
+Q. contract between hashcode and equals methods
+
+Q: what is exception prapogation
+
+Q. what is static in java?? 
+Q. how memory management done by static ??
+ans: each object of instance variable has its own copy and for static all the objects share same copy thats how we do memory management 
+
+
+Q. difference between static and instance variable 
+ans: each object of instance variable has its own copy and for static all the objects share same copy
+
+Q. difference between overloading and overriding 
+
+Q. what is the default first line in the constructor??
+ans: call to super class constructor is the default first line in the constructor.
+
+Q. difference between constructor and method?
+
+Q. what is constructor ? and why we use it ?
+ans: it does two tasks 1> object initialization 
+		       2> assigning default values to the data members
+
+
+Q. do you klnow thread class ?? 
+Q. which are the methods of thread class which belongs to thread class and object class ?
+
+Q. why we should we use toString method?
+
+Q. what are classloaders in java?
+Q. what are the types of classloaders?
+Q. what are the principles of classloaders?
+
+Q. difference between class not found exception and no such class def error?
+
+Q. difference between exception and error?
+Q. can we handle error ??
+
+Q. what is memory management in java
+Q. what are the different types of memory ? explain
+
+Q. what is system class and what it contains?
+
+Q.what is System.out.println?
+
+Q. why we made main method as a static?
+
+Q. why we pass String array as parameter to main method?
+
+Q. what is collection framework?
+  
+Q. difference between list set and map
+
+Q. what is autoclosable interface 
+
+Q. random access interface in java?
+
+Q. how arrays work internally ?
+
+Q. what is deadlock? when it occurs?
+
+Q. entity life cycle
+
+Q. difference between jdbc and hibernate
+
+Q. what is jpql?
+
+Q. what is criteria interface
+
+Q. hibernate architechture
+
+Q. what is first level cache in hibernate ?
+
+Q. which design patterns you know
+
+Q. why should we hire you?

@@ -1,0 +1,75 @@
+naukri foundit linkedin
+
+how hr asks you questions 
+
+Q> current company kuthli aahe ?
+
+Q> on contract basis or permanant ?
+
+Q> duration of work 
+
+Q> technologies stack and rating on stack ?
+
+Q> notice period official - 60/30 days currently serving notice period or will get early release within 15 days 
+
+
+how to talk to hr 
+
+what exactly your looking for 
+ask for gd on mail 
+interview process ?(face to face or virtual) ( hr technical technological ) (team size vary between 10-15 manager lead (scrum - manager ) 8- dev 4-QA business analyst for functional roles for technical lead)
+NOTICE PERIOD 
+
+
+jira for tracking ticket story 
+
+story point assign meaning time to complete the task or ticket (1,2,3,5,7 days)
+2 weeks sprint 10 working days sprint spill over if the ticket or story is not completed
+
+dsm - yesterdays task todays task and any difficulties 
+ 
+
+					epic 
+		
+		story1			story2 		story3
+
+
+	task1 	task2 task3		task1 task2 
+
+
+NO PF NO UAN NO FORM 16 
+
+
+Offer date joining date releaving date 
+
+pt -200rs
+
+
+no of years of experience*2= salary package 
+
+
+make a narriative for you project 
+
+
+roles     permisiions    user    
+
+
+
+coding practices 
+
+invalid data access exception 
+unique constraints exceptions
+
+
+
+
+
+
+
+
+
+
+
+
+
+

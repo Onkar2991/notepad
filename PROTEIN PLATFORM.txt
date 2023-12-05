@@ -1,0 +1,53 @@
+
+Protean platform:
+
+overview :
+
+This platform provides pre-built  components to create & manage enterprise application.
+It reduce persons months of efforts.
+we identify the common features, which we develop that features like:
+1. User Management Service
+2. Email Service
+3. SMS Service
+4. Holiday calender Service
+5. Tiny URL Service
+6. QR scanner Service
+etc...
+
+suppose client want to build application. First we demonstrate them, what services we are developed. If client want that service, 
+if client want some customization, then we changed it.
+
+wrapper class(for customization) If he want new field or change in implementaion. That changes do in wrapper class.
+
+1. User Management Service :
+
+This is role based access control implementation, its easy to define roles and permission for your application/ to user.
+We have roles like User and Admin, that roles have some permissions.
+We have user mangement features like :
+i.    Register a new user account.
+ii.   Login with username and password.
+iii.  Retrieve a single user account.
+iv.   Retrieve list of user account.
+v.    Update user account data(basic user data, contact, address)
+vi.   add or remove a role on a user account.
+vii.  create a new role.
+viii. create a new permission.
+ix.   add permission on a role
+x.    remove permission on a role.
+xi.   update a permission (enabled or disabled it)
+
+
+for security we spring boot starter security:
+we can generate a salt (return string)
+Salting: A random value called a salt is generated. The salt is then combined with the user's password before hashing.
+ This adds uniqueness to each user's hash and makes it more secure.
+ 
+ 
+ create hash (return byte[])
+Hashing: The password is transformed into a fixed-length string of characters (hash) using a one-way cryptographic hash function. 
+This process is irreversible, meaning you can't convert the hash back to the original password.
+
+we encrypt  password (String password, String salt)
+        return Base64.getEncoder().encodeToString(securePassword);
+		
+

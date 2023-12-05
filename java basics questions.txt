@@ -1,0 +1,66 @@
+java basics questions
+
+
+Q. What is the difference between utility class and service class?
+
+Ans: An Utility class is a class that performs common used functions generally with static methods, while a Service is a self-contained unit of functionality, consisting of an interface which contains the signature of the methods that the Service is going to expose and one or more implementation classes.
+
+Q. What is socket in Java?
+
+Definition: A socket is one endpoint of a two-way communication link between two programs running on the network. A socket is bound to a port number so that the TCP layer can identify the application that data is destined to be sent to. An endpoint is a combination of an IP address and a port number.
+
+
+Q. What is heap Java?
+The Java heap is the area of memory used to store objects instantiated by applications running on the JVM. When the JVM is started, heap memory is created and any objects in the heap can be shared between threads as long as the application is running.
+
+
+Q. What is memory leak in Java?
+
+In Java, the memory leak is a situation when the garbage collector does not recognize the unused objects and they remain in the memory indefinitely that reduces the amount of memory allocated to the application. Because the unused objects still being referenced that may lead to OutOfMemoryError.
+
+
+Q. How do I increase heap size?
+
+1> Log in to the Application Server Administration Server.
+2> Navigate to the JVM options.
+3> Edit the -Xmx256m option.
+4> This option sets the JVM heap size.
+5> Set the -Xmx256m option to a higher value, such as Xmx1024m.
+6> Save the new setting.
+
+
+
+Q. What are destructors in Java?
+
+Destructor in Java & Why do We Use it? | DataTrained – Data ...
+A destructor in Java is a special method that gets called automatically as soon as the life cycle of an object is finished. A destructor is called to de-allocate and free memory. The following tasks get executed when a destructor is called. Destructors in Java, also known as finalizers are non-deterministic.
+
+
+
+Q. What is the memory size of Java?
+
+The default Java heap size is 1280 MB, which supports fewer than 75,000 pairs. If you increase the Java heap size by 256 MB, support increases by 25,000 pairs. You can continue to increase the Java heap size until you reach the maximum heap size.
+
+
+Q. Is heap a ROM or RAM?
+
+Both stack and heap are stored in memory(RAM).
+
+
+Q. Why stack is faster than heap?
+
+The stack is faster because the access pattern makes it trivial to allocate and deallocate memory from it (a pointer/integer is simply incremented or decremented), while the heap has much more complex bookkeeping involved in an allocation or free.
+
+
+
+Q. What is a heap size?
+
+The heap size value is determined by the amount of memory available in the computer. Initial heap size is 1/64th of the computer's physical memory or reasonable minimum based on platform (whichever is larger) by default.
+
+
+Q. Why pointers are not used in Java?
+
+A pointer is a variable which can hold the address of another variable or object. But, Java does not support pointer due to security reason, because if you get the address of any variable you could access it anywhere from the program without any restriction even variable is private.
+
+
+Q. 

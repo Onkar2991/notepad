@@ -2,12 +2,12 @@ spring
 
 framework 
 
-acid properties 
+acid properties : database management operations
 
-a--automicity
-c--consistancy
-i--isolation
-d--durability
+a--automicity ==> eighther a trancion gets completed or gets declined there is no intermediate state . it will start from start if it gets failed
+c--consistancy ==> before transection and after transection the data should be consistant
+i--isolation ==> two transection doesn't interfare with each other they work seperatly
+d--durability ==> the changes of a sucessful transection occurs even if the system failure occurs
 
 
 mvc-->model view controller
@@ -17,3 +17,81 @@ ioc/di--> inversion of control or dependency injection
 M- MODEL(BUSINESS LOGIC /BACKEND CODE)
 V-VIEW (JSP/ANGULAR/REACT)
 C- CONTROLLER(DISPACTER SERVLET/FRONT CONTROLLER/DESIGN PATTERNS)
+
+
+
+Q. what happens when we inject prototype bean in singletone bean ??
+ans:-   ==> we get only singletone object through out the application.
+	==> prototype bean looses its behaviour as prototype and acts as a singletone as we inject a prototype bean in singletone bean 
+	==> to solve this problem we use @lookup annotation 
+	==> rules for using lookup annotation
+		==> the bean which you are injecting using lookup annotation should not be final , it should be public
+		==> the method which you are defining should not be private , static ,final 
+
+
+
+==> @RestController(value=endpoint) use it in controller , req
+    @requestmapping
+
+==> @Service 
+    @Transection==>class level as well as method level
+
+==> @Target
+    @Retention
+
+==> we create endpoints for getting meaningful resources
+
+==> controller>impl>
+
+==> in service there are interfaces
+
+==> impl implemented methods
+
+==> repo will connect to the db 
+
+==> entity will contain entities 
+
+
+==> factory pattern (class.forName)
+
+
+==> service > impl >controller
+
+
+
+
+==>web.xml contains dispacher servlet
+
+==>applicationContext.xml 
+
+==> context annotation-config will enable the annotation processing 
+
+==> by default annotations are not enabled
+
+==> @component scan will give the base package and will create the bean for the
+
+@controller restcontroller requestparam   response entity
+
+http >cookies session request response 
+
+
+@value bean config primary qualifier
+
+
+
+POSTMAN
+=================
+
+==> don't give primary key field while posting a request //we auto-generate the primary key 
+
+==> dont use @requestbody for get method
+
+==>use @requestbody for put and post methods only
+
+==> use @pathvariable for passing integer value 
+
+==> use @requestbody for passing object 
+
+
+ 
+

@@ -82,6 +82,38 @@ Make Java fast! Performance tuning Java
 Customer Relationship Manager
 https://www.salesforce.com/in/crm/what-is-crm/
 https://www.crio.do/projects/project-crm-spring/
+https://github.com/eric60/Spring-CRM-Web-App
+https://www.youtube.com/watch?v=qhXGWAGiR6c
+https://youtu.be/sQD7kaZ5h0s?si=ljFoD7WFvXFQJ2ct
+https://youtu.be/lENKty3sM_Q?si=TBsG6fXl27NiEjUz
+
+
+
+https://www.youtube.com/watch?v=nf2wpURndPo&t=2s
+premium calculator
+
+
+
+https://youtu.be/Wa0GQwWwzJE
+https://youtu.be/ULwm8I0vSpU?si=rrz7_ew9Cj845xhG
+pagination
+
+
+https://www.youtube.com/watch?v=1RilyCsxp7U
+jira
+
+
+https://www.youtube.com/watch?time_continue=35&v=MAIkC9KctVw&embeds_referring_euri=https%3A%2F%2Fwww.javaguides.net%2F&source_ve_path=MTM5MTE3LDM2ODQyLDM2ODQyLDM2ODQyLDM2ODQyLDI4NjY2&feature=emb_logo
+DTO
+
+
+https://www.javaguides.net/2018/10/jaxb-tutorial.html
+JAXB
+
+
+https://medium.com/@basecs101/internal-working-of-hashmap-in-java-latest-updated-4c2708f76d2c
+internal working of hashmap
+
 
 
 ============================================================================================================================================================================================
@@ -145,7 +177,40 @@ https://youtu.be/AWVTKBUnoIg?si=kFdqAU6M3360V6Ir
 deployement stratergies
 
 
+https://youtu.be/FjT_lMTFciE
+https://www.youtube.com/watch?v=FjT_lMTFciE
+https://youtu.be/bM9e2EPUg0g?si=HQeN-95NjyCpQjqX
+https://youtu.be/TQ4jdBjgWdU?si=tL6VcM67ymBEhciL
+health insurance claim 
 
+
+https://youtu.be/pc4lfKm8NLY
+https://github.com/90rajibgarai/spring-boot-jasper-report/tree/master
+jasper reports 
+
+
+
+https://youtu.be/g3mk45o1zAg?si=llIrfzBXcbOiXnV6
+user roles and responsibilities
+
+
+https://www.youtube.com/watch?v=cjDcl2Wqf5E
+https://youtu.be/thBuZNmFrzs?si=JHjrS2ZN5MrbnTFb
+https://youtu.be/OOpz31alvIY
+coupan code
+
+
+
+https://youtu.be/YfDFKgGNP6s
+E-shipping 
+
+
+https://blog.kms-solutions.asia/ekyc-process
+E-kyc process
+
+
+https://www.cibil.com/loan-approval-process
+Loan approval process
 
 ============================================================================================================================================================================================
 

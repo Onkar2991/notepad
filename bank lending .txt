@@ -1,0 +1,143 @@
+bank lending 
+
+
+ cash deposit -CRR-SLR= remaining amount is disbursed as a lending amount 
+
+
+==>CRR
+	==> CASH RESERVE RATIO
+	==>it is the particular percentage of cash deposit that every bank should maintain by every bank in india as per the requirement of rbi with rbi 
+
+==>SLR
+	==>STATUTORY LIQUIVIDITY RATIO
+	==> it is the particular oercentage of cash deposit that every bank have to maintain in the form of cash , gold , or other liquid assets by the days end .
+  
+
+==> banks generates 60-70% income through lending the money 
+
+==> by lending the money they can generate the employment , based upon that employment the employess or workers standard of living will increase 
+
+==> after that the contribution towards infrastructure development will increase 
+
+
+
+
+CLASSIFICATION OF LOANS :->
+============================
+
+1> purpose base loans 
+=========================
+
+
+==> here based upon the use of funds banks lend the money 
+
+==> two types 
+	i> productive purpose:- for agriculture , industry , trade ,etc like for proctive purpose  
+	ii> consumption purpose :-> for home loans car loans like for purchase of consumable goods 
+
+
+
+2> secured and unsecured loans 
+===============================
+
+
+
+==>secure loans :->
+		
+		==> banks lends loans behalf of pledge of specific collatral securities like buildings , bonds , f.d receipts  , equipments 
+		==> secure loans reduces the loss of banks if the borrower is unable to replay the loan 
+
+
+
+==> unsecure loans :-> 
+ 		
+		==> the loan provided by the banks without taking any collatral securities
+		==> this type of loans will be given to the borrower by undertaking his INTIGRITY , FINANCIAL CONDITION , PAST RECORD OF REPAYMENT 
+
+
+3> Maturity period 
+====================
+
+==> short term loans:-> within 1 year  
+
+==> intermediate loans:->  1-5 years of locking period 
+
+==> long term loans:-> more than 5 years 
+
+
+
+4> method of repayment
+=======================
+
+==> based on method repayment the loans are classified into two types 
+
+	==> lumsum repayment :-> here the borrower will pay the lumsum amount within the certain amount of time 
+	
+	==> installment repayment :-> here the borrower will pay monthly , quatarly , half yearly  or yearly
+
+
+
+
+
+
+PRINCIPLES OF LENDING 
+============================
+
+
+
+1> safty of funds
+===================
+
+==> it means the borrower is in the condition to repay the loan amount with intrest according to the terms of lending contract 
+
+==> the repayment of the lending depends upon the borrowers 
+		
+		==> capacity to pay 
+	
+		==> willingness to pay 
+
+==> if mr X deposit its money and mr Y borrows money and did not return it then how will the bank return money to mr X , this will lose public confidance in the banks 
+
+==> to avoid this banks should give secured loans 
+
+
+
+
+2> Liquidity 
+================
+
+==> it refers to the readyness with which bank can convert its assets into cash with no or minimal loss 
+
+==> if Mr X. deposited the money and Mr Y borrows the money as a secured loans and did not return it then bank will sell the securities of Y on short notice and the amount will be given to 	depositor
+
+
+
+
+3> profitability 
+==================
+
+==>banks should earn intrests to 
+		
+		==> pay salaries to staff 
+		
+		==> intrest to depositors 
+		
+		==> dividends to the shareholders 
+		
+		==> meet the day-to-day expenditure 
+		
+		==> make provisions for growth 
+
+
+
+4> Diversity 
+==============
+
+==> banks should not invest its surplus funds in specific kind of security but in different types of securities 
+
+
+
+
+5> saleability of securities 
+===============================
+

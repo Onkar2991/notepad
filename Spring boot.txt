@@ -1,0 +1,35 @@
+Spring boot
+============
+
+
+==> inbuild server 
+==> no xml fir configuration like web.xml  hbm.cml 
+==> autoconfiguration 
+==> autoconfiguration (users m2 folder )(see it yourself)
+==> spring boot starter dependancies
+==> DEVTOOL will reduce time to develop the application 
+==> rapid application developement 
+==> actuator will determine the time consumed by the methods 
+
+
+
+Q> can we configure external server in spring boot application ?
+Q > in how many ways we can create aspring boot application 
+Q> sexplain @Springboot applicaytion annotation?
+Q> what do you mean by starter dependancies ?
+Q> current spring boot version you worked on 
+Q> advantages and disadvantages 
+Q> spring vs spring boot
+Q> what is devtool
+ 
+
+
+project architecture --> monolithic application (single war file)
+		     --> ui vegla backend server vegla 
+		    --> 30-40 modules 
+		--> rest templete for inter module communication
+		--> one becomes producer and another becomes consumer 
+		--> synchronus communication 
+		--> cafka for asynchronus 
+
+request flow --> explain spring mvc architecture flow  

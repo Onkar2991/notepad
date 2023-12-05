@@ -24,3 +24,14 @@ http methods
 AutoScalling 
 
 security group-> key pair-> launch templete->target group->autoscaling group
+
+
+
+
+local > dev > qa > uat > prod 
+
+ask for logs if the code is fatal at prod environment 
+
+
+project architecture
+

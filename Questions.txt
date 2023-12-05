@@ -11,3 +11,163 @@ comparator
 comparable
 backword compatibility
 
+
+
+============================================================================================================================================================================================
+
+
+Q. What if the main method is declared as a private?
+
+ans>>Declaring the main method private or, protected
+But, at the time of execution JVM does not consider this as the entry point of the program. It searches for the main method which is public, static, with return type void, and a String array as an argument. If such a method is not found, a run time error is generated.
+
+
+Q.What is the modifier not allowed for method?
+
+ans>>Private − Abstract methods cannot have the private modifier. Private methods are not accessible outside the class they are declared in, making them unsuitable for abstraction.
+
+
+
+Q.Can we pass object as an argument to a method?
+
+ans>>To pass an object as an argument we write the object name as the argument while calling the function the same way we do it for other variables. Syntax: function_name(object_name); 
+
+
+
+Q.Why should we overload constructor?
+
+ans>>As construction overloading enables the creation of the object of a specific class in several ways, it is most commonly used in Java programs based on the requirement of the programmer. With the use of constructor overloading, objects can be initialized with different data types.
+
+
+
+Q.Why compiler generated constructor is called default constructor?
+ans>>A default constructor is a constructor that either has no parameters, or if it has parameters, all the parameters have default values. If no user-defined constructor exists for a class A and one is needed, the compiler implicitly declares a default parameterless constructor A::A() .
+
+
+
+Q.How does a compiler and JVM differentiate constructor and method invocations if both have same name as class name?
+
+ans>>A compiler and a JVM differentiates constructor and method invocations by using 'new' keyword. If 'new' keyword is used in calling then a constructor is executed else method is executed.
+
+
+
+Q.Can we consider both default and no-arg constructor are same?
+
+ans>> No. Java won't provide a default constructor if you write any kind of constructor in class. One difference between them is that the body of default constructor will always be empty whereas we can insert our own code in no-arg constructor.
+
+
+
+Q.What if the main method is declared as a private?
+
+ans>>at the time of execution JVM does not consider this as the entry point of the program. It searches for the main method which is public, static, with return type void, and a String array as an argument. If such a method is not found, a run time error is generated.
+
+
+
+Q.What if static modifier is removed from the signature of the main method?
+
+ans>>If you don't add the 'static' modifier in your main method definition, the compilation of the program will go through without any issues but when you'll try to execute it, a "NoSuchMethodError" error will be thrown.
+
+
+Q.What if I do not provide the String array as the argument to the method?
+
+ans>>Since the main method is the entry point of the Java program, whenever you execute one the JVM searches for the main method, which is public, static, with return type void, and a String array as an argument. If anything is missing the JVM raises an error
+
+
+
+Q.What is first argument of the string array in main method?
+
+ans>>The string args argument in the main method accepts a single string array. The main method can be declared in both the given following ways. public static void main(String[] args) public static void main(String args[]) Both the above methods will run successfully.
+
+
+
+
+Q.Do I need to import java.lang package anytime?why?
+
+ans>>No, java. lang package is a default package in Java therefore, there is no need to import it explicitly. i.e. without importing you can access the classes of this package.
+
+
+
+Q.Can I import same package/class twice?
+
+ans>>Yes, you can import a class twice in Java, it doesn't create any issues but, irrespective of the number of times you import, JVM loads the class only once.
+
+
+
+Q.What is purpose of garbage collection in JAVA? When is it used?
+
+ans>>Garbage collection in Java is the automated process of deleting code that's no longer needed or used. This automatically frees up memory space and ideally makes coding Java apps easier for developers. Java applications are compiled into bytecode that may be executed by a JVM.
+
+
+Q.What is native method?
+
+ans>>Native methods are Java™ methods that start in a language other than Java. Native methods can access system-specific functions and APIs that are not available directly in Java. The use of native methods limits the portability of an application, because it involves system-specific code.
+
+
+Q. What is the access scope of a protected method?
+
+ans>>The protected access specifier in Java allows members to be accessed within the same class, subclasses, and classes in the same package. This means that protected members can be accessed by the class itself, its subclasses (even if they are in a different package), and other classes in the same package.
+
+
+Q.What are the methods in object?
+
+ans>> 
+	tostring() method.
+	hashCode() method.
+	equals(Object obj) method.
+	finalize() method.
+	getClass() method.
+	clone() method.
+	wait(), notify() notifyAll() methods.
+
+
+Q.What is the impact of declaring a method as final?
+
+ans>>When a method is declared as final, it cannot be overridden by a subclass.
+
+
+
+Q.Can there be an abstract class without abstract methods in it ?
+
+ans>>Yes, we can declare an abstract class with no abstract methods in Java. An abstract class means that hiding the implementation and showing the function definition to the user. An abstract class having both abstract methods and non-abstract methods. For an abstract class, we are not able to create an object directly.
+
+
+
+Q.Can we execute a program without main() method?
+
+ans>>Yes, we can execute a java program without a main method by using a static block. Static block in Java is a group of statements that gets executed only once when the class is loaded into the memory by Java ClassLoader, It is also known as a static initialization block.
+
+
+
+Q.)What is purpose of toString() method in java?
+
+ans>>The toString method is used to return a string representation of an object. If any object is printed, the toString() method is internally invoked by the java compiler. Else, the user implemented or overridden toString() method is called. 
+
+
+Q. What are the accessibility modifiers allowed for class
+
+ans>>
+
+1) public 
+2) default (when no access modifier is specified)
+
+
+Q. What are the accessibility modifiers allowed for class members including inner classes?
+
+ans>>There are four types of access modifiers available in Java: 
+
+Default – No keyword required
+Private
+Protected
+Public
+
+
+Q. what is the default accessibility modifier and its member?
+
+ans>>The default access modifier is also called package-private, which means that all members are visible within the same package but aren't accessible from other packages
+
+
+Q.Why private and protected modifiers are not allowed for the outer class?
+
+ans>>If we have a protected inner class,access is permitted inside the same package and can be accessed outside the package through inheritance. But when we use protected modifier to outer class,we can access it within the package but we can't access that class outside the package.
+
+

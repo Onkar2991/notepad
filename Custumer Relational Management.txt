@@ -1,0 +1,252 @@
+Custumer Relational Management
+
+==> CRM stores the detailed information on overall purchase history , personal info and even purchasing behaviour patterns. it gathers this information through multiple channels
+
+==>Types of CRM 
+	1> Operational CRM
+	2> Analytical CRM
+	3> Collaborative CRM
+ 
+1> Operational CRM:->
+=========================
+
+	==> an operational CRM assist businesses in managing their day to day marketing , sales, and custemer service operations
+	==> it is specially designed to help facilitate activities that have to do with customers 
+	==> an operational CRM is conceivable for every interaction that your brand has with current and potential clients
+
+
+	i> sales automation :->
+	=========================
+	
+	==> it provides a standard for handling sales processes and general phrases for sales processes for all the company's department
+	==> this might involve automatically  tracking a contact and updating their status from prospect to qualified lead once they've completed certain actions or met specific criteria
+	==> Designed to simplify the sales process for a company , it allows its staff to spend much more time communicating directly with potential customers and solidifying the loyalty 	   of the customers already on board
+
+
+	ii> marketing automation:->
+	=============================
+	
+	==> this type of operational CRM makes it possible for the marketing team to handle monotonus and time-consuming tasks
+	==> tasks like calling contacts , organizing email campaingns , dispersing substance offerings , that would have otherwise taken a chunk of the teams time that are deligated to the 	    machine for better efficiency
+	==> in marketing campaign , management involves marketers to use customers specific information to determine , evaluate and develop communication that are targeted to customers in 	    individual
+
+
+	iii> service automation:->
+	============================
+
+	==> This helps you to automate the process it uses to reach out to its customers; enhance customer experience, communication, and care to keep them coming back and even incentivize 	   them to advertise the company image in person 
+	==> tools include :-> live chat , triggered email response , offline help or online knowledge bases to navigate the customer (e.g. FAQ's blogs , etc ) . Chatbots are also becomming
+	   more popular as a means if addressing the customer's concerns 
+
+
+
+
+
+2> Analytical CRM:->
+=======================
+
+	==> an analytical CRM system is much more concerned with gathering customer data and studying it for patterns and trends . these data include the customers contact info , feedback and any other relevant info that will help to identify patterns or preferences 
+
+	==> The more data your busimess gathers on consumer behaviours , patterns and pain points the better you can tailor your marketing and sales strategies to new and existing customers
+
+	==> analyatical CRM accumulates and analyze sonsumer data of various kinds including
+
+		i> sales data :-> purchase and return history , brand preferences , etc
+		
+		ii> Financial data :-> payment and credit history  including payment type credit scores ,etc
+
+		iii> marketing data:-> customer respons rates to marketing campaigns , customer satisfaction data , retention data , etc 
+
+
+3> Collaberative CRM:->
+=========================
+
+	==>this is also known as strategic crm which helps your organization to share the information of custmers to various business units like marketing team sales team support team 	   technical support etc
+
+	==>broadly identified by two aspects :->
+		i> interaction management 
+		ii> channel management
+
+
+
+
+Objectives:->
+===============
+
+==> to simplify marketing and sales process 
+
+==> to make call centres more efficient
+
+==> to discover new customers and increase customer revenue 
+
+==> to cross sell products more effectively
+
+
+
+
+Advantages:->
+=================
+
+==> better knowledge of customer 
+
+==> retain more customers
+
+==> better segmentation 
+
+==> minimises the cost 
+
+==> enhances corparate image 
+
+==> incresases business growth
+
+==>controls customer defection rate 
+
+
+
+
+
+
+
+project:->
+===========
+
+Dashboard :->
+==============
+
+
+lead management:->
+===================
+	==> whenever we get any query/enquiry from any platforms like facebook instagram website email shopping website regarding our product from a customer we call it as a lead so we 	    create a lead of that customer , we do that in the lead management 
+	==> here we can add , delete , update the lead data 
+	==> suppose we want to add a lead so there are some parameters which we have to fill like 
+		
+			==> SALUTAION :-> like how we want to adress a customer Mr , Mrs
+			
+			==> FIRST NAME MIDDLE NAME LAST NAME of the customer/ lead 
+			
+			==> LEAD SOURCE :-> from where we get the lead as like fb insta email
+
+			==>LEAD RATINGS :-> hot cold warm according to the platform from which we get the request 
+					==> we assigned the rating as hot for instagram and email as the custmer response is faster from this platforms 
+					==> for linked in  we assigned warm for that we assigned a assignment rule 
+					==> for other platforms we didnt applied assignment rule so we have to give the lead ratings manually
+						
+			==>LEAD STAGE :-> here we mention the lead as new or opportunity bydefault it is set to new
+			
+			==>NEXT LEAD ACTION :->  
+			
+			==>ACTION EXECUTION STATUS :-> scheduled or not scheduled
+
+			==>INTRESTED PRODUCT :-> in which product the lead is intrested here all the products are mentioned in the drop down and the list is getting from the product api
+
+			==>NEXT LEAD ASSIGN TO :-> to whom we want to assign the lead 
+
+			==>REMARK :-> if we want to add any remark of the lead we can add it here 
+
+			==>ADRESS TYPE :-> permanant  temperory  office  home 
+
+			==> COUNTRY STATE  CITY  STREET POSTAL CODE 
+			
+			==> if we want to edit the lead details then there is option for edit the data gets automatically fetched and then we can make the changes 
+
+
+
+CONTACT MANAGEMENT:->
+======================
+
+	==> after creating a lead we have to create the contact details of that lead so that we can contact to the lead 
+
+	==> it has mainly SALUTATION , FIRST NAME , MIDDLE NAME , LAST NAME , CONTACT NO , ALTERNATE CONTACT NO , EMAIL ADRESS , DEPARTMENT (for which department the lead is about)
+
+
+
+
+ACCOUNT DETAILS:->
+===================
+
+	==> for adding the company account details we have an account details section 
+
+		==> ACCOUNT NAME , ACCOUNT SOURCE , ACCOUNT NUMBER  
+		
+		==> ACCOUNT TYPE:-> salary , savings 
+		
+		==> ACCOUNT CATEGORY :-> gold silver platinum  based upon the services they require from us 
+		
+		==> INDUSTRY:-> for which industry they the software 
+
+		==> NO OF EMPLOYEES :-> present no of employees in the company 
+
+		==> WEBSITE URL :-> company website url 
+	
+		==> ANNUAL REVENUE :-> revenue of the company
+		
+		==> BILLING ADRESS , REGISTERED ADRESS , SHIPPING ADRESS  
+
+
+
+PRODUCT:->
+============
+
+	==> PRODUCT NAME 
+	
+	==> PRODUCT CATEGORY :-> category in which it belongs like food agri lifestyle , etc 
+	
+	==> PRODUCT UNIT 
+
+	==> PRODUCT MIN QUANTITY 
+`
+	==> PRODUCT CODE 
+	
+	==> PRODUCT DESCRIPTION  
+
+
+PRODUCT PRICE BLOCK:->
+========================
+
+==> if we have different prices for different lots then we can custmize it here 
+
+	==>PRODUCT NAME 
+	==> PRODUCT START QUANTITY
+	==> PRODUCT END QUANTITY 
+	==> PRODUCT AMOUNT 
+
+
+OPPORTUNITY:->
+===============
+
+==> whenever a lead is converted into an opportunity then this part comes for execution 
+
+==> you can edit the lead stage after a lead is changing into opportunity after that it automatically reflects to the opportunity section 
+
+	==> it comes  with the lead details along with the opportunity details 
+
+	==> FIRST NAME , MIDDLE NAME , LAST NAME, NEXT LEAD ASSIGN TO , ACTION REMARK , ETC 
+	
+	==> THRESHOULD AMOUNT ACCOUNT NAME , CONTACT NO , PRODUCT NAME 
+	
+	==> PRODUCT DISCRIPTION  , QUANTITY , UNIT PRICE , QUOTATION NUMBER , QUOTATION GIVEN BY , QUOTATION AMOUNT , DISCOUNT PERCENTAGE , FINAL AMOUNT 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==============================================================================================
+Questions 
+
+Q> which type of CRM did u used in your application or project? 
+
+Q> what is the purpose of the account details ? why we need it ? (industry , website url , number of employess)
+
+Q> THRESHOULD AMOUNT in opportunity 
+
+Q> which technologies did you used in your application ?

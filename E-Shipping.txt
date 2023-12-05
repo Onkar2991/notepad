@@ -1,0 +1,42 @@
+////SHIPPING COMPLIANT MANAGEMENT LENDING CLAIM MANAGEMENT SYATEM USER MANAGEMENT 
+
+
+
+
+E-shipping process :->
+==========================
+
+==> this are the standarized steel boxes used to ship variety of cargo like fruits shoes electrionics and hazardous materials 
+
+==>  exporter ===> shipping company ===> importer 
+
+==> exporter is a person who wants to export his goods or material to the other countrys importer so the exporter will search for the shipping company whos container will come to his factory for cargo loading 
+
+
+==> two sizes of container 20 feet and 40 feet depending upon the exporters need he will choose the container for shipping 
+
+==> when the cargo is less in quantity then LESS THAN CONTAINER LOAD (LCL) is used . in this you pay for per cubic meter or per metric tone for space inside consolidated container 
+
+==> after loading the container and checking the container the exporter is given with the unique number which is the tracking id of the container 
+
+==> types of containers 
+	1> IMDG CONTAINER ==> for dangerous goods like chemicals or gas 
+	2> REEFER CONTAINER ==> if the goods are temperature sensitive 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==> port , shipping company , shipping agent , freight forwarder(Freight forwarding is the coordination and shipment of goods from one place to another via a single or multiple carriers via air, marine, rail or highway.)(in simple way freight forwarder is the person who assist the importer and exporter for shipping the container from one point to another )

@@ -1,0 +1,25 @@
+resource 
+lookup
+
+endpoints
+uri vs url
+
+
+request mapping 
+propogation level isolation level 
+@transectional 
+hibernate validation
+
+
+
+
+
+difference between request param and path variable 
+marshelling unmarshelling 
+
+what is the significance of t in generics in stream 
+flat map==flatten + mapping 
+
+abstraction advantages
+inheritance advantages
+

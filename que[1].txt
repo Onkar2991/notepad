@@ -1,0 +1,77 @@
+OOPS concept
+
+how many ways to create object
+
+constructor
+constructor chaining
+ 
+
+string 
+scp vs string builder vs string buffer
+program 
+
+multithreading
+how we create threate
+
+exception 
+types and sub types
+custom exception
+
+collection
+what is collection 
+what is collections
+what is collection  framework
+differance
+
+java8 features
+lambda 
+stream-program
+functional interface
+optional class 
+method referance
+date and time
+misleneous 
+
+hibernate
+orm tool
+anotation
+serialization
+session and session factory
+synchronization
+
+spring boot
+annotation
+what is spring mvc
+spring vs springboot
+how to change db
+how to change port number
+controller vs restcontroller
+design pattern
+why rest api are state less
+what is bean and bean factory
+what is rest template
+jar or war
+maven and craddle
+
+
+project 
+self intro
+
+devlopment environment
+
+git and github all
+
+aws
+ec2
+s3
+
+microservices
+8 component
+
+
+
+
+
+
+
+

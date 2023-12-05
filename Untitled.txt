@@ -1,0 +1,16 @@
+
+
+
+
+endpoints
+uri vs url
+
+
+
+request mapping 
+propogation level isolation level 
+@transectional 
+hibernate validation
+
+difference between request param and path variable 
+marshelling unmarshelling 
