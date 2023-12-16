@@ -11,9 +11,6 @@ propogation level isolation level
 hibernate validation
 
 
-
-
-
 difference between request param and path variable 
 marshelling unmarshelling 
 
@@ -23,3 +20,68 @@ flat map==flatten + mapping
 abstraction advantages
 inheritance advantages
 
+============================================================================================================================================================================================
+
+self intro 
+
+daily standup meeting 
+
+day to day shedule 
+
+project 
+
+roles and responsibilities 
+
+
+agile methodology 
+how many sprint you have worked on  
+hasrole()
+haspermission()
+
+
+
+============================================================================================================================================================================================
+
+slf4j
+log4j
+
+
+
+enhancement 
+change request 
+defect fixetion
+development
+ 
+
+
+always check for acceptance criteria in jeera tickets 
+
+
+
+
+roles and responsibility 
+
+==>SDLC - REQUIREMENT GATHER AND ANALYSIS (from client )     new feature and he explains the go through or the functionality of the feature i.e functional requirements 
+								WE care for the technical approches 
+	
+	ETA - estimate time analysis 
+	ESTIMATES 
+
+==> DEVELOPMENT OR CODING 
+
+==> TESTING 
+
+==> DEFECT FIXING 
+
+==> NEW ENHANCENMENT 
+
+
+
+
+
+GROOMING (FUNCTIONALITY EXPLAINED )
+SPRINT PLANNING
+PEER TESTING (UNIT TESTING AND INTEGRATION TESTING)
+CODE COMMIT TO DEV 
+DEV TO QA 
+ 

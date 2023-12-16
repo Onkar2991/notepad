@@ -1,0 +1,42 @@
+Jasper Reports
+==================
+
+
+==> Jasper reports is a open source java reporting tool that can write to a variety of targets such as Screens , Printers into PDF , HTML , Microsoft Excel , RTF , ODT, Comma seperated    values (CSV) , or XML files 
+
+
+==> It can be used in java embeded applications including java enterprise applications or web applications to generate dynamic content 
+
+==> it reads its intrunctions from XML or .jasper file(.jrxml)
+
+
+==> japer reports 
+
+	==> Reposiratory explorer > file > new reports > select any templete > file name to be saved( extension must be .jrxml) > choose data adapter
+		> select public>> table >> select any table >> run a query for selected table >>select fields >> finish 
+	 
+	==> edit the names which you want (field names must be same as mentioned in the entity class ) 
+	
+	==> create one file in resource package with name and extension will be jrxml , it will contain the source file of jasper report which we get from jasper reporting tool
+	
+	==> Add the jasper dependency in pom.xml
+
+	==> remove query string as we dont want to get the data from inbuild db of jasper reporting tool , we want it from our application 
+
+	==> mention all the field names in field tag and mention the class path and datatype in the class variable in field tag i.e (java.lang.String,java.lang.Integer, etc) for each field 
+
+	==> in detail tag , mention the same names as mentioned in the fields section as we have to map it to our application
+
+	==> Create a service for the report 
+			
+			==> first get all the data of employess or anything whichever you want(List )
+
+			==> then we have to load the jrxml file and compile it
+				
+				==> File file = resourceUtil.getFile(resourcelocation:"classpath:(name of jrxml file with extension)) to get or load the file 
+				
+				==> JaperReport jas perreport = JasperCompileManager.compileReport(japerDesign: file.getAbsolutePath()) for compiling the report 	
+		
+				==> JRBeanCollectionDatasource datasource = new JRBeanCollectionDatasource()
+			
+		

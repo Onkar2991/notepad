@@ -14,8 +14,8 @@ Spring boot
 
 
 Q> can we configure external server in spring boot application ?
-Q > in how many ways we can create aspring boot application 
-Q> sexplain @Springboot applicaytion annotation?
+Q> in how many ways we can create a spring boot application 
+Q> explain @Springboot application annotation?
 Q> what do you mean by starter dependancies ?
 Q> current spring boot version you worked on 
 Q> advantages and disadvantages 

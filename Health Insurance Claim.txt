@@ -1,0 +1,341 @@
+health insurance claim 
+================================
+
+==> two types of claim processes 
+
+
+1> CASHLESS:->
+================
+	   ==> cashless insurance claim process occurs when the insurance company has tie up with the hospitals 
+	   ==> they have their hospital network list if the hospital comes in this list then the cashless claim process occurs  
+	   ==> TPA (third party administrative)  desk they will contact to the insurance company 
+	   ==> insurance company will check the details and give the initial approval for the treatment 
+		initial approval will have a estimated amount  
+	   ==> the final approval will be given at the time of patient discharge and it will have the full amount to be imbursed to the hospital
+	   ==> the minimum turn around time for the approval of the claim is 30 min to 4 hours if they need any clarification on the claim they will ask for it and then it will be approved
+
+
+	   ==> there are some non payable items which are not covered in the insurance policy so this non payable items bills has to paid by the insurance claimer  
+
+
+	DOCUMENSTS
+	===========
+		==> health insurance policy and health card 
+		==> id proof 
+
+
+
+	PRE-AUTHORISATION TRAETMENT:->
+	================================
+	
+	==> you will notify the insurance company about the treatment before admitting to the hospital OR planned hospitalization and give them the estimation and doctors prescription or 	    doctors treatment details 
+	==> they will check and approve the claim 
+-	==> it will be valid for  7-10 days differs in insurance company and then you can do the treatment 
+
+
+ 
+	
+2> REIMBURSEMENT:->
+===================== 
+
+	==> here you have to pay for the bills and then you give the bills to insurance company for reimbersement
+	==> turn around time will be 20 - 30 working days 
+
+	DOCUMENTS:->
+	=============
+		==> original bills of everything (reports tests bills etc )
+
+
+
+
+
+
+
+
+
+
+
+
+
+PRIMIUM CALCULATIONS:->
+==========================
+
+==> NET PRIMIUM 
+		==> 
+
+
+
+
+
+==> GROSS PREMIUM
+
+	
+
+==> PRIMIUMS can be calculated on the basis of following :->
+	
+	==> age :->
+		
+		==> age is directly praportional to primium i.e age less premium less age high prmium high
+
+	==> medical history :->
+		
+		==> if a person has previous medical history like heart problems diabeties etc in such cases the premium is high as the risk of life is high 
+
+	==> tenure :-> 
+		==> if a person buys a policy for more than 2 or 3 years it will make sure the company that the person is associated with the company for long duration (assurance )
+		
+		==> generally health insurance premiums are yearly based so if a person buys an policy for more than one year the company will give the discounts on premium for the person 
+		
+		==> higher the tenure lesser the premium 
+
+	==> add on benifits opted :->
+				==> critical illness rider 
+				==> personal accident rider 
+				==> hospital daily cash raider
+
+		==> by opting this types of add on in health insurance the customer can increase coverage of its insurance claim
+		
+		==> by opting such add on's customers premium is increased 
+	
+	
+	==> savings and investments :-> 
+		
+		==> insurance company's invests its capital funds into public sector domains , how much return the company can achieve from tis type of domains can also determines the 		    value of premiums 
+
+
+	==> Mortality rate :->
+		
+		==> it is key factor in calculating premiums.
+		
+		==>  it is a factor by which we can define the life expectancy of a customer and the according to that premiums can be calculated 
+
+		==> in this some insurance company first checks the customers medical helathat home or they will tell to do it , if some health issues detected they increases premium.
+
+
+
+
+
+
+
+
+TABELS:->  https://chat.openai.com/share/9b2902ec-1ff6-4c4d-88a1-49404b7c4fe0 
+=============
+
+==> ClaimInformation:
+		==> Contains general information about each claim.
+
+
+==> ClaimDetails:
+		==> Stores detailed information related to each claim.
+
+
+==> ClaimStatus:
+		==> Tracks the status of each claim (e.g., pending, approved, denied).
+
+
+==> ClaimHistory:
+		==> Records the history of changes made to each claim.
+
+
+==> ClaimDocuments:
+		==> Manages documents associated with each claim.
+
+
+==> ClaimPayments:
+		==> Tracks payment details for each claim.
+
+
+==> ClaimParties:
+		==> Stores information about parties involved in a claim (e.g., claimant, insurer).
+
+
+==> PolicyInformation:
+		==> Contains details about insurance policies.
+
+
+==> Policyholders:
+		==> Stores information about individuals or entities holding insurance policies.
+
+
+==> CoverageDetails:
+		==> Describes the coverage associated with each policy.
+
+
+==> InsuredItems:
+		==> Records details about items or properties covered by insurance.
+
+==> UserAccounts:
+		==> Manages user accounts and access levels.
+
+
+==> AuditTrail:
+		==> Keeps a record of all changes made to the claims system for auditing purposes.
+
+
+==> CommunicationLog:
+		==> Records communication history related to claims.
+
+
+==> ExpenseDetails:
+		==> Tracks expenses associated with handling each claim.
+
+
+==> ClaimCategories:
+		==> Categorizes claims based on type or nature.
+
+
+==> PolicyPremiums:
+		==> Manages premium information associated with insurance policies.
+
+
+
+
+
+
+MODULES:->     https://chat.openai.com/share/f5dec56e-c86f-4650-851a-39ebfc89d00f
+===========
+
+==> BENIFICIARY MODULE :->
+	
+	==> Two  types 
+	 
+		==> Revocable beneficiary
+			==> ‘Revocable beneficiary’ designation gives right to the policy holder to change the beneficiary name without the consent of the named beneficiary.
+		
+		==> Irrevocable beneficiary
+			==> ‘Irrevocable beneficiary’ the policy holder has to take consent of the beneficiary before the name is changed.
+
+
+==> CRM MODULE :->
+
+
+==> Primium calculator module ==>
+
+==> user managemnt 
+		==> This module deals with the creation and management of user accounts. It includes roles and permissions to control access to different 		     oparts of the system.
+
+
+
+
+
+
+KEY DEPENDANCIES:->
+=====================
+
+==> Data Sources and Integration:
+
+		==>Integration with external data sources, such as customer databases, financial systems, and other relevant databases, is often a key dependency. The availability and 		   reliability of data from these sources can significantly impact the claim management process.
+
+
+==> Regulatory Compliance:
+
+		==>Compliance with legal and regulatory requirements is essential. Dependencies on legal updates, compliance changes, and industry standards may affect the development and 		   operation of the claim management system.
+
+
+==> User Authentication and Access Control:
+
+		==>Dependence on user authentication systems and access control mechanisms is critical for ensuring that only authorized personnel can access and modify claims data.
+
+
+==> Communication Channels:
+
+		==>Integration with communication channels, such as email, SMS, or other notification systems, is often necessary for keeping stakeholders informed about the status of 		   claims and other relevant updates. 
+
+
+==> Payment Systems:
+
+		==> Integration with payment systems is crucial for processing claim payments. Dependence on payment gateways and financial institutions should be carefully managed.
+
+
+
+
+
+
+
+
+COMMOMN EXCEPTIONS:->
+========================
+
+==> Invalid Claim Information:
+		
+		==> Incomplete or inaccurate claim forms.
+
+		==> Missing required documentation.
+
+		==> Claims with invalid or expired policy information.
+
+
+==> Policy Exceptions:
+		
+		==>Claims for events not covered by the policy.
+
+		==> Claims exceeding policy limits.
+
+		==> Claims for excluded or prohibited activities.
+
+
+==> Fraudulent Claims:
+
+		==> Claims suspected of being fraudulent or exaggerated.
+
+		==> Inconsistencies in claimant information.
+
+
+==> Processing Errors:
+
+		==> System errors during data entry or processing.
+
+		==> Mismatched claim data with policy information.
+
+
+==> Late Claims:
+		
+		==> Claims submitted beyond the specified deadline.
+
+		==> Exceptions for valid reasons, such as delays due to natural disasters or accidents.
+
+
+==> Duplicate Claims:
+
+		==> Multiple submissions of the same claim.
+		
+		==> Claims already settled or denied.
+
+
+==> Coverage Disputes:
+
+		==> Disputes between the insured and the insurer regarding coverage.
+		
+		==> Ambiguities in policy language leading to interpretation issues.
+
+
+==> Regulatory Compliance:
+
+		==> Violations of regulatory requirements in claims processing.
+
+		==> Failure to adhere to legal guidelines and industry standards.
+
+
+==> Communication Failures:
+
+		==> Inability to communicate with claimants or other involved parties.
+
+		==> Lack of response to requests for additional information.
+
+
+
+
+==> Human Errors:
+
+		==> Mistakes made by claims adjusters during the evaluation process.
+		
+		==> Errors in documentation or data entry.
+
+
+
+
+
+
+==> there is a term called hystric which will be in use when a service is down which will break the circuit roll back the changes (fallback)
+
+==> we designed the application based on the status codes if the status code is 200 (ok) then only the further process occurs other than that status code the circuit breaker will break the	cirkite leading in stopping the service   

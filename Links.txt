@@ -116,6 +116,29 @@ internal working of hashmap
 
 
 
+https://www.youtube.com/watch?v=z6gOPonp2t0&ab_channel=Amigoscode
+Test Driven Development (TDD) 
+
+
+https://medium.com/@manasdalai91/mockito-mock-spy-injectmocks-93d65ac6bada
+Mockito
+
+
+https://www.youtube.com/watch?v=QGjW5XYC3fk&ab_channel=JavaShastra
+@Mock and @injectmock difference 
+
+
+
+https://www.youtube.com/playlist?list=PLSVW22jAG8pBnhAdq9S8BpLnZ0_jVBj0c
+Spring boot microservices 
+
+
+
+https://12factor.net/
+
+12  factor app 
+
+
 ============================================================================================================================================================================================
 
 PROJECT LINKS
@@ -154,6 +177,10 @@ project architechture
 
 
 https://youtu.be/rv4LlmLmVWk?si=5CCw-aphuvnuD-Cl
+https://apisero.com/components-of-microservices-architecture/     ==> Components of microservice architecture 
+https://stackify.com/what-are-microservices/#:~:text=Microservices%20are%20an%20architectural%20style,often%20over%20messaging%20or%20HTTP
+https://www.bacancytechnology.com/blog/java-microservices
+https://guru99.com/microservices-tutorial.html
 microservices
 
 

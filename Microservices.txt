@@ -1,0 +1,8 @@
+Microservices
+==================
+
+
+monolithic vs microsercices 
+
+==> single jar or war 			==> independent packaging for each service 
+==> single repo				==> multilpe repo
