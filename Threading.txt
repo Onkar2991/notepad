@@ -8,5 +8,34 @@ Deadlock:->
 
 
 producer consumer problem:->
+================================
+
+==> the producer consumer problem is also known as Bounded Buffer Problem 
+						  =========================
+
+==> The producer consumer problem describe two processes one is producer and another one is consumer which share common fixed size buffer space used as a queue 
+	
+	==> producers work is to produce the data and put it into the buffer and start again 
+		
+	==> consumers work is to consume the data or remove the data from the same buffer in which producer puts the data 
+
+
+
+problem statement:-> producer should not try to add the data in the buffer if it is full and that the consumer should not remove the data or consume the data if the buffer is empty.   
+====================
+
+
+
+Solution:-> 
+===========
+		==> producer should go to sleep or discard the data if the buffer is full 
+	
+		==> the next time the consumer removes an item from buffer it notifies the producer who starts to fill the buffer again 
+		
+		==> similarly the consumer should go to sleeep if the buffer is empty 
+		
+		==> the next time producer puts data into buffer it wakes up the consumer 
+
+	
 
 

@@ -6,3 +6,41 @@ monolithic vs microsercices
 
 ==> single jar or war 			==> independent packaging for each service 
 ==> single repo				==> multilpe repo
+
+
+
+
+Q> retis for caching 
+
+
+
+
+
+The CAP Theorem 
+===================
+
+The CAP theorem refers to the three attributes of distributed data stores: 
+
+==> Consistency:
+		==> All reads receive the most recent write or an error.
+
+
+==> Availability: 
+		==> All reads contain data, but it might not be the most recent.
+
+
+==> Partition tolerance:
+		==>  The system continues to operate despite network failures.
+
+
+
+==> According to the CAP theorem, only two of the three properties (Consistency, Availability, and Partition-tolerance) can be guaranteed at any given time in distributed data stores, but never all three. 
+
+==> Since distributed data stores are partitioned by nature, and the assumption is that network failure will happen, partition tolerance is considered mandatory. As a result, the theorem argues that any system has to select between complete Consistency and complete Availability. 
+
+		==> Consistency + Partition Tolerance (CP):
+			==>  Every client sees the same data at a given point in time, this is mostly used with storage-based, big cache scenarios favoring consistency over availability. 
+
+
+		==> Availability + Partition Tolerance (AP): 
+			==> Every client receives a response for all read and write requests at all times, regardless of the state of any individual node in the system. This combination can be found in distributed transactional systems favoring availability over consistency. 

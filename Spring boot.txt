@@ -13,23 +13,200 @@ Spring boot
 
 
 
-Q> can we configure external server in spring boot application ?
-Q> in how many ways we can create a spring boot application 
-Q> explain @Springboot application annotation?
-Q> what do you mean by starter dependancies ?
+
+
 Q> current spring boot version you worked on 
-Q> advantages and disadvantages 
+ 
 Q> spring vs spring boot
 Q> what is devtool
+
+
+============================================================================================================================================================================================
+
+
+Q> what do you mean by starter dependancies ?
+ans:-> 
+	==> A starter dependancy is nothing but a special dependacy that aggregates commonly used dependacies for a particular feature
  
+	==> suppose you are building a Spring based web application. For this, you will need to add dependencies for spring-core, spring-web, jackson, etc. You will also need to get the 	    right versions of all these dependencies. 
+
+	==> if you use Spring Boot, it provides a single dependency called spring-boot-starter-web. You just need to add this. This will automatically add all the dependencies that are 	    required for a building a web application via Spring.
 
 
-project architecture --> monolithic application (single war file)
-		     --> ui vegla backend server vegla 
-		    --> 30-40 modules 
-		--> rest templete for inter module communication
-		--> one becomes producer and another becomes consumer 
-		--> synchronus communication 
-		--> cafka for asynchronus 
+			==> spring-boot-starter-web ==> Used to build a spring based web application. Can also be used to build a REST application
+	
+			==> spring-boot-starter-data-jpa ==> Used to add Spring Data JPA support
 
-request flow --> explain spring mvc architecture flow  
+			==> spring-boot-starter-test ==> Used to add testing support like JUnit Mockito, etc
+
+			==> spring-boot-starter-thymeleaf ==> Used to add Thymeleaf support
+
+
+ADVANTAGES:->	==> Starter dependencies speed up development
+		==> They reduce the number of dependencies required for an application
+		==> Developers do not need to know the names of the dependencies required for an application
+		==> Developers do not need to know the exact version of the dependencies to use
+
+		
+
+============================================================================================================================================================================================		
+
+Q> in how many ways we can create a spring boot application?
+Ans:-> there are three differet ways to create springboot application and they are 
+	
+	1> Using Spring Boot CLI Tool.
+	2> Using Spring STS IDE.
+	3> Using Spring Initializr Website.
+	 
+
+============================================================================================================================================================================================
+
+
+Q> explain @Springboot application annotation?
+ans:-> 
+	==> this annotation is used to mark the main classes of spring boot application 
+	 
+	==>  It encapsulates @SpringBootConfiguration, @EnableAutoConfiguration, and @ComponentScan annotations with their default attributes.
+
+			
+			==> @SpringBootConfiguration
+		
+					==> It is a class-level annotation that is part of the Spring Boot framework
+					
+					==> It implies that a class provides Spring Boot application configuration.
+	
+					==> It can be used as an alternative to Spring’s standard @Configuration annotation so that configuration can be found automatically.
+
+	
+
+			==> @EnableAutoConfiguration
+	
+					==> This annotation auto-configures the beans that are present in the classpath.
+	
+					==> we need to apply the @EnableAutoConfiguration annotation in the root package so that every sub-packages and class can be examined.
+	
+			
+			==> @ComponentScan
+	
+					==> @ComponentScan annotation is used with @Configuration annotation to specify the package for Spring to scan for components.
+	
+					==> it tells Spring in which packages you have annotated classes that should be managed by Spring. 
+
+
+============================================================================================================================================================================================
+
+
+Q> advantages and disadvantages
+
+ans:-> 
+
+ADVANTAGES:->
+==============
+
+
+==> Spring boot starter dependency which will provide the prerequired features for the springboot application 
+
+==> reduces boiler plate code
+
+==> embeded servers --> it has its embeded servers like tomcat jetty undertow so no need for external servers . tomcat server is by default enabled in spring boot 
+
+		    -->  we can easily enable or disable these servers based on our requirements. 
+
+==> easy to connect with databases '
+
+==> Default setup for testing --> spring boot provides testing java applications by providing a default setup for unit and integration testing 
+			
+			      --> spring-boot-starter-test ==> Used to add testing support like JUnit Mockito, etc
+
+==> it has spring boot actuator dependancy for application monitoring 
+
+==> increases productivity and minimizes the development time 
+
+
+Disadvantages:->
+
+==> not suitable for large scale projects 
+
+==> time consuming to convert existing or legacy spring spring applications 
+
+
+
+============================================================================================================================================================================================
+
+
+Q> What are the four core principles of springboot ?
+ans:->	 the four core principles of spring boot are as follows 
+
+	1> AUTOCONFIGURATION:-> 
+				==> spring boot provides the feature called autoconfiguration.
+		
+				==> it automatically configures the application based on the dependancies that you provided to it so that developers do not to spend time on configuring the 				    application themselves   
+				
+				==> instead of that spring boot will configure the application based on the reasonable default settings that are appropriate for the most of the application
+
+	
+	2> OPINIONATED:->
+			
+				==> springboot is opinionated framework meaning that it provides opinions about the best ways to configure and run the application
+	
+				==> Due to this developers don't need to make all the descision themselves instead they can rely on spring boots opinions to guide them in right direction
+
+	
+
+	3> CONVENTION OVER CONFIGURATION:->
+	
+				==> spring boot provides acceptable default settings for configuration this means that developers only need to provide configuration when they want to  				    override the default congigurations 
+			
+				==> this simplifies the development process 
+	
+	
+	
+	4> ELEMINATES BOILERPLATE CODE:->
+	
+				==> spring boot reduces the boilerplate code that developers need to write by providing a set of boilerplate code and abstractions so that developers can 				    focus on writting business logic insted of boiler plate code
+
+				==> example :- for jdbc connections we need to write too much of boiler plate code so instead of writing that we can conclude it into 3-4 lines in the 					    property files where we provide the values of database properties
+
+				==> It also consumes multiple Spring Framework’s annotations and provides a single annotation that saves us from manual configurations including XML based 				    configurations 
+
+  
+============================================================================================================================================================================================
+
+
+Q> can we configure external server in spring boot application ?
+ans:->
+	==> yes we can configure the external server to the spring boot application 
+
+	==> spring boot application bydefault creates the jar packaging but for adding the external server in the application we need war files 
+	
+	==> so first step is to create the packaging of war file so that we can deploy it on external server we can do that in pom.xml file 
+			
+		==> after <parent></parent> tag add another tag called <packaging> war </packaging> 
+								      ================================
+
+	==> second is to add the tomcat dependancy so that we can deploy the application on external server 
+		
+		==> <dependancy>
+		    <groupId> org.springframework.boot </groupId>
+		    <artifactId> spring-boot-starter-tomcat </artifactId>
+		    <scope> provided </scope> // for external tomcat tobe used at runtime 
+		    </dependancy>
+
+	==> third is to extend your main class to SpringBootServeletInitializer
+						 ================================
+		
+		==> override the method  called configure 
+					       ===========
+
+		==> in that method change the return statment to following 
+		
+				==> return builder.sources(application class name.class)
+
+
+==> clean the application and then create the packaging of it 
+
+==> copy the war file created in the target folder and then paste it to the external tomcats webapp folder and then run the external tomcat thats it it will create folder for the war  
+
+
+
+============================================================================================================================================================================================

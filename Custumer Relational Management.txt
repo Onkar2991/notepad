@@ -49,7 +49,7 @@ Custumer Relational Management
 
 	==> The more data your busimess gathers on consumer behaviours , patterns and pain points the better you can tailor your marketing and sales strategies to new and existing customers
 
-	==> analyatical CRM accumulates and analyze sonsumer data of various kinds including
+	==> analyatical CRM accumulates and analyze Consumer data of various kinds including
 
 		i> sales data :-> purchase and return history , brand preferences , etc
 		

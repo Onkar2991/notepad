@@ -1,5 +1,5 @@
 Links 
-=========================================================================================================================================
+============================================================================================================================================================================================
 
 https://www.oracle.com/java/technologies/javase/codeconventions-programmingpractices.html
 https://javatechonline.com/java-coding-best-practices-and-standards/
@@ -137,6 +137,22 @@ Spring boot microservices
 https://12factor.net/
 
 12  factor app 
+
+
+
+
+https://resilience4j.readme.io/docs/circuitbreaker
+resilance4j for microservices 
+
+
+
+https://medium.com/geekculture/unit-testing-of-simple-java-programs-b785a164b440
+Unit Test Cases for Simple Java Programs
+
+https://symflower.com/en/company/blog/2023/how-to-write-junit-test-cases/
+junit test cases 
+
+
 
 
 ============================================================================================================================================================================================

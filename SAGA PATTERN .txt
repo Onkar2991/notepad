@@ -1,0 +1,122 @@
+SAGA PATTERN 
+====================
+
+
+
+==> it is a design pattern that is long lived sequence of smaller transections 
+
+==> used to manage data consistancy across multilple microservices 
+
+==> each transection is executed by a single service and the state changed are broadcasted to other services involve in saga 
+
+==> alternative approch to a ACID transection model that may not be feasible in distributed environment( BCZ THERE IS NO ROLL BACK METHOD IN ACID EITHER THE TRANSECTION COMPLETES OR NOTHING HAPPENS, DUE TO WHICH THE OTHER SERVICES DOESN'T GET NOTIFIED ABOUT THE TRANSECTION COMPLETION OR FAILURE HENCE IT IS NOT FEASIBLE IN DISTRIBUTED ENVIRONMENT  )
+
+
+
+ 
+Features of SAGA Pattern
+===========================
+
+==> Coordinated transactions:
+			
+			==> The SAGA pattern provides a way to coordinate transactions that involve multiple services or processes. 
+			
+			==> The pattern defines a sequence of steps, each of which can involve a separate service or process, that are executed in a coordinated manner to complete the 			    transaction.
+
+
+
+==> Compensation and rollback: 
+			==> The SAGA pattern includes a mechanism for compensating or rolling back the transaction if one of the steps fails. This mechanism ensures that the transaction 			    remains consistent even if one or more of the steps fail.
+
+
+
+==> Distributed transactions:
+			==>  The SAGA pattern supports distributed transactions that span multiple services or processes. 
+			
+			==> The pattern provides a way to coordinate the transaction across these services or processes in a consistent manner.
+
+
+==> Asynchronous processing: 
+			==> The SAGA pattern can support asynchronous processing, which allows for greater concurrency and performance. 
+			
+			==> This is especially important in distributed systems where the processing time of different services or processes may vary.
+
+
+==> Error handling: 
+			==> The SAGA pattern provides a standardized way to handle errors that occur during the transaction. 
+			
+			==> The pattern ensures that errors are handled consistently across all services or processes involved in the transaction.
+
+
+==> Scalability: 
+			==> The SAGA pattern can scale to handle large and complex transactions that involve multiple services or processes. 
+		
+			==> The pattern provides a way to break down the transaction into smaller, more manageable steps, which can be executed in parallel across different services or 			    processes. 
+
+
+
+
+
+
+
+============================================================================================================================================================================================
+
+
+2 PHASE COMMIT PROTOCOL 
+========================
+
+==> it is pattern for distributed transections 
+
+==> it maintains ACID properties for distributed transections 
+
+==> Transection manger manages the transection in 2 phase commit
+	
+	==> first  it will prepare for commit or abort 
+	
+	==> second it will perform commit or abort 
+
+
+	==> PHASE 1:-> PREPARATION OR VOTING 
+	====================================
+		
+		==> TM (transection manager) sends query to commit to all participants 
+		
+		==> participants reply with yes or no , if it is yes then it is ready for the commit and if no the it is for abort 
+	
+		==> whatever happens the logs are maintained , undo log files are for abort (ROLLBACK) and redo log files are for commit 	
+
+		==> if the TM asks for abort or commit transection they take help from these undo logs and redo logs respectively 
+
+		==> if any of the service returns no then TM sends abort(ROLLBACK) request to all the services 
+
+
+
+	==> PHASE 2:-> Action 
+	=======================
+		
+		==> COMMIT:->
+			
+			==> TM sends COMMIT message to all the participants(services)
+			
+			==> each participants completes the operation and releases the lock and sends acknoledgement to TM
+		
+			==> TM marks the transection complete with sucess
+								   =======
+		
+		
+		==> ABORT:->
+			
+			==> TM sends abort message to all the participants 
+	
+			==> each participants aborts the operation and releases the lock and sends acknoledgement to TM
+	
+			==> TM marks the transection complete with Failure 
+								   =======
+
+
+
+==> Challenges 
+===============
+	
+	==> if there is no response form the participants services then the resources is locked untill the timeout 
+	

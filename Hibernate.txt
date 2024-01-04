@@ -84,6 +84,76 @@ hibernate configuration
 ==>An entity represents a table stored in a database. 
 
 
+
+============================================================================================================================================================================================
+
+
+@Temporal 
+
+==> it is used in case of date time and timestamp 
+
+==> it accepts only one parameter which is TemporalType which further accepts parameters like DATE , TIME and TIMESTAMP according to the underlying SQL type we want in the mapping 
+
+		==> @Temporal(TemporalType.DATE) (format ==> "yyyy-MM-dd")
+			
+		==> @Temporal(TemporalType.TIME) (format ==> "HH.mm.ss")
+
+		==> @Temporal(TemporalType.TIMESTAMP) (format ==>"HH.mm.ss.SSS")
+
+
+==> Date corresponds to the DATE SQL type, which is only a date without time.
+			   ==========
+
+==> Time corresponds to the TIME SQL type, which is a time of the day specified in hours, minutes and seconds.
+			   =========
+
+==> Timestamp includes information about date and time with precision up to nanoseconds and corresponds to the TIMESTAMP SQL type.
+					==============
+
+
+
+		--> java.util.Date
+		--> java.util.calender
+		--> java.time 
+
+ 
+============================================================================================================================================================================================
+
+@Basic 
+
+==> @Basic annotation on a field or a property signifies that its a basic type and Hibernate should use the standard mapping for its persistance 
+
+==> Its an optional annotation 
+
+==> When we dont specify the @Basic annotation for a basic type Attribute , it is implicitely assumed , and the default values of this annotation applies 
+
+==> it has two attributes optional and fetch 
+
+		==> optional attribute is boolean parameter that defines whether the marked field or property allows null. Its default value is true , if the field is not primitive type 		    the underlying column is assumed to be nullable by default 
+
+		==> fetch accepts two parameters Lazy loading and eagerly fetching 
+			==> fetchType.LAZY
+			==> fetchType.EAGER 
+
+
+============================================================================================================================================================================================
+
+Jpa @Basic 					 ||	@Column 
+						 ||
+						 ||
+attrributes of @Basic annotation is applied to   || attributes of @Column are applied to the database columns 
+jpa entities 					 ||
+						 ||
+						 ||
+@Basic annotations optional attributes defines   || @Column annotation’s nullable attribute specifies whether the corresponding database column can be null 
+whether the entity field can be null or not      ||
+						 ||	
+						 ||
+We can use @Basic to indicate that a field 	 ||The @Column annotation allows us to specify the name of the mapped database column
+should be lazily loaded				 ||
+
+
+
 ============================================================================================================================================================================================
 
 cascading types:-
@@ -192,13 +262,15 @@ CACHING:->
 
 ==>database oprerations are always expensive hence we use caching mechanism 
 
+==> we always cache the entire object in the cache memory instead of storing its properties 
+
 query optimization
 jprofilers 
 profiling tools
 thread dump
 
 
-cache Stratergy:->
+cache Stratergy:->  LRU Time basesed
 ==================
 1> cahce-aside:->
 
@@ -255,7 +327,7 @@ cache types:->
 	==>You can not disable the first-level cache			
 
 
-2> Second level cache:->
+2> Second level cache:->(ehCache(xml base))       (@Cacheble(annotation based))
 
 	==>The second-level cache is by default disabled, the developer needs to enable it explicitly, and the SessionFactory object is responsible to maintain it.
 
@@ -326,25 +398,73 @@ public void evictAllcachesAtIntervals() {
 
 
 
+============================================================================================================================================================================================
+
+
+get() method:->
+=================
+
+	==> get() method is used to retrieve a persistent object from the database. It is a member of the Session interface, and it takes the class of the object to be retrieved and the 	    primary key of the object as arguments.
+
+	==> get() method only hits the database if the object is not present in the session cache.
+		
+		==> If the same object is already present in the cache then it returns previously stored data from the cache.
+
+	==> get() method returns null if there is no object present in the database.
+				======
+	
+
+load() method:->
+=================
+	
+	==> load() method is used to retrieve an object from the database by its identifier (primary key).
+	
+	==> It is used to initialize a proxy object instead of a fully-initialized object, so it can be used to lazily load the object when it is needed.
+	
+	==> load() method does not retrieve the object from the database when it is called. Instead, it returns a proxy object that represents the object.
+
+	==> The actual object is only retrieved from the database when it is needed, such as when a method of the object is called or a property is accessed.This technique is known as 	    “lazy loading” and it is used to improve the performance of Hibernate by avoiding unnecessary database queries.
+	    ==============
+	
+	==> load() method throws ObjectNotFoundException if there is no object found in the database.
+				=========================
 
 
 
 
 
+============================================================================================================================================================================================
+
+
+HIBERNATE EXCEPTIONS:-->
+===========================
+
+
+1> MAPPING ERRORS:->
+		
+		==> AnnotationException – a problem with an annotation
+		
+		==> DuplicateMappingException – duplicate mapping for a class, table, or property name
+		
+		==> InvalidMappingException – mapping is invalid
+		
+		==> MappingNotFoundException – mapping resource could not be found
+		
+		==> PropertyNotFoundException – an expected getter or setter method could not be found on a class
+	
+	
+  
+
+2> Invalid @Entity Annotation:-> 
+	
+		==> cause for the mapping exception is simply an entity class missing the @Entity annotation:
+
+		==> Another possibility is that it may have the wrong type of @Entity annotation: (always use javax.persistance.Entity)
 
 
 
 
-
-
-
-
-
-
-
-
-
-
+3> 
 
 
 
