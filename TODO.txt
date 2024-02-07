@@ -18,3 +18,21 @@ coockies
 junit5
 
 ModelAttribute class
+
+
+
+Q> single responsibility principle  vs interface segregation principle  
+Q> difference between abstract class and interface after java8
+Q> di vs ioc 
+Q> jpa vs hibernate 
+Q> is it manadatory to implement interface methods when we implement an abstract class to interface ?
+
+==> ISP is more focused on the client-side point-of-view.
+==> SRP is more focused on the designer-side point-of-view
+
+
+==> SRP is concerned with what a module does, and how it is done, disallowing any mix of abstraction levels.18601801295
+==> ISP is concerned with how a module should be consumed,
+
+==> ISP generalizes into: “Don’t depend on more than you need.” 
+==> SRP generalizes to “Gather together things that change for the same reasons and at the same times.”
