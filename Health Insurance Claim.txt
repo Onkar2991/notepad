@@ -13,6 +13,25 @@ project architecture --> monolithic application (single war file) (migration)
 request flow --> explain spring mvc architecture flow  
 
 
+==> roles and responsibility
+
+	==> team member         ==> participating in sprint planning (story spill over)(depdends on complexity of the story) 
+				==> requirement analysis of the story 
+				==> development 
+				==> local or peer testing 
+				==> junit or sonar voilations 
+				==> demo for client 
+
+
+==> project title 
+==> role
+==> technologies 
+==> discription
+==> overall modules and then mention the modules you worked on 
+
+
+
+
 ==> team size vary between 10-15 , manager lead (scrum - manager ) 8- dev 4-QA business analyst for functional roles for technical lead
 
 ==> for performance optimization 
@@ -65,66 +84,8 @@ request flow --> explain spring mvc architecture flow
 	DOCUMENTS:->
 	=============
 		==> original bills of everything (reports tests bills etc )
-
-
-
-
-
-
-
-PRIMIUM CALCULATIONS:->
-==========================
-
-==> NET PRIMIUM 
-		==> 
-
-
-
-
-
-==> GROSS PREMIUM
-
 	
 
-==> PRIMIUMS can be calculated on the basis of following :->
-	
-	==> age :->
-		
-		==> age is directly praportional to primium i.e age less premium less age high prmium high
-
-	==> medical history :->
-		
-		==> if a person has previous medical history like heart problems diabeties etc in such cases the premium is high as the risk of life is high 
-
-	==> tenure :-> 
-		==> if a person buys a policy for more than 2 or 3 years it will make sure the company that the person is associated with the company for long duration (assurance )
-		
-		==> generally health insurance premiums are yearly based so if a person buys an policy for more than one year the company will give the discounts on premium for the person 
-		
-		==> higher the tenure lesser the premium 
-
-	==> add on benifits opted :->
-				==> critical illness rider 
-				==> personal accident rider 
-				==> hospital daily cash raider
-
-		==> by opting this types of add on in health insurance the customer can increase coverage of its insurance claim
-		
-		==> by opting such add on's customers premium is increased 
-	
-	
-	==> savings and investments :-> 
-		
-		==> insurance company's invests its capital funds into public sector domains , how much return the company can achieve from tis type of domains can also determines the 		    value of premiums 
-
-
-	==> Mortality rate :->
-		
-		==> it is key factor in calculating premiums.
-		
-		==>  it is a factor by which we can define the life expectancy of a customer and the according to that premiums can be calculated 
-
-		==> in this some insurance company first checks the customers medical helathat home or they will tell to do it , if some health issues detected they increases premium.
 
 
 
@@ -208,7 +169,13 @@ MODULES:->     https://chat.openai.com/share/f5dec56e-c86f-4650-851a-39ebfc89d00
 ===========
 
 ==> BENIFICIARY MODULE :->
-	
+
+
+	TABLE NAME:-> BENIFICIARY
+	==============
+
+
+
 	==> Two  types 
 	 
 		==> Revocable beneficiary
@@ -217,11 +184,133 @@ MODULES:->     https://chat.openai.com/share/f5dec56e-c86f-4650-851a-39ebfc89d00
 		==> Irrevocable beneficiary
 			==> ‘Irrevocable beneficiary’ the policy holder has to take consent of the beneficiary before the name is changed.
 
+	
+	
+  API FOR BENIFICIERY MODULE 
+  ===========================
+	
+	==> CREATE BENIFICIERY 	
+	
+		==> ENDPOINT --> POST /api/beneficiaries/ 
+	
+		==> Description--> Create a new beneficiary.
+	
+		==> Request body: Information about the beneficiary (e.g., name, contact details, relationship to the policyholder).
+
+	
+	
+	==> Get Beneficiary Details:
+
+		==> Endpoint: GET /api/beneficiaries/{beneficiary_id}
+
+		==> Description: Retrieve details of a specific beneficiary.
+	
+		==> Parameters: beneficiary_id - Identifier for the beneficiary.
+
+	
+	
+	==> Update Beneficiary:
+	
+		==> Endpoint: PUT /api/beneficiaries/{beneficiary_id}
+	
+		==> Description: Update information for a specific beneficiary.
+	
+		==> Parameters: beneficiary_id - Identifier for the beneficiary.
+
+	
+	
+	==> Delete Beneficiary:
+
+
+		==> Endpoint: DELETE /api/beneficiaries/{beneficiary_id}
+
+		==> Description: Remove a beneficiary from the system.
+	
+		==> Parameters: beneficiary_id - Identifier for the beneficiary.
+
+
+
+
+
+
+
 
 ==> CRM MODULE :->
 
 
 ==> Primium calculator module ==>
+
+
+	TABLE NAME:->   PREMIUM_CALCULATION 
+	==============
+
+
+PRIMIUMS can be calculated on the basis of following :->
+=========================================================
+	
+	==> age :->
+		
+		==> age is directly praportional to primium i.e age less premium less age high prmium high
+
+	==> medical history :->
+		
+		==> if a person has previous medical history like heart problems diabeties etc in such cases the premium is high as the risk of life is high 
+
+	==> tenure :-> 
+		==> if a person buys a policy for more than 2 or 3 years it will make sure the company that the person is associated with the company for long duration (assurance )
+		
+		==> generally health insurance premiums are yearly based so if a person buys an policy for more than one year the company will give the discounts on premium for the person 
+		
+		==> higher the tenure lesser the premium 
+
+	==> add on benifits opted :->
+				==> critical illness rider 
+				==> personal accident rider 
+				==> hospital daily cash raider
+
+		==> by opting this types of add on in health insurance the customer can increase coverage of its insurance claim
+		
+		==> by opting such add on's customers premium is increased 
+	
+	
+	==> savings and investments :-> 
+		
+		==> insurance company's invests its capital funds into public sector domains , how much return the company can achieve from this type of domains can also determines the 		    value of premiums 
+
+
+	==> Mortality rate :->
+		
+		==> it is key factor in calculating premiums.
+		
+		==>  it is a factor by which we can define the life expectancy of a customer and the according to that premiums can be calculated 
+
+		==> in this some insurance company first checks the customers medical helath at home or they will tell to do it , if some health issues detected they increases premium.
+
+
+
+
+    API FOR PREMIUM CALCULATION:-> 
+  =================================
+
+
+
+	==> Endpoint:POST /api/premium/calculate
+	
+	==> Parameters:
+		
+		==> Policy details (e.g., coverage type, policy duration, insured amount)
+		
+		==> Insured details (e.g., age, health condition)
+	
+	==> Response: Calculated premium amount
+
+
+
+
+
+
+
+
 
 ==> user managemnt 
 		==> This module deals with the creation and management of user accounts. It includes roles and permissions to control access to different 		     
@@ -346,3 +435,73 @@ COMMOMN EXCEPTIONS:->
 ==> there is a term called hystric which will be in use when a service is down which will break the circuit roll back the changes (fallback)
 
 ==> we designed the application based on the status codes if the status code is 200 (ok) then only the further process occurs other than that status code the circuit breaker will break the	circuit  leading in stopping the service   
+
+
+
+
+
+
+API'S USED IN THE APPLICATION 
+==============================
+
+
+https://chat.openai.com/share/2abbba90-bc05-4fc3-85b0-92d4c7b1b99f
+
+
+==> Reporting API'S
+		
+		==> includes the api's to for generating and retrieving reports related to claim data .
+	
+		==> this can be useful for the analytics , complience and descision-making purpose
+		
+
+==> Audit Trail APi's 
+	
+		==> api's to track and log changes made to claim data	
+
+		==> useful for analytics and descision making purpose 
+
+
+==> Notification Api's
+	
+		==> api for sending notifications to the user whether to sms , email, or other communication channels 
+	
+		==> important for keeping users informed about the status of their claims 
+
+
+==> Database api's
+
+		==> utilized this apis for interacting with the relational databases 
+
+
+==> File storage api's 
+
+		==> our system requires document uploads and storage , so that we need some file storage 
+	
+		==> we used amazon S3 buckets to store the data   
+
+
+
+==> Payment gateway api's
+	
+		==> claim amount has to be transfered to the insurer or the respective person so we need financial transections to make the payments 
+	
+		==> so there are some payemnt gateway apis for that .
+
+
+
+
+
+============================================================================================================================================================================================
+
+
+Q> Does beneficiary have to pay tax on the proceeding of life insurance policy?
+ans:->  Generally, the benefits on the life insurance policy are tax free and the beneficiary is not liable to pay any tax after the death of the policy holder. But if you are changing you	beneficiary for monetary gain or other purposes then the beneficiary has to pay tax on it.
+
+
+
+Q> What does it mean when company says “no physical exam”?
+ans:->  Such insurance company that says,“No physical exam” gives freedom to the policyholder to take policy and exempt the physical test that is mandatory by certain life insurance  	company.Normally, such insurance company is more expensive and the insured has to pay a higher premium on their policy.
+
+
+Q> 

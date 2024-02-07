@@ -28,6 +28,11 @@ i> Singleton:->
 
 
 
+==> make constructor private
+
+==> write a static methods that has return type of object of this singletone class  
+
+
 
 ii> Factory:->
 ===============

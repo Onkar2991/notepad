@@ -336,6 +336,33 @@ cache types:->
 	==>once the session factory is closed all the cache associated with that is also removed from the memory.
 
 
+	==> cache providers in second level cache 
+			
+	
+		==> EH cache :-> 
+	
+				==> efficient memory caching solution for hibernate 
+				==> it has features like expiration policies , distributed caching and persistant caching (like session)
+
+		
+		==> infispan :-> 
+
+
+	working :->	
+	============
+		
+		==> a request is made to fetch an entity or execute query
+		
+		==> cache lookup 
+
+		==> database queary
+	
+		==> cache eviction
+
+		==> cache expiration 	
+
+
+
 
 Note:->
 =========
@@ -466,6 +493,9 @@ HIBERNATE EXCEPTIONS:-->
 
 3> 
 
+
+
+============================================================================================================================================================================================
 
 
 

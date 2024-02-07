@@ -1,0 +1,189 @@
+Idempotency:-> 
+===============
+
+==> Idempotency means that sending the same request multiple times will produce the same result, without changing the state of the server or the resource. 
+
+==> HEAD, OPTIONS , GET , PUT , and DELETE are idempotent methods, because they always return the same resource, update the same resource, or remove the same resource
+
+	
+	==> POST  will update the rows in the databses whenever we we post it multiple times , hence it is Non-Idempotent method
+ 
+	==> PATCH is also idempotent 
+
+
+
+============================================================================================================================================================================================
+
+
+
+API:->(Application Programming Interface)
+=========================================
+
+
+==> API is gateway between the client and the resource or you can say that it is used to communicate between two software systems
+
+==> clients are the users who want to access informationm
+
+==> resources are the information that the clients require 
+
+
+
+============================================================================================================================================================================================
+
+
+
+SOAP API'S (Simple Object Access Protocol)
+===============================================
+
+==> SOAP apis are developed in structural and formalized way 
+
+==> it is a Architectural pattern and are not as closely alligned with HTTP requsts 
+
+==> SOAP uses XML as the data format for messages being sent and received by an api  client
+
+==> it provides four distinct dimentions ot the api control
+	
+	==> ENVELOPE:-> Defining the structutre of the message 
+	
+	==> ENCODING:-> Rules for expressing the type of data.
+	
+	==> REQUEST:-> How each SOAP API request is structured.
+	
+	==> RESPONSE:-> How each SOAP API response is structured. 
+
+
+USECASE
+=======
+
+==> SOAP utilizes XML as part of a standard communication protocol that allows for the exchange of structured information in distributed environments. 
+
+==> SOAP lets applications that are running on different operating systems and in different programming languages communicate with each other.
+
+
+
+BENIFITS:->
+============
+
+==> SOAP is also known for extensibility as it has other approches for delivering API'S , it uses HTTP for transport but it can also leverage 
+	
+	==> simple mail transport protocol (SMTP)
+	
+	==> transmission control protocol (TCP) 
+	
+	==> user data protocol (UDP)
+
+		to pass messages Back and forth , this allows for more flexibility when it comes to moving data ,content , and media 
+
+
+==> SOAP is language, transport, and even platform independent, whereas REST requires the use of HTTP.
+
+==> SOAP is very secure, which makes it perfect for systems that handle sensitive data, such as financial services and online banking applications.
+
+==> SOAP works well in distributed enterprise environments, instead of depending on direct point-to-point communication.
+
+==> SOAP has built-in error handling features, which makes it easy to understand what happened when a request fails.
+
+
+
+
+Disadvantages of SOAP:-> 
+=========================
+
+==> SOAP does not support caching API calls.
+
+==> SOAP is much more complicated than REST, which can have performance implications.
+
+==> SOAP is much less adaptable than REST.
+
+==> SOAP is usually slower than REST.
+
+
+
+SOAP API use cases:->
+=========================
+
+Some of the most common use cases for SOAP APIs include:
+
+==> Transfers at banks:
+		
+		==> Bank transfers require communication between different banks or bank branches, which may involve multiple calls to different web services. Security is also extremely important for this use case.
+
+
+==> Booking flights: 
+		
+		==> Much like with bank transfers, different web services must be called to check availability and flight pricing information.
+
+
+==> Billing services:
+		
+		==> People who work in fields like telecommunication operations need to connect with numerous systems to generate billing information, which often includes sensitive data.
+
+
+==> Navigation companies:
+		
+		==> Shipping and transport companies need to combine information from lots of different sources to calculate the best routes possible.
+
+
+==> City management: 
+		
+		==> SOAP APIs connect many city management processes to ensure the city is run properly. All of these processes— from traffic light management to sewage system operations—need to work in a predictable way.
+
+
+
+EXAMPLE 
+===========
+
+Request:->
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+ <soap:Body>
+  <IsValidISBN10 xmlns="http://webservices.daehosting.com/ISBN">
+   <sISBN>0-19-852663-6</sISBN>
+  </IsValidISBN10>
+ </soap:Body>
+</soap:Envelope>
+
+
+
+
+Response:-> 
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <m:IsValidISBN10Response xmlns:m="http://webservices.daehosting.com/ISBN">
+         <m:IsValidISBN10Result>true</m:IsValidISBN10Result>
+      </m:IsValidISBN10Response>
+   </soap:Body>
+</soap:Envelope>
+
+
+
+
+
+============================================================================================================================================================================================
+
+
+REST API:->
+============
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+============================================================================================================================================================================================
+

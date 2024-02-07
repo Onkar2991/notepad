@@ -1,0 +1,17 @@
+JAVA 8 :->
+
+predicate--> filter()     ==> boolean test()
+
+Function-->map()	  ==>aaply()  ==> returns a result in specific type by accepting parameters 
+
+Consumer--> ForEach()	  ==> voidAccept() ==> returns nothing 
+
+Supplier--> generate()	  ==> get()    ==>
+ 
+Comparator--> sorted()	
+
+BinaryOperator--> reduce()	==> arguments and result should be of same type 
+
+BiFunction--> collect()		==> apply() ==> accepts two arguments 
+
+UnaryOperator--> Iterate()

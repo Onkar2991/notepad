@@ -35,3 +35,8 @@ ask for logs if the code is fatal at prod environment
 
 project architecture
 
+
+
+
+ocr service (optical character recognation)
+

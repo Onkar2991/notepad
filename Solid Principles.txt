@@ -12,7 +12,10 @@ D ==> dependancy injection
 
 ==> single responsibility
 		
-		==> it should not have more than one task 
+		==> it should not have more than one task to perform 
+	
+		==>  a class should only have one responsibility or functionality 
+
 
 
 ==> open close 
@@ -21,22 +24,28 @@ D ==> dependancy injection
 		
 		==> close for modification
 
+		==> by applying this principle we stop ourselves from modifying existing code and causing potential new bugs in the application 
+
 
 ==> liskov substitution 
 	
-	coding to interface principle 
+		==> this principle follows coding to interface principle 
 		
-		==> 
+		==> if a class A is subtype of class B then we should be able to replace class A without disrupting the behaviour of program 
 
 
 
 ==> interface segregation 
 		
-		==> 
+		==>  larger interfaces should be split into smaller ones.
+		
+		==> By doing so, we can ensure that implementing classes only need to be concerned about the methods that are of interest to them.
 
 
 
-==> 
+==> Dependancy Inversion :-> 
+
+		==> The principle of dependency inversion refers to the decoupling of software modules. This way, instead of high-level modules depending on low-level modules, both will 		    depend on abstractions.
 
 
 
@@ -74,5 +83,422 @@ Isolation levels     and   prapogation level
 
 Transection Isolation levels:->
 ==============================
+
+
+==> in order to maintain consistancy in database , transection follows ACID properties 	in that isolation determines how transection integrity is visible to other users and systems.
+
+
+==> The choice of isolation level depends on the specific requirements of the application. Higher isolation levels offer stronger data consistency but can also result in longer lock times     	and increased contention, leading to decreased concurrency and performance.
+
+
+==> Lower isolation levels provide more concurrency but can result in data inconsistencies.
+
+
+==> a transection isolation level is defined on the following phenomina 
+
+	1> Dirty Read 
+
+		==> it is a situation where a transection reads a data which is not yet committed 
+	
+		==> ex:-> if transection1 updates a row and leaves it uncommited meanwhile transection2 reads the updated row 
+				
+			  if the transection1 rolls back the changes then transection2 will have the data which doesnt even existed
+
+	
+
+	2> Non Repeatable read 
+
+		==> it happens when a transection reads the same row twice and gets different outputs
+
+		==> ex:-> T1 reads a row and T2 updates the same row and after that T1 reads the same row then T1 will get the updated row after reading the same row 
+
+
+
+	3> Phantom read
+		
+		==> when two same queries are executed for a same transection but the rows retrived by the two , are different then it is said Phantom read 
+	
+		==> ex:-> transaction T1 retrieves a set of rows that satisfy some search criteria then Transaction T2 generates some new rows that match the search criteria for 				  transaction T1. 
+
+		      --> If transaction T1 re-executes the statement that reads the rows, it gets a different set of rows this time.
+
+
+
+==> Based on the above phenomenas isolation levels are divided into four types
+
+
+	i> Read Uncommited 
+
+		==> it is the lowest Isolation level 
+
+		==> in this isolation level the transection may read the uncommited changes made by another transections , hence allows Dirty Reads
+
+		==> in this level of isolation , transections are not isolated form each other 
+		
+		==> This can result in dirty reads, non-repeatable reads, and phantom reads.
+		
+	
+	ii> Read Commited 
+
+		==> this isolation level guarentees that any data read is committed at the moment it is read 
+	
+		==> thus it does not allow dirty read 
+		
+		==> the transection holds read or write lock on current row , and thus prevents other transections from reading or updating or deleting the row 
+
+		==> This eliminates dirty reads but can still result in non-repeatable reads and phantom reads.
+	
+	
+	iii> Repeatable Read 
+
+		==> this is the most restrective isolation level
+	
+		==> this transection holds read lock on all the rows it is references and write locks on referenced rows for update and delete actions 
+	
+		==> since other transections cannot read , update or delete  these rows  thats why it avoids non-repeatable reads
+
+		==> phantom reads are still possible.
+
+	
+	
+	iv> Serializable 
+
+		==> this is the highest isolation level 
+	
+		==> a serializable execution is guarenteed to be serializable 
+	
+		==>  All transactions must be executed sequentially
+
+		==> it avoids dirty reads , non-repeatable reads and phantom reads 
+
+
+
+==> some DBMS may also support additional custom isolation levels or features such as snapshot isolation and multi-version concurrency control (MVCC) that provide alternative solutions to 	the problems addressed by the standard isolation levels.                             ====================    ========================================
+		 
+
+	==> SnapShot isolation level 
+  	   ===========================
+
+		
+		==> it is the best example for the multi-version concurrency control
+
+		==> Transactions in Snapshot have two important timestamps, a read timestamp R and a write timestamp W. All read operations after R can only read the data committed before 		    R. 
+
+		==> Snapshot allows two transactions that do not have a write intersection to execute simultaneously and in parallel.
+	
+		==> when a write operation is committed, the new data is saved in the new version while the old one is not covered, which is what we call MVCC (Multiversion concurrency 		    control).
+
+		==> MVCC works mainly when there is a conflict between read and write operations, allowing two seemingly conflicting transactions to execute concurrently.
+
+		==> MVCC also requires garbage collection, otherwise too much old version data will take up unnecessary storage space.
+
+		==> question is, how do you determine whether a version of data can be deleted? The answer is that it can be deleted when all read operations involved in such version of 		    data are completed, provided that there is a newer version of data ahead.
+
+
+
+
+Advantages of Transaction Isolation Levels:
+===========================================
+
+==> Improved concurrancy: 
+			
+		==> Transaction isolation levels can improve concurrency by allowing multiple transactions to run concurrently without interfering with each other.
+	
+
+==> control over data consistancy:
+	
+		==> Isolation levels provide control over the level of data consistency required by a particular application.
+
+
+==> Reduced data anomalies:
+
+		==> The use of isolation levels can reduce data anomalies such as dirty reads, non-repeatable reads, and phantom reads.
+
+
+==> Flexibility: 
+		==> The use of different isolation levels provides flexibility in designing applications that require different levels of data consistency.
+
+
+
+
+
+Disadvantages of Transaction Isolation Levels:
+===============================================
+
+==> Decreased concurrency: 
+		==> Some isolation levels, such as Serializable, can decrease concurrency by requiring transactions to acquire more locks, which can lead to blocking.
+ 
+
+==> Limited support: 
+		==> Not all database management systems support all isolation levels, which can limit the portability of applications across different systems.
+
+
+==> Complexity: 
+		==> The use of different isolation levels can add complexity to the design of database applications, making them more difficult to implement and maintain
+
+
+==> Increased overhead:
+		==> The use of isolation levels can increase overhead because the database management system must perform additional checks and acquire more locks.
+
+
+
+
+
+
+
+
+
+============================================================================================================================================================================================
+
+
+
+TRANSECTION PROPOGATION:->
+==================================
+
+
+==> Transaction propagation is the ability to maintain the integrity of transactions when multiple transactions are running simultaneously.
+
+==> It defines how a transaction should behave when it is executed within the context of an existing transaction.
+
+==> Propagation defines our business logic’s transaction boundary. Spring manages to start and pause a transaction according to our propagation setting.
+
+==> There are different levels of transection prapogation and they are as follows
+
+
+
+
+1) REQUIRED propogation :->
+============================
+
+
+
+==> It is the deault propogation . 
+
+==> Spring checks if there is active transection , and if the transection doesnt exists , it creates a new transection 
+
+==> if the transection exists , the business logic appends to currently active transection 
+
+
+Example:->
+------------
+
+
+@Transactional(propagation = Propagation.REQUIRED)
+public void requiredExample(String user) { 
+    // ... 
+}
+
+
+
+==>  REQUIRED is the default propagation, we can simplify the code by dropping it:
+
+
+@Transactional
+public void requiredExample(String user) { 
+    // ... 
+}
+
+
+
+==> internally it works as follows
+
+
+if (isExistingTransaction()) {
+    if (isValidateExistingTransaction()) {
+        validateExisitingAndThrowExceptionIfNotValid();
+    }
+    return existing;
+}
+return createNewTransaction();
+
+
+
+
+
+
+2) SUPPORTS Propagation:->
+===========================
+
+==> Spring first checks if an active transaction exists. If a transaction exists, then the existing transaction will be used. If there isn’t a transaction, it is executed non-transactional
+
+
+Example:-
+------------
+
+
+@Transactional(propagation = Propagation.SUPPORTS)
+public void supportsExample(String user) { 
+    // ... 
+}
+
+
+
+
+if (isExistingTransaction()) {
+    if (isValidateExistingTransaction()) {
+        validateExisitingAndThrowExceptionIfNotValid();
+    }
+    return existing;
+}
+return emptyTransaction;
+
+
+
+
+
+
+
+3)MANDATORY Propagation:->
+=============================
+
+
+==> When the propagation is MANDATORY, if there is an active transaction, then it will be used. If there isn’t an active transaction, then Spring throws an exception:
+
+
+Example:->
+-------------
+
+
+@Transactional(propagation = Propagation.MANDATORY)
+public void mandatoryExample(String user) { 
+    // ... 
+}
+
+
+
+
+if (isExistingTransaction()) {
+    if (isValidateExistingTransaction()) {
+        validateExisitingAndThrowExceptionIfNotValid();
+    }
+    return existing;
+}
+throw IllegalTransactionStateException;
+
+
+
+
+4) NEVER propagation:->
+===========================
+
+
+==> Spring throws an exception if there’s an active transaction:
+
+
+Example:->
+-----------
+
+@Transactional(propagation = Propagation.NEVER)
+public void neverExample(String user) { 
+    // ... 
+}
+
+
+
+if (isExistingTransaction()) {
+    throw IllegalTransactionStateException;
+}
+return emptyTransaction;
+
+
+
+
+5)NOT_SUPPORTED Propagation:->
+=================================
+
+
+==> If a current transaction exists, first Spring suspends it, and then the business logic is executed without a transaction:
+
+
+Example:->
+-------------
+
+
+@Transactional(propagation = Propagation.NOT_SUPPORTED)
+public void notSupportedExample(String user) { 
+    // ... 
+}
+
+
+==> The JTATransactionManager supports real transaction suspension out-of-the-box. Others simulate the suspension by holding a reference to the existing one and then clearing it from the thread context
+
+
+
+
+
+6) REQUIRES_NEW Propagation:->
+================================
+
+==> When the propagation is REQUIRES_NEW, Spring suspends the current transaction if it exists, and then creates a new one:
+
+
+Example:->
+-------------
+
+
+
+@Transactional(propagation = Propagation.REQUIRES_NEW)
+public void requiresNewExample(String user) { 
+    // ... 
+}
+
+
+==> NOT_SUPPORTED, we need the JTATransactionManager for actual transaction suspension.
+
+
+if (isExistingTransaction()) {
+    suspend(existing);
+    try {
+        return createNewTransaction();
+    } catch (exception) {
+        resumeAfterBeginException();
+        throw exception;
+    }
+}
+return createNewTransaction();
+
+
+
+
+
+7) NESTED Propagation:->
+=========================
+
+
+==> For NESTED propagation, Spring checks if a transaction exists, and if so, it marks a save point. 
+
+==> This means that if our business logic execution throws an exception, then the transaction rollbacks to this save point. 
+
+==> If there’s no active transaction, it works like REQUIRED. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

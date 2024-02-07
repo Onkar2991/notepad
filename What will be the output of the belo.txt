@@ -1,0 +1,344 @@
+What will be the output of the below program?
+public class StrEqual {
+    public static void main(String[] args) {
+        String s1 = "hello";
+        String s2 = new String("hello");
+        String s3 = "hello";
+        if (s1 == s2) {
+            System.out.println("s1 and s2 equal");
+        } else {
+            System.out.println("s1 and s2 not equal");
+        }
+        if (s1 == s3) {
+            System.out.println("s1 and s3 equal");
+        } else {
+            System.out.println("s1 and s3 not equal");
+        }
+    }
+}
+
+
+
+
+
+ans ==> s1 and s2 not equal
+	s1 and s3 equal
+
+
+
+=======================================================================
+
+
+public class A { 
+    public static void main(String[] args) 
+    { 
+        if (true) 
+            break; 
+    } 
+}
+
+
+ans ==> error break should be used outside the loop 
+
+
+=============================================================================
+
+
+public class Test {
+    public static void main(String[] args) {
+        String s = new String("5");
+        System.out.println(1 + 10 + s + 1 + 10);
+    }
+}
+
+ans ==> 115110
+
+
+===================================================================================
+
+
+
+public class Test 
+{ 
+    public static void main(String[] args) 
+    { 
+        try
+        { 
+            System.out.printf("1"); 
+            int sum = 9 / 0; 
+            System.out.printf("2"); 
+        } 
+        catch(ArithmeticException e) 
+        { 
+            System.out.printf("3"); 
+        } 
+        catch(Exception e) 
+        { 
+            System.out.printf("4"); 
+        } 
+        finally
+        { 
+            System.out.printf("5"); 
+        } 
+    } 
+}
+
+
+ans==> 135 
+
+
+=================================================================================
+
+Write a java program to convert an array to string in Java
+
+====================================================================================
+
+
+public class Test {
+    public void print(Integer i) {
+        System.out.println("Integer");
+    }
+
+    public void print(int i) {
+        System.out.println("int");
+    }
+
+    public void print(long i) {
+        System.out.println("long");
+    }
+
+    public static void main(String args[]) {
+        Test test = new Test();
+        test.print(10);
+    }
+}
+
+ans==> int 
+
+========================================================================================
+
+class Base {
+    public Base() {
+        System.out.println("Base");
+    }
+}
+
+class Derived extends Base {
+    public Derived() {
+        System.out.println("Derived");
+    }
+}
+
+class DeriDerived extends Derived {
+    public DeriDerived() {
+        System.out.println("DeriDerived");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Derived b = new DeriDerived();
+    }
+}
+
+
+ans==>  Base
+	Derived 
+	DeriDerived 
+
+call to super class is the default first line in constructor 
+
+
+================================================================================
+public class Overloaded {
+    public static void foo(Integer i) {
+        System.out.println("foo(Integer)");
+    }
+
+    public static void foo(short i) {
+        System.out.println("foo(short)");
+    }
+
+    public static void foo(long i) {
+        System.out.println("foo(long)");
+    }
+
+    public static void foo(int... i) {
+        System.out.println("foo(int ...)");
+    }
+
+    public static void main(String[] args) {
+        foo(10);
+    }
+}
+
+
+ans==> foo(long)
+
+====================================================================================
+
+How to print duplicate characters from the string?
+write this program using collection framework
+
+===================================================================================
+
+Is the below code successfully overridden?
+
+
+
+package overridingPrograms; 
+public class A 
+{ 
+private void m1()
+{ 
+ System.out.println("m1-A"); 
+ } 
+} 
+public class B extends A
+{ 
+private void m1()
+{ 
+ System.out.println("m1-B"); 
+} 
+public static void main(String[] args) 
+{ 
+ B b = new B(); 
+ b.m1(); 
+ } 
+}
+
+
+
+ans==> no bcz the methods specified are private hence we can not access it outside the class 
+
+
+=======================================
+
+public class A 
+{ 
+public final void m1()
+{ 
+ System.out.println("m1-A"); 
+ } 
+} 
+public class B extends A
+{ 
+public void m1()
+{ 
+ System.out.println("m1-B"); 
+} 
+public static void main(String[] args) 
+{ 
+ B b = new B(); 
+  b.m1(); 
+ } 
+}
+
+
+============================================================
+
+
+public class A 
+{ 
+ synchronized void m1()
+ { 
+  System.out.println("m1-A"); 
+ } 
+void m2(char c)
+{ 
+ System.out.println("m2-A"); 
+ } 
+} 
+public class B extends A
+{ 
+@Override 
+public final void m1()
+{ 
+ System.out.println("m1-B"); 
+} 
+@Override 
+synchronized void m2(char c)
+{ 
+ System.out.println("m2-B"); 
+} 
+public static void main(String[] args) 
+{ 
+ A a = new B(); 
+ a.m1(); 
+ a.m2('a'); 
+ } 
+}
+
+
+
+ans ==> m1-b
+	m2-2 
+
+===================================================================================
+
+
+
+public class Animal 
+{ 
+void m1(Animal a)
+{ 
+ System.out.println("Both dogs and cats are pets."); 
+ } 
+} 
+public class Dog extends Animal
+{ 
+@Override 
+protected void m1(Animal a)
+{ 
+ System.out.println("The only dog is a pet animal."); 
+ } 
+} 
+public class Cat extends Dog 
+{ 
+@Override 
+public void m1(Animal a)
+{ 
+ System.out.println("Cat is also a pet animal."); 
+ } 
+} 
+public class AnimalClass 
+{ 
+public static void main(String[] args) 
+{ 
+ Animal a = new Cat(); 
+  a.m1(null); 
+ Dog d = new Dog(); 
+  d.m1(a); 
+ Cat c = (Cat)new Animal(); 
+  c.m1(null); 
+ } 
+}
+
+
+
+================================================================
+
+How do you find longest substring without repeating characters in a string?
+
+
+============================================================================
+
+
+class A{
+int a=10;
+    void run(int d){
+        System.out.println("class A method");
+    }
+}
+
+public class B extends A{
+    int a=20;
+    void run(int d){
+        System.out.println("class B method");
+}
+    public static void main(String[] args) {
+        A pr=new B();
+        pr.run(9);
+        System.out.println(pr.a);
+    }
+}

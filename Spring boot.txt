@@ -3,21 +3,19 @@ Spring boot
 
 
 ==> inbuild server 
-==> no xml fir configuration like web.xml  hbm.cml 
-==> autoconfiguration 
+==> no xml file configuration like web.xml  hbm.cml 
 ==> autoconfiguration (users m2 folder )(see it yourself)
 ==> spring boot starter dependancies
 ==> DEVTOOL will reduce time to develop the application 
 ==> rapid application developement 
 ==> actuator will determine the time consumed by the methods 
 
-
+  
 
 
 
 Q> current spring boot version you worked on 
  
-Q> spring vs spring boot
 Q> what is devtool
 
 
@@ -210,3 +208,69 @@ ans:->
 
 
 ============================================================================================================================================================================================
+
+
+Q> How to add external jar in the existing application ?
+ans:-> 
+	==> go to the project structure
+		==> module 
+			==> + sign 
+				==> add the jar and then select and apply ok thats it
+
+
+============================================================================================================================================================================================
+
+Q> spring vs spring boot
+ans:->
+
+		spring 							springboot
+
+
+==> used to develop enterprise applications.			==> widely used to develop REST APIs.
+
+==> The most important feature of the Spring Framework 		==> The most important feature of the Spring Boot is Autoconfiguration.
+    is dependency injection.
+
+==> It helps to create a loosely coupled application.		==> It helps to create a stand-alone application.
+
+==> we need to set the server explicitly.			==>  provides embedded servers such as Tomcat and Jetty etc.
+
+==> To run the Spring application, a deployment descriptor 	==> There is no requirement for a deployment descriptor.
+    is required.
+
+
+
+
+
+
+
+============================================================================================================================================================================================
+
+
+spring mvc framework 
+
+mvc flow 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

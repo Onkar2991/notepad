@@ -1,0 +1,145 @@
+JDBC (JAVA DATABASE CONNECTIVITY) 
+====================================
+
+steps to connect jdbc connection :->
+
+1> register the class
+
+
+		==> used to load the class dynamically 
+
+
+		==> Syntax
+			
+			public static void forName(String className)throws ClassNotFoundException
+
+
+
+		==> for registering the class you need the following 
+			
+			class.forName("oracle.jdbc.driver.OracleDriver")( write which databses driver u required ) 
+
+
+	
+ 
+2> get connection 
+
+		==> used to establish the connection between the application and database 
+
+		==> Syntax
+		
+			public static Connection getConnection(String url)throws SQLException  
+
+
+			public static Connection getConnection(String url,String name,String password) throws SQLException  
+
+		==> for connection to DB 
+	
+			
+			==> Connection con = DriverManager.getConnection(String url,String name,String password);
+
+					
+			We declare the parameters first 
+
+
+			String url = “ jdbc:oracle:thin:@localhost:1521:xe”
+			
+			String username = "system"
+	
+			String password = "password" 
+	
+
+
+
+3> create Statement
+
+		==> Syntax
+	
+			public Statement createStatement()throws SQLException  
+
+		
+		==> Statement st = con.createStatement();
+
+
+
+4> execute query
+
+		
+		==> used to execute the queries 
+
+		==> Syntax 
+
+
+			public ResultSet executeQuery(String sql)throws SQLException  
+
+
+		
+		==> ResultSet rs=stmt.executeQuery("select * from emp");  
+
+			while(rs.next())
+			{  
+			   System.out.println(rs.getInt(1)+" "+rs.getString(2));  
+			}  		
+
+
+
+ 
+5> close connection
+		
+		
+		==> used to close the connection 
+
+
+		==> Syntax
+
+			public void close()throws SQLException  
+
+		
+		
+		==> con.close();  
+		 
+
+
+
+
+
+
+
+==> sample code
+
+
+
+public static void main(String[] args) throws Exception
+    {
+        String url = "jdbc:mysql://localhost:3306/table_name"; // table details
+        
+	String username = "rootgfg"; // MySQL credentials
+        
+	String password = "gfg123";
+        
+	String query = "select *from students"; // query to be run
+        
+	Class.forName("com.mysql.cj.jdbc.Driver"); // Driver name
+        
+	Connection con = DriverManager.getConnection(url, username, password);
+        
+	System.out.println("Connection Established successfully");
+        
+	Statement st = con.createStatement();
+        
+	ResultSet rs = st.executeQuery(query); // Execute query
+        
+	rs.next();
+        
+	String name = rs.getString("name"); // Retrieve name from db
+ 
+        System.out.println(name); // Print result on console
+        
+	st.close(); // close statement
+        
+	con.close(); // close connection
+        
+	System.out.println("Connection Closed....");
+    }
+
+

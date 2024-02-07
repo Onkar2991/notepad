@@ -111,6 +111,16 @@ https://www.javaguides.net/2018/10/jaxb-tutorial.html
 JAXB
 
 
+https://www.gigaspaces.com/blog/acid-distributed-transactions
+How to Achieve ACID Compliance on Distributed, Highly Available SystemsS
+
+
+https://johndobie.com/blog/validation-errors-in-spring-boot-microservices/
+Validation and Error Handing in Spring Boot Microservices
+
+
+
+
 https://medium.com/@basecs101/internal-working-of-hashmap-in-java-latest-updated-4c2708f76d2c
 internal working of hashmap
 
@@ -151,6 +161,67 @@ Unit Test Cases for Simple Java Programs
 
 https://symflower.com/en/company/blog/2023/how-to-write-junit-test-cases/
 junit test cases 
+
+
+
+https://medium.com/@toimrank/hibernate-core-interfaces-and-classes-7d6f51fb0429
+HIBERNATE CORE INTERFACES 
+
+
+https://github.com/ItsMeVikash/Spring-Boot-with-Apache-POI/tree/master
+Apache poi dependancy 
+
+
+https://www.javachinna.com/spring-boot-read-csv-file-populate-database/
+Apache commons dependancy for csv data populate 
+
+
+https://www.javachinna.com/build-full-stack-application-angular-spring-cloud-microservices-p1/
+Full stack application with Angular and Spring Cloud Microservices
+
+
+https://github.com/callicoder/java-read-write-excel-file-using-apache-poi
+java-read-write-excel-file-using-apache-poi
+
+
+https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/
+best-practices-for-rest-api-design
+
+
+https://www.integrate.io/blog/rest-api-standards/#:~:text=Representational%20State%20Transfer%20Application%20Programming,processed%20across%20different%20platforms%20efficiently
+REST API Standards
+
+
+
+https://www.youtube.com/playlist?list=PLSVW22jAG8pBnhAdq9S8BpLnZ0_jVBj0c
+https://www.youtube.com/watch?v=lh1oQHXVSc0&list=PLSVW22jAG8pBnhAdq9S8BpLnZ0_jVBj0c&index=7&ab_channel=ProgrammingTechie
+springboot microservices playlist yt
+
+
+https://stackify.com/what-are-microservices/#:~:text=Microservices%20are%20an%20architectural%20style,often%20over%20messaging%20or%20HTTP
+What are Microservices?
+
+https://www.bacancytechnology.com/blog/java-microservices
+Java Microservices Architecture
+
+https://www.guru99.com/microservices-tutorial.html
+Microservices Tutorial: What is, Architecture and Example
+
+https://resilience4j.readme.io/docs/circuitbreaker
+circuitbreaker in microservices 
+
+
+https://medium.com/geekculture/unit-testing-of-simple-java-programs-b785a164b440
+Software Testing: Unit Test Cases for Simple Java Programs
+
+
+https://symflower.com/en/company/blog/2023/how-to-write-junit-test-cases/
+How to write JUnit test cases? A step-by-step guide with examples
+
+
+https://medium.com/@toimrank/hibernate-core-interfaces-and-classes-7d6f51fb0429
+Hibernate Core Interfaces and classes
+
 
 
 
@@ -255,5 +326,51 @@ E-kyc process
 https://www.cibil.com/loan-approval-process
 Loan approval process
 
+
+https://github.com/aadeeshjain/User-Registration-Login-SpringBoot/tree/master
+User-Registration-Login-SpringBoot
+
+
+https://github.com/AdityaKshettri/Email-Confimation-during-User-Signup/tree/master
+Email-Confimation-during-User-Signup
+
+
+
+https://github.com/aadeeshjain/User-Registration-Login-SpringBoot/tree/master
+user registration
+
+
+
+https://github.com/muke5hy/aadhaar-auth-kyc-starter/tree/master
+aadhaar-auth-kyc 
+
+https://medium.com/omarelgabrys-blog/microservices-with-spring-boot-authentication-with-jwt-part-3-fafc9d7187e8
+Microservices with Spring Boot — Authentication with JWT 
+
+
+
+
+
 ============================================================================================================================================================================================
+https://github.com/in28minutes/spring-unit-testing-with-junit-and-mockito/tree/master
+spring-unit-testing-with-junit-and-mockito
+
+
+https://github.com/hamvocke/spring-testing
+spring-testing
+
+
+https://github.com/deepakbhalla/springboot-rest-template-crud-examples/tree/master
+springboot-rest-template-crud-examples
+
+https://github.com/ShubhamRandive1/Wallet_Payment_Application
+Wallet_Payment_Application
+
+
+https://github.com/bezkoder/spring-boot-custom-validation
+spring-boot-custom-validation
+
+
+
+
 

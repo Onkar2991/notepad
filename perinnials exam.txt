@@ -1,0 +1,52 @@
+package VIJAYPRACTICE;
+
+import java.util.*;
+
+class TestTaker {
+
+    public static String decodedMessage(String encodedMessage) {
+        // Split the message into words.
+        String[] words = encodedMessage.split("\\s+");
+
+        // Create a TreeMap to store key-value pairs (numeric key and word without digits).
+        TreeMap<Integer, String> wordMap = new TreeMap<>();
+
+        // Process each word.
+        for (String word : words) {
+            int sumOfDigits = 0;
+            StringBuilder cleanWord = new StringBuilder();
+
+            // Extract digits and sum them, building the clean word without digits.
+            for (char c : word.toCharArray()) {
+                if (Character.isDigit(c)) {
+                    sumOfDigits += Character.getNumericValue(c);
+                } else {
+                    cleanWord.append(c);
+                }
+            }
+
+            // Add the key-value pair to the map.
+            wordMap.put(sumOfDigits, cleanWord.toString());
+        }
+
+        // Build the decoded message by concatenating the words in sorted order.
+        StringBuilder decodedMessage = new StringBuilder();
+        for (String word : wordMap.values()) {
+            decodedMessage.append(word).append(" ");
+        }
+
+        // Trim the trailing space.
+        return decodedMessage.toString().trim();
+    }
+
+    public static void main(String[] args) {
+        String encodedMessage1 = "t2e1st This i1s f1irs1t";
+        String encodedMessage2 = "t1e3s6t No1w s1e1c1o3nd w3e h2a2ve";
+
+        String decodedMessage1 = decodedMessage(encodedMessage1);
+        String decodedMessage2 = decodedMessage(encodedMessage2);
+
+        System.out.println("Decoded message 1: " + decodedMessage1); // This is first test
+        System.out.println("Decoded message 2: " + decodedMessage2); // Now we have second test
+    }
+}

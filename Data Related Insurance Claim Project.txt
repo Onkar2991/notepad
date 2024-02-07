@@ -1,0 +1,26 @@
+https://youtu.be/FjT_lMTFciE
+https://www.youtube.com/watch?v=FjT_lMTFciE
+https://youtu.be/bM9e2EPUg0g?si=HQeN-95NjyCpQjqX
+https://youtu.be/TQ4jdBjgWdU?si=tL6VcM67ymBEhciL
+
+
+Premium Calculator
+https://www.youtube.com/watch?v=nf2wpURndPo&t=2s
+
+Modules overview
+https://chat.openai.com/share/f5dec56e-c86f-4650-851a-39ebfc89d00f
+
+Table Names
+https://chat.openai.com/share/9b2902ec-1ff6-4c4d-88a1-49404b7c4fe0
+
+For Description
+https://chat.openai.com/share/e77e8658-dcc9-46b5-aedb-499b8344217c
+
+Key dependancies in the project
+https://chat.openai.com/share/d25cc55d-f5d2-464d-b6ac-e1872697b9fa
+
+Possible bug fixes in the project
+https://chat.openai.com/share/531cb923-f645-4f99-82da-4f97d4dbf7fc
+
+Possible exceptions
+https://chat.openai.com/share/af297704-631f-4763-969b-ffc03e45214c
