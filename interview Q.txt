@@ -1,0 +1,31 @@
+1> Introduction 
+2> Which SpringBoot version u are using ?
+3> Specific things in that spring version ?
+4> If your current project is monolithic then how u worked on microservices ?
+5> Advantages of Microservices which u have experienced in real time 
+6> Why do u say it is easy to deploy in microservices ?
+7> How do u scale ur application in microservices ?
+8> example suppose u have a e-commerse application which contains three microservices one is item microservice , second one is cart , third one is payment microservice.. how do u scale the item microservice??
+9> What is horizonatl and vertical scalling ?
+10> how are u deploying ur application?
+11> which services used while deploying the application ?
+12> have u tried anything in spring boot version 3?
+13> example suppose u have a e-commerse application which contains three microservices one is item microservice , second one is cart , third one is payment microservice.. suppose you have 10 items in the cart for making the payment how do u pass this items to payment give me some 2-3 approches .... component communication .. how do u pass this items to payment services ? how the payment microservice will get to know that there are 10 items in the cart as they are completly independant from each other ?
+14> from where u are invoking the rest-template ?
+15> alternative for Rest-templete for inter module communication?
+16> @ControllerAdvise annotation 
+
+17> 
+
+sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+
+have u seen this in ur application ?
+
+18> what is KeyStore And TrustStore? 
+19> Which build tool u are currently using ?
+20> How do u handle the passwords in the databases (in case of connecting to a database) ? if u hash it then how will u get back that password ?
+21> which code repository u are using?
+22> in Spring boot application u have to apply jBoss server instead of tomcat server how u can do that?
+23> which services u are familier in AWS ?
+
+

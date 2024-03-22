@@ -1,0 +1,14 @@
+Q> can one functional interface extends another functional interface ?
+ans -> we canot extend functional interface to another functional interface if we try to do it the functional interface will not be the functional interface as it will cintain two abstract methods 
+
+
+==> if we want to do it the one interface shouldnt conatain any abstract method then we can extend one functional interface to another by this it will not become an functionaal interface` 
+
+
+
+Q> can we use lambda expression insted of method refrence in the implemented methods?
+ans:-> no we can not use lambda expressions for the implemented methods as we have to give the implementation for the lambda expression 
+
+
+Q> a::m1
+   a.m1 why we require it ? before streams it was working then ?

@@ -1,0 +1,49 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+class Main {
+    public static void main(String args[]) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        // read the name from the input
+        String input_from_question = br.readLine();
+
+        // Write your answer here
+        boolean isSorted = isSortedAscending(input_from_question);
+
+        // print the Output
+        System.out.println(isSorted);
+    }
+
+    public static boolean isSortedAscending(String input) {
+        // Convert input string to array of integers
+        String[] numbers = input.split(" ");
+        int[] intArray = new int[numbers.length];
+        for (int i = 0; i < numbers.length; i++) {
+            intArray[i] = Integer.parseInt(numbers[i]);
+        }
+
+        // Check if the array is sorted in ascending order
+        for (int i = 0; i < intArray.length - 1; i++) {
+            if (intArray[i] > intArray[i + 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

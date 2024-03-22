@@ -1,0 +1,52 @@
+JAXB(Java Architecture for XML Binding) 
+=======================================
+
+(1.8 java version supported)
+
+
+==> JAXB is a Java standard that defines how Java objects are converted from and to XML. It uses a standard set of mappings.
+
+==> JAXB Marshalling means Converting a Java Object to XML.
+
+==> JAXB Unmarshalling means Converting XML to Java Object.
+
+
+==> Two important jaxb classes are 
+	
+	==> Unmarshaller interface is used to convert XML to Java Object.
+
+	==> JAXBContext class is the entry point for JAXB and provides methods to get marshaller and unmarshalled object.
+
+
+
+==> javax.xml.bind.annotation package provides classes and interfaces for JAXB 2.0.
+
+
+==> annotations in the jaxb 
+
+	
+	==> @XmlRootElement:-> This is a must have an annotation for the Object to be used in JAXB. It defines the root element for the XML content.
+
+	==> @XmlType :-> We can use it for ordering the XML . It has (PropOrder) parameter in it which will order the Xml in given Format 
+	
+	==> @XmlTransient :-> This will make sure that the object property is not written in the Xml
+
+	==> @XmlAttribute :-> this will  mark the object property as a xml attribute 
+	
+	==> @XmlElement :-> (name ="Onkar") this will define the element in  the Xml as we require
+
+	
+==> We have to create the object of JAXBContext and then we can use marshaller and unmarshaller 
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,84 @@
+import java.util.*;
+
+public class Solution {
+
+    public static long unlockingKey(long key) {
+        long answer = 0;
+        // Write your code here
+        
+        // Convert the key to a string to manipulate digits
+        String keyStr = String.valueOf(key);
+        
+        // Convert the string to a char array for sorting
+        char[] digits = keyStr.toCharArray();
+        
+        // Sort the digits in ascending order
+        Arrays.sort(digits);
+        
+        // Find the smallest digit other than 0 to put at the beginning
+        int i = 0;
+        while (digits[i] == '0') {
+            i++;
+        }
+        char temp = digits[i];
+        digits[i] = digits[0];
+        digits[0] = temp;
+        
+        // Convert the char array back to a string and then to a long
+        String unlockingKeyStr = new String(digits);
+        answer = Long.parseLong(unlockingKeyStr);
+        
+        return answer;
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        // input for key
+        long key = in.nextLong();
+        long result = unlockingKey(key); 
+        System.out.print(result);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        // input for dataStream
+        String dataStream = in.nextLine();
+
+        int result = unaffectedChar(dataStream);
+        System.out.println(result);
+    }
+
+    public static int unaffectedChar(String dataStream) {
+        int count = 0;
+        int length = dataStream.length();
+
+        for (int i = 0; i < length / 2; i++) {
+            if (dataStream.charAt(i) == dataStream.charAt(length - 1 - i)) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+}

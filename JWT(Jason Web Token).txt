@@ -1,0 +1,74 @@
+JWT(Jason Web Token)
+========================
+
+==> when a client sends a request to the server like user login then on a server JWT token is created .
+
+==> This JWT token is serialized into jwt with secrete key and sends back the jwt to the browser
+
+==> when a client (browser) again sends the request to the server the jwt token is also sent with that request 
+
+==> the server then verify the jwt signature and get user from jwt(i.e Deserializes the jwt and verify)
+
+==> After the verification it then sends response to the browser or the client 
+
+
+
+==> JWT has three parts 
+	
+	==> Header --> it conatins algorithm and the jwt token type
+	
+	==> Payload --> it is data which contains user data 
+	
+		    --> {
+			  "sub": "123456789",		--> sub is nothing bt the subject which is id of the user 
+			  "name": "Onkar",		--> data of the user like username password or anything like that 
+			  "iat" : "9876543210"		--> it is the jwt token issued at 
+			}
+		
+		  --> it has more fields like "eat" which is expired at for jwt  it is the date . 
+		
+		  --> "exp" is for expiration of the jwt token.
+
+
+	==> Verify Signature--> it is the combination of HEADER  , PAYLOAD , SECREAT KEY . All the things are encrypted 
+
+
+==> usecase:-> 
+	
+
+	in case of session
+	
+	==> suppose u have two different servers for the same company for different services like Bank and Retirement plans . if you want to access the 	      bank server then the session is stored in the bank server. if u want to access the Retirement server then u dont have the session stored so u 	      have to again store the session in that so that u can access it 
+	
+	in case of JWT
+	
+	==> the two servers will have the same secret key whenever we want to access the servers we dont need to do the same taskfor multiple times 
+
+ 
+
+
+ 
+	 
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+282828/238776

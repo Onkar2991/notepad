@@ -53,15 +53,29 @@ D ==> dependancy injection
 ============================================================================================================================================================================================
 
 
+@Transactional Annotation:->
+==============================
+
+
+==> We can use @Transactional to wrap a method in a database transaction.
+
+==> The annotation supports further configuration as well:
+
+		1> the Propagation Type of the transaction
+		2> the Isolation Level of the transaction
+		3> a Timeout for the operation wrapped by the transaction
+		4> a readOnly flag – a hint for the persistence provider that the transaction should be read only
+		5> the Rollback rules for the transaction
+
+			==> by default, rollback happens for runtime, unchecked exceptions only. 
+			
+			==> The checked exception does not trigger a rollback of the transaction.
+
+				==> We can configure this behavior with the rollbackFor and noRollbackFor annotation parameters.
 
 
 
-
-
-
-
-
-
+  
 ============================================================================================================================================================================================
 
 ACID prperties:->

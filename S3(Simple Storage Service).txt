@@ -1,0 +1,140 @@
+S3(Simple Storage Service)
+==============================
+
+==> storage for the internet u can store any amount of data any type of data and u can access that asset in anywhere 
+
+==> it is object based. it can add anything 
+
+==> data is replicated .aws  will itself maintain the replica for the s3 bucket in different datacentres at least 2 datacentres . 
+
+==> unlimited storage .
+
+==> it is a endpoint based service , it should have unique name .u always get an endpoint whenever u create a s3 bucket 
+
+==> it doesn't think about the type of data whichever data will be it is staored in the s3 b ucket . s3 does'nt alter the file extension 
+
+==> it is a file system on the cloud 
+
+==> s3 storage classes / types
+
+
+	
+	==> S3 standard --> general purpose hardrive , used for frequently used data 
+
+
+	==> S3 IA (infrequently accessed) --> used to store long lived data , less frequently accessed
+
+
+	==> S3 One Zone IA --> the data will be availaible to only one zone only thats why it called S3 One Zone IA
+			
+			   --> data is also less frequently accessed 
+		
+			   --> the data present will be imp. bt not that important like u can do ur work without that data 
+			
+			   --> data is not replicated 
+
+
+	==> S3 Intelligent Tiering --> amazon will automatically moving the data to whichever availaibility zone which is cheapest at the time (cost 	
+				       effective tier)
+	
+
+	==> S3 Glacier --> data is long lived and less less frequently used 
+		      
+      		       --> low cost 
+ 
+		
+	==> S3 Deep Glacier --> high retrival time 
+			
+			    --> data stored in magnetic drives 
+			 
+			    --> low cost 
+	 
+	
+
+==> Life Cycle Policy --> in that  policy companies define storage shifting of data to cost effective tier 
+		
+		   
+==> AWS S3 Charges --> no of Requests
+		
+		   --> tiers
+		
+		   --> Data Transfer 
+		
+		   --> data replication -- in same region 
+
+		   --> data replication -- in different region 
+
+
+==> aws free tier account has 5 gb space 
+
+
+
+
+==> Search for S3 in aws console .click on create bucket 
+
+==> General Configuration --> Bucket name 
+			  --> Aws Region 
+			  --> choose setting from existing bucket(if u have any existing bucket)
+
+==> Object Ownership --> select ACLs Disabled(recomanded)(to acces the data within the bucket for different Iam users)
+		     --> in company ACLs is disabled 
+
+		     --> Bucket owner preffered 
+
+
+==> Block public access settings for this bucket 
+	
+		     --> check mark the block all public access 
+
+	--> its for if any person other than the owner or Iam user who has permission to acces the s3 bucket got the public dns then he should not be able 	    to access the bucket data 
+
+
+==> Bucket versionaning 
+	
+	--> it is for keeping multiple varients of an object . u can use versioning to preserve , retrive and restore every version of every
+	    object stored in the bucket  
+	
+	--> Enable 
+	    Disable options are their . select enable option . 
+
+==> Tags --> optional 
+
+==> Default Encryption 
+
+		==> Encryption type :
+			
+			--> serverside encryption with amazon s3 managed Keys(SSE-S3)					(//select this)
+		       
+		        --> serverside encryption with AWS key management service keys(SSE-KMS)
+	
+		        --> Dual layer Server side encryption with AWS key management service keys(DSSE-KMS)
+
+
+
+		==> Bucket Key	(it is only for SSE-KMS)
+		
+			--> Enable 						
+			--> Disable 
+
+==> Advanced Setting 
+	
+		--> Object Lock 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

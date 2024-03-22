@@ -1,0 +1,30 @@
+Java 17 Featues 
+===================
+
+==> sealed classes and sealed interfaces are introduced in java 17 to have the control over inheritance of classes and interfaces 
+
+==> they restrict which classes and interfaces can extend or implement them
+
+==> they are declared using Sealed modifiers and permit clause . permit clause specifies the sub classes which can extend the current sealed class 
+
+==> permitted subclasses must be in same package or in same module of the sealed class
+
+==> permitted subclasses must be eigther final , sealed or non -sealed . if dont declare it for permitted subclasses u will get compile time error 
+
+==> final permitted subclass can not be extended further . Sealed classes are extended only by permitted subclasses . non-sealed classes can be extended by anyone 
+
+==> sealed class must and should specify the permited subclasses using permit clause . if u havent mentioned it u will get CTE
+
+==> permitted subclasses must and should extend their superclasses otherwise u get CTE 
+
+
+
+
+
+==> it is same for interfaces also 
+
+==> permited sub intefaces must be sealed or non sealed but not final 
+
+==> While declaring sealed classes and sealed interfaces, permits clause must be used after extends and implements clause.
+
+==> getPermittedSubclasses() and isSealed(). This two methods are introduced in java 17 in java.lang.Class package  

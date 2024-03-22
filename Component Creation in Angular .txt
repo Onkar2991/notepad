@@ -1,0 +1,108 @@
+Component Creation in Angular 
+====================================
+
+
+==> Components are the main building blocks for Angular applications.
+
+==>  Each component consists of:
+
+		1> An HTML template that declares what renders on the page
+
+		2> A TypeScript class that defines behavior
+
+		3> A CSS selector that defines how the component is used in a template
+
+		4> Optionally, CSS styles applied to the template
+
+
+
+==> for creating it through Angular CLI
+
+
+	==> install the Angular CLI 
+
+	==> create a new workspace by ng new <Project_Name>
+
+	==> ng generate component <Component name>
+		
+			this command will create the following 
+		
+			==> A directory named after the component
+			
+			==> A component file, <component-name>.component.ts
+		
+			==> A template file, <component-name>.component.html
+
+			==> A CSS file, <component-name>.component.css
+		
+			==> A testing specification file, <component-name>.component.spec.ts
+
+
+
+
+
+==> For creating it manually 
+
+
+	==> Navigate your angular project directory 
+
+	==> Creating a new file <Component_ name >.component.ts
+	
+	==> import { Component } from '@angular/core';	
+	
+	==> after that @Component Decorator 
+		
+		@Component({
+			
+		})
+	
+	==> Choose a CSS selector 
+	
+		@Component({
+ 		
+		 selector: 'app-component-overview',
+			
+			})
+
+	
+	==> Define a HTML Templete for that the component uses to disply information .
+	
+		
+		@Component({
+  		
+		selector: 'app-component-overview',
+  		templateUrl: './component-overview.component.html',
+	
+			})  
+
+	
+	==> Define styles for that component 
+	
+		
+		@Component({
+  	
+		selector: 'app-component-overview',
+  		
+		templateUrl: './component-overview.component.html',
+  
+		styleUrls: ['./component-overview.component.css']
+			
+			})
+
+==> An Angular component requires a template defined using template or templateUrl. You cannot have both properties in a component.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tue 12.30

@@ -1,0 +1,13 @@
+java 9 
+
+
+
+==> we can have private methods inside interfaces 
+
+==> Jshell Scripting 
+
+==> can create immutable collections
+
+==> try wd resource 
+
+==> 

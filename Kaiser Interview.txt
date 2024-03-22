@@ -1,0 +1,128 @@
+composition
+
+
+class Engine {
+
+public void start (){
+sout("engine class ");
+}
+
+}
+
+class Wheels {
+
+public void rotate(){
+sout("weels rotating ");
+}
+
+}
+class  Car {
+private Engine engine;
+private Wheels wheels;
+public Car(){
+this.engine= new engine();
+this.wheels= new wheels();
+
+}
+public void drive(){
+engine.start();
+wheels.rotate();
+sout("car is running");
+}
+
+class Composition{
+public static void main(String [] args){
+
+Car myCar = new Car();
+myCar.drive();
+}
+
+}
+}
+
+
+
+===========================================================================================================================================================================================
+
+Parallel 
+
+List<String> list = Arrays.asList("apple", "banana","orange");
+
+list.parallelStream().forEach(System.out::println);
+
+
+
+ssequential
+
+List<String> list = Arrays.asList("apple", "banana","orange");
+list.stream().forEach(System.out::println);
+
+
+
+
+============================================================================================================================================================================================
+
+
+
+prime number series from 1 to 100
+
+
+public class Prime{
+public static void main(String [] args){
+
+for(int i=2;i<=100;i++){
+if(isPrime(i))
+{
+System.out.println(i+" ");
+}
+}
+
+}
+
+private static boolean isPrime(int num){
+if(num<2){
+return false;
+}
+for(int i=2;i<= Math.sqart(num);i++){
+if(num % i == 0){
+return false;
+}
+}
+return true;
+}
+} 
+
+
+============================================================================================================================================================================================
+
+
+
+
+@RestController
+public class MyController{
+
+@Autowired 
+private MyRepository myRepo;
+
+@GetMapping("/data")
+public List <MyEntity> getData (){
+return myRepo.findAll();
+
+}
+}
+
+
+============================================================================================================================================================================================
+
+
+
+1> Introduction 
+2> Difference between Composition and Aggregation . Write a program for that 
+3> Difference Between Parallel And Sequential Stream . Write a piece of code for both 
+4> Difference between Consumer And Supplier .
+5> for what purpose we are using Consumer And Supplier ?
+6> Program for Generating Prime Numbers from 1-100
+7> Spring Bean LifeCycle 
+8> @RequestMapping and @GetMapping 
+9> write a code to fetch the data from database using @GetMapping 
+ 

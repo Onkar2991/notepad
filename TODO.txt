@@ -19,6 +19,9 @@ junit5
 
 ModelAttribute class
 
+why do we use Spring Mvc over servlets 
+
+
 
 
 Q> single responsibility principle  vs interface segregation principle  

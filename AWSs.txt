@@ -1,0 +1,245 @@
+AWS
+======
+
+
+==> based on your customer zone select the appropriate zone according to that 
+
+==> as a customer should not get any latancy in the data
+
+==> ex : if your application customer base is in uk and us and u are selecting the datacentre which is in india then the customer will get the data latancy , thats why select the appropriate datacentres so that ur customers doesn't get any data latancy or late responces from the server    
+
+==> availaibility zone is the zone , in which zone you want to host your application 
+
+
+==> Edge Locations :-this are the boundry of the availaibility zones. when you are switching to one availaibility zone to another then the edge locations comes in picture. user should get the same responses if he changes the zone 
+
+
+
+
+EC2 instances (Elastic Cloud Compute)
+========================================
+
+==> Amazon EC2 provides scalable computing capacity in the AWS cloud.
+
+==> it enables organizations to develop and deploy applications faster, without needing to invest in hardware upfront.
+
+==> Users can launch virtual servers, configure security and networking, and manage cookies from an intuitive dashboard.
+
+
+
+
+
+
+==> search for EC2 in the search box , select the EC2 console window
+
+==> Dashboard contains :-> instances running 
+			   auto-scalling groups
+			   key pairs
+			   instances
+			   security Grops 
+			   Load Balancers 
+			   dedicated hosts 
+			   Elastic Ips
+			   snapshots 
+			   volumes , etc 
+
+
+==> click on Launch instances :- 
+			
+		==> here we can configure all the parameters related to our EC2 instance 
+
+
+==> Name and Tags:- 
+		
+		==> here u write the name of instance . U should give unique names to the instances . If byMistake u have given the same name to an instance the AWS will automatically add 		    a String with your instance name 
+
+
+
+==>Application and Os Images(Amazon Machine Image):-
+
+		==> it is similar to docker image 
+		==> it is a snapshot of operating System 
+		==> choose on which operating system u want to deploy the instance 
+
+
+
+Q> what are the instances type ? 
+reserved instances
+saving plans
+dedicated hosts 
+sheduled instances 
+capacity reservations
+
+
+==> Instance type
+
+
+		==> each instance have its own capacity , it will have different cpus , memory etc it is more like assembled desktop
+
+		==> select which instance type u want according to ur requirement like t2.nano,t2.micro,t2.small , t2.medium , t2.large , C6in.metal , C6in.4xlarge etc
+
+
+ec2 instance type change
+		
+		==> Stop the instance by selecting it then go to the "Instance state" menu and choose "Stop instance". ...
+
+		==> Change the instance type in the "Actions" menu by choosing "Instance settings" and then "Change instance type".
+
+		==> Restart the instance from the "Instance state" menu by choosing "Start instance".  
+
+
+Two types of scalling 
+
+		==> 1> adding instances 
+
+		==> 2> scaling the resources of current instance (vertical SCaling)
+
+
+
+Load Balancers:-
+		
+		==> it is common endpoint . 
+		
+		==> application servers will be behind the load balancers . 
+	
+		==> load balancers duty is to raoute the incomming request to the least busy server
+
+ 
+==> Key pair (login)
+
+		==> you can use a key pair to securely connect to your instance 
+
+Create a new key pair
+	key pair name 
+	key pair type (RSA bydefault)
+	Private key file format (.pem format to use with OpenSSH)
+	create new key pair
+	download the key file
+	then select the created key pair
+
+
+
+two types of keys 
+public key :- it is for client side 
+private key :- it is for hosted by server 
+
+
+		==> you can have same key pair for all the instances unless u have autoScalling Groups (if you are not physically creating the instances )
+
+		==> keep different key pairs for all the instances if you are creating instances physically 
+
+
+
+==> network Settings 
+
+
+	private key --> cloud access
+	cloud-->region (availaibility zone)
+	region--> Virtual Private Cloud (byDefault is created or u can create it manually)
+			--> it has all the resources which we create 
+			--> it has internet Gateway which will connect our cloud to the internet 
+
+
+
+	VPC--> Public subnet-->security group-->instance
+	   --> Amazon EBS
+	
+
+
+
+public subnet willl have the list of IPs 
+
+security group is nothing but the firewall 
+
+amazon EBS is nothing but the storage block . all the data comming from the instance will be stored in Amazon EBS 
+
+
+
+
+==> it has network info which will have a byDefault vpc number 
+==> after that the subnet it is also by default 
+==> auto assign public Ip which is by default enabled 
+==> eigther create a new security group or select from existing security group .
+==> for creatng a new security group 	
+	--> allow SSH traffic from (anywhere 0.0.0.0/0)which is a global ip
+	--> Allow HTTPS traffic from the internet 
+	//--> Allow HTTP traffic which is unsecure traffic from the internet//
+
+	==> while creating a security group it has inbound and outbound rules 
+	==> outbound rules are the rules that our server over the internet with which ips can coonect to my server 
+		--> type (all traffic )	
+		--> protocol (All)
+		--> Port range (All)
+		--> destination (custom)
+				(0.0.0.0/0)	
+		--> Description_optional
+
+	==> Inbound Rule is to customize the traffic which our server is getting 
+
+	==> create a security group
+
+
+==> Configure the Storage (EBS)
+
+	--> gp2 *we use* 
+	-->io1 ,io2*when more i/p o/p operations are there*
+	--> sc1
+	--> magnetic 
+	--> throughput Optimized HDD(st1 )
+
+
+
+==> Launch the instance 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			   

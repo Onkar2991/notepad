@@ -220,9 +220,127 @@ Error Handling in Spring Boot Microservices
 ============================================================================================================================================================================================
 
 
-Q> retis for caching 
+
+MONOLITHIC to MICROSERVICES MIGRATION process:->
+=================================================
+
+
+==> Different rate of change 
+		
+	==> If your application has some portions that change more frequently than others, then it may be time to split them up into microservices 
+
+
+
+==> Different Scalability Requirements
+
+	==> Measure and monitor your application to determine where scalability requirements can affect your need for microservices.
+
+	==> When looking at scalability requirements, measurement is key. Without proper monitoring, you won’t be able to determine where your memory or CPU hogs live. Or you may not know 	    which APIs receive more traffic.
+
+
+==> Different Reliability Needs
+
+	==> Reliability needs differ across systems and applications. Aim to protect your critical systems with microservices when appropriate.
+
+
+
+==> Different User Base 
+
+	==>  You’ll have external users or customers, internal sales or purchasing folks, and perhaps even plant personnel in a manufacturing setting. All of these customers have different 	     needs.
+
+	==> separate applications based on those needs.
+
+
+
+	1> Identify logical components.
+	2> Flatten and refactor components.
+	3> Identify component dependencies.
+	4> Identify component groups.
+	5> Create an API for remote user interface.
+	6> Migrate component groups to macroservices (move component groups to separate projects and make separate deployments).
+	7> Migrate macroservices to microservices.
+	8> Repeat steps 6-7 until complete.
+
 
 
 ===========================================================================================================================================================================================
+
+
+DECOMPOSITION PATTERN :->
+==========================
+
+
+==> Decompose by Business Capability
+
+
+	==> split the application as a set of loosely coupled services in order to accelerate software development processes.
+
+	==> Services must be cohesive. A service should implement a small set of strongly related functions.
+	
+	==> Services must be loosely coupled — each service as an API that encapsulates its implementation.
+
+	==> “Decompose by Business Capability” pattern offers that;
+
+
+		==> Define services corresponding to business capabilities.
+
+		==> A business capability is a concept from business architecture modeling.
+
+		==> A business service should generate value.	
+
+
+	EX: product service shoud be deal with only products 
+	    order service should deal with orders and so on	
+
+
+
+==> Decompose by Subdomain
+	
+	==> In order to apply Decompose by Subdomain model, we should define services corresponding to Domain-Driven Design (DDD) subdomains.
+	
+	==> A domain is consists of multiple subdomains. Each subdomain corresponds to a different part of the business.
+
+	
+	Ex:- product domain should work with only products related services 
+	     order domain should work with only order related services 
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	

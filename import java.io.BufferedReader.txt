@@ -1,0 +1,39 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class Main {
+    public static void main(String args[]) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        // read the highestValue from the input
+        int highestValue = Integer.parseInt(br.readLine());
+
+        // Generate the series according to the requirements
+        String output = generateSeries(highestValue);
+
+        // print the Output
+        System.out.println(output);
+    }
+
+    public static String generateSeries(int highestValue) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 1; i <= highestValue; i++) {
+            if (i % 6 == 0) {
+                sb.append("0");
+            } else if (i % 3 == 0) {
+                // Exclude multiples of 3
+                continue;
+            } else if (i % 2 == 0) {
+                // Negate multiples of 2
+                sb.append("-").append(i);
+            } else {
+                sb.append(i);
+            }
+
+            // Add "-" between numbers except for the last one
+            if (i != highestValue) {
+                sb.append("-");
+            }
+        }
+        return sb.toString();
+    }
+}

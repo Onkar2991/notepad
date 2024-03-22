@@ -1,0 +1,214 @@
+Servelets
+==============
+
+==> Servlets are the Java programs that run on the Java-enabled web server or application server. They are used to handle the request obtained from the web server, process the request, produce the response, and then send a response back to the web server. 
+
+==> Servlets work on the server side.
+
+==> Servlets are capable of handling complex requests obtained from the web server.
+
+==> The entire life cycle of servlet is managed by Servlet container . it uses the javax.servlet.Servlet interface 
+
+==> Execution of Servlets basically involves six basic steps: 
+
+	==> The clients send the request to the webserver.
+
+	==> The web server receives the request.
+
+	==> The web server passes the request to the corresponding servlet.
+
+	==> The servlet processes the request and generates the response in the form of output.
+
+	==> The servlet sends the response back to the webserver.
+
+	==> The web server sends the response back to the client and the client browser displays it on the screen.
+
+
+	Architecture 
+	=============
+
+
+
+	
+		      http request		
+	Web Browser <===============> Web Server <=============> Servlet Program <==============> Database 
+		      http response 
+
+
+
+
+==> Before servlets CGI(Common Gateway Interface) is there . it can be build using any languages like c,c++. As it is built using this languages it becomes the platform dependant and not portable . it creates process for each request comming from the client and it has to manage the destruction of this process also . By this the overhead increases . By creating new processes for each request it acquires more memory for it . To acoid that Servelets come in picture 
+
+
+==> Servlet Container is also known as Servlet Engine . It is an integreted set of objects that provice a runtime environment for java Servlet components .
+
+==> Features of Servlet container :-
+	
+	==> Network Services :-
+			     ==> loads the servlet class . the loading may be from local system , a remote file System , or other network services 
+		
+			     ==> the Servlet conatiner provides the network services over which the request and responses are sent
+
+	
+	==> Decode and Encode MIME-Based messages :- 
+			    
+			     ==> provides the service of decoding and encoding MIME-based messages 
+
+	
+	==> Manage Servlet Container :-
+			    
+			     ==> Manages the life Cycle of Servlet 
+
+	==> Resource Management :-
+	
+			     ==> manages the Static and Dynamic resources like HTML files , Servlets , Jsp pages 
+
+	==> Security Service :-
+	
+			    ==> Handles Authorization and authentication of resource access 
+
+	==> Session management :-
+	
+			    ==> mentains a session by appending the session id to the URL path 
+
+	
+==> Servlets make our web application more responsive and efficient as it doesn’t create and destroy a process every time a request is received. 
+
+
+==> The doGet method is called by the server (via the service method) when the client requests a GET request. It is used to retrieve information from the server. 
+       --------------
+
+==> The doPost method is called by the server (via the service method) when the client requests a POST request. It is used to send information to the server.
+       ---------------
+
+
+==> @WebServlet(name = “MyServlet”, urlPatterns = “/myServlet”)==> for configuring the servlet 
+
+
+==> A Servlet Filter is an additional component for performing pre-post processing work on the web requests like logging, monitoring, debugging and troubleshooting.
+
+
+
+==> There are three potential ways in which we can employ to create a servlet:
+
+		1> Implementing Servlet Interface
+
+		2> Extending Generic Servlet
+
+		3> Extending HTTP Servlet
+
+
+
+
+============================================================================================================================================================================================ 
+
+
+==> LifeCycle of Servlets 
+============================
+
+
+==> Loading the Servlet:-
+
+	
+		==> it is done by the servlet container
+	
+		==> it loads the servlet class and creates the instance of the servlet , for crating a instance of the servlet it uses the servlet containers no argument constructor 
+
+
+==> Initializing the servlet :- { Servlet.init(ServletConfig) method }	
+
+	
+		==> after instantiated the servlet the servlet container initializes this instantiated servelet with servlet object.
+
+		==> it initializes the servlet by invoking the Servlet.init(ServletConfig) method 
+							       ---------------------------
+
+		==> This method is used to initialize the resources, such as JDBC datasource.
+	
+		==> if the Servlet fails to initialize, then it informs the Servlet container by throwing the ServletException or UnavailableException.
+													     --------------------------------------------
+
+
+==> Handling the Request :- { Servlet.service(ServletRequest, ServletResponse) method }
+	
+		==> After initializing the servlet it is ready to serve the client requests
+	
+		==> for serving the client requests it creates two objects ServletRequest , ServletResponse . in case of HTTP requests it creates HttpServletRequest and HttpServletResponse 
+								---------------------------------------------
+		    objects which are the subtypes of ServletRequest , ServletResponse
+
+		==> After creating the objects it invokes the Servlet.service(ServletRequest, ServletResponse) method by passing the request and response objects.
+	
+		==> The service() method while processing the request may throw the ServletException or UnavailableException or IOException.
+										    --------------------------------------------------------
+
+
+==> Destroying the servlet :-{ destroy() method }
+	
+		==> After currently running threads have completed their jobs, the Servlet container calls the destroy() method on the Servlet instance.
+
+		==> After the destroy() method is executed, the Servlet container releases all the references of this Servlet instance so that it becomes eligible for garbage collection.
+
+
+
+ 
+============================================================================================================================================================================================
+
+
+Difference between ServletContext and ServletConfig
+=========================================================
+
+
+	ServletConfig										ServletContext
+
+ServletConfig is servlet specific						ServletContext is for whole application
+
+Parameters of servletConfig are present as name-value				Parameters of servletContext are present as name-value pair in <context-param> 
+pair in <init-param> inside <servlet>.						which is outside of <servlet> and inside <web-app>
+												
+ServletConfig object is obtained by getServletConfig() method.			ServletContext object is obtained by getServletContext() method.
+
+Each servlet has got its own ServletConfig object.				ServletContext object is only one and used by different servlets of the application.
+
+Use ServletConfig when only one servlet needs information shared by it.		Use ServletContext when whole application needs information shared by it
+		
+
+
+
+============================================================================================================================================================================================ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+

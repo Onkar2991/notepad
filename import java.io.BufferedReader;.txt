@@ -1,0 +1,39 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+
+class Main {
+    public static void main(String args[]) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        // read the weights from the input
+        String input_from_question = br.readLine();
+
+        // Write your answer here
+        boolean canBalance = canBalance(input_from_question);
+
+        // print the Output
+        System.out.println(canBalance);
+    }
+
+    public static boolean canBalance(String input) {
+        // Split the input string into an array of integers
+        int[] weights = Arrays.stream(input.split(" ")).mapToInt(Integer::parseInt).toArray();
+
+        // Calculate the sum of weights on each side
+        int leftSum = 0;
+        int rightSum = Arrays.stream(weights).sum();
+
+        for (int i = 0; i < weights.length; i++) {
+            leftSum += weights[i];
+            rightSum -= weights[i];
+
+            // If the sums are equal, return true
+            if (leftSum == rightSum) {
+                return true;
+            }
+        }
+
+        // If no balance point is found, return false
+        return false;
+    }
+}

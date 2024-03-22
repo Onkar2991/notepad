@@ -1,10 +1,14 @@
 JAVA 8 :->
 
+
+Functional Interfaces
+================================
+
 predicate--> filter()     ==> boolean test()
 
 Function-->map()	  ==>aaply()  ==> returns a result in specific type by accepting parameters 
 
-Consumer--> ForEach()	  ==> voidAccept() ==> returns nothing 
+Consumer--> ForEach()  	  ==> voidAccept() ==> returns nothing 
 
 Supplier--> generate()	  ==> get()    ==>
  
@@ -15,3 +19,40 @@ BinaryOperator--> reduce()	==> arguments and result should be of same type
 BiFunction--> collect()		==> apply() ==> accepts two arguments 
 
 UnaryOperator--> Iterate()
+
+
+
+
+================================================================================================================================================
+
+Lambda Expressions 
+=====================
+
+==> lambda expressions are the methods without names 
+	
+==> 
+	(parameters)-> Expression
+	(parameters)-> {Statements}
+
+	three parts parameters , Arrow mark and a body 
+
+==> before java8 anonymous inner classes are  used to implement functional interfaces . After java8 we use lambda expressions for implementing functional interfaces 
+
+==> run() method of Runnable interface accepts nothing and returns nothing. Then signature of lambda expression implementing Runnable interface will be () -> void.
+
+==> actionPerformed() method of ActionListener interface takes one argument of type ActionEvent and returns void. Then signature of lambda expression for implementing ActionListener interface will be (ActionEvent) -> void.
+
+
+==> compare() method of Comparator interface takes two arguments of type Object and returns int. Then signature of lambda expression for implementing Comparator interface will be (Object, Object) -> int.
+
+
+==> Lambda expressions removes verbosity and repetition of code.
+
+
+
+
+================================================================================================================================================
+
+
+
+

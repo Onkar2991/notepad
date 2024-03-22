@@ -223,6 +223,11 @@ https://medium.com/@toimrank/hibernate-core-interfaces-and-classes-7d6f51fb0429
 Hibernate Core Interfaces and classes
 
 
+https://github.com/JavatoDev-com/spring-boot-multiple-datasources/tree/main
+https://medium.com/javarevisited/configure-multiple-data-sources-postgres-oracle-in-a-spring-boot-application-72b28a9e6ea9
+multiple datasources connection 
+
+
 
 
 

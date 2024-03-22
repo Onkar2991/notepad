@@ -1,0 +1,65 @@
+AWS Lambda
+=============
+
+
+==> You dont require any servers for running the AWS Lambda Service
+
+==> it has feature of Automatic Scalling which means Scalling is done automatically based on the size of load 
+
+==> For Aws Lambda Billing we only have to pay for the amount of time that your code is running it is measured in seconds for which the code is running 
+
+==> it supports the code which is in c-sharp go , nodeJs , java , python 
+
+
+
+
+
+
+Usecase
+=================
+
+
+
+==> Aws lambda is used to process images when it is uploaded
+
+
+	
+
+	Images 
+	  |
+	  |
+	  v
+	S3 Busket =====> Aws Lambda is triggered ==> images are processed and 
+						     converted into thumbnails 
+						     based on the devices 
+
+
+	
+	Explaination:- when raw images are added in the s3 Bucket after that the aws lambda is triggered to convert the raw images into respective format for showing on different devices 		       such as android , mac , iphone , deskstop  
+
+
+
+==> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

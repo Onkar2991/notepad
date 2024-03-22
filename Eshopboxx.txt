@@ -1,0 +1,49 @@
+package StringProg;
+public class ExcelSheet {
+    public static void main(String[] args) {
+        String input = "AAZ";
+        char[] charArray = input.toCharArray();
+        int i = charArray.length - 1;
+        while (i >= 0 && charArray[i] == 'Z') {
+            charArray[i] = 'A';
+            i--;
+        }
+        if (i < 0) {
+            char[] newChars = new char[charArray.length + 1];
+            newChars[0] = 'A';
+            System.arraycopy(charArray, 0, newChars, 1, charArray.length);
+            charArray = newChars;
+        } else {
+            charArray[i]++;
+        }
+        String output=new String(charArray);
+        System.out.println("input : "+input);
+        System.out.println("output : "+output);
+    }
+}
+
+//time complexity= O(n)
+//space complexity= O(n)
+class OptimizedExcelSheet {
+    public static void main(String[] args) {
+        String input = "AAZ";
+        String output = getNextColumn(input);
+        System.out.println("Input: " + input);
+        System.out.println("Output: " + output);
+    }
+
+    public static String getNextColumn(String column) {
+        char[] chars = column.toCharArray();
+        int i = chars.length - 1;
+        while (i >= 0 && chars[i] == 'Z') {
+            chars[i] = 'A';
+            i--;
+        }
+        if (i < 0) {
+            return "A" + new String(chars);
+        } else {
+            chars[i]++;
+            return String.valueOf(chars);
+        }
+    }
+}

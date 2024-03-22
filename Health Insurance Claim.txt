@@ -19,8 +19,9 @@ request flow --> explain spring mvc architecture flow
 				==> requirement analysis of the story 
 				==> development 
 				==> local or peer testing 
-				==> junit or sonar voilations 
-				==> demo for client 
+				==> junit or sonar voilations
+
+
 
 
 ==> project title 
@@ -52,10 +53,8 @@ request flow --> explain spring mvc architecture flow
 	   ==> insurance company will check the details and give the initial approval for the treatment 
 		initial approval will have a estimated amount  
 	   ==> the final approval will be given at the time of patient discharge and it will have the full amount to be imbursed to the hospital
-	   ==> the minimum turn around time for the approval of the claim is 30 min to 4 hours if they need any clarification on the claim they will ask for it and then it will be approved
-
-
-	   ==> there are some non payable items which are not covered in the insurance policy so this non payable items bills has to paid by the insurance claimer  
+	   ==> the minimum turn around time for the approval of the claim is 30 min to 4 hours if they need any clarification on the claim they will ask for 		it and then it will be approved
+	   ==> there are some non payable items which are not covered in the insurance policy so this non payable items bills has to paid by the insurance 		claimer  
 
 
 	DOCUMENSTS
@@ -68,7 +67,7 @@ request flow --> explain spring mvc architecture flow
 	PRE-AUTHORISATION TRAETMENT:->
 	================================
 	
-	==> you will notify the insurance company about the treatment before admitting to the hospital OR planned hospitalization and give them the estimation and doctors prescription or 	    doctors treatment details 
+	==> you will notify the insurance company about the treatment before admitting to the hospital OR planned hospitalization and give them the 		    estimation and doctors prescription or doctors treatment details 
 	==> they will check and approve the claim 
 -	==> it will be valid for  7-10 days differs in insurance company and then you can do the treatment 
 
@@ -179,7 +178,7 @@ MODULES:->     https://chat.openai.com/share/f5dec56e-c86f-4650-851a-39ebfc89d00
 	==> Two  types 
 	 
 		==> Revocable beneficiary
-			==> ‘Revocable beneficiary’ designation gives right to the policy holder to change the beneficiary name without the consent of the named beneficiary.
+			==> ‘Revocable beneficiary’ designation gives right to the policy holder to change the beneficiary name without the consent of the 			    named beneficiary.
 		
 		==> Irrevocable beneficiary
 			==> ‘Irrevocable beneficiary’ the policy holder has to take consent of the beneficiary before the name is changed.
@@ -231,13 +230,6 @@ MODULES:->     https://chat.openai.com/share/f5dec56e-c86f-4650-851a-39ebfc89d00
 
 
 
-
-
-
-
-==> CRM MODULE :->
-
-
 ==> Primium calculator module ==>
 
 
@@ -257,9 +249,9 @@ PRIMIUMS can be calculated on the basis of following :->
 		==> if a person has previous medical history like heart problems diabeties etc in such cases the premium is high as the risk of life is high 
 
 	==> tenure :-> 
-		==> if a person buys a policy for more than 2 or 3 years it will make sure the company that the person is associated with the company for long duration (assurance )
+		==> if a person buys a policy for more than 2 or 3 years it will make sure the company that the person is associated with the company for 		    long duration (assurance )
 		
-		==> generally health insurance premiums are yearly based so if a person buys an policy for more than one year the company will give the discounts on premium for the person 
+		==> generally health insurance premiums are yearly based so if a person buys an policy for more than one year the company will give the 		    discounts on premium for the person 
 		
 		==> higher the tenure lesser the premium 
 
@@ -275,7 +267,7 @@ PRIMIUMS can be calculated on the basis of following :->
 	
 	==> savings and investments :-> 
 		
-		==> insurance company's invests its capital funds into public sector domains , how much return the company can achieve from this type of domains can also determines the 		    value of premiums 
+		==> insurance company's invests its capital funds into public sector domains , how much return the company can achieve from this type of 		    domains can also determines the value of premiums 
 
 
 	==> Mortality rate :->
@@ -284,7 +276,7 @@ PRIMIUMS can be calculated on the basis of following :->
 		
 		==>  it is a factor by which we can define the life expectancy of a customer and the according to that premiums can be calculated 
 
-		==> in this some insurance company first checks the customers medical helath at home or they will tell to do it , if some health issues detected they increases premium.
+		==> in this some insurance company first checks the customers medical helath at home or they will tell to do it , if some health issues 		    detected they increases premium.
 
 
 
@@ -306,49 +298,33 @@ PRIMIUMS can be calculated on the basis of following :->
 
 
 
-
-
-
-
-
-
-==> user managemnt 
-		==> This module deals with the creation and management of user accounts. It includes roles and permissions to control access to different 		     
-		    parts of the system.
-
-
-
-
-
-
 KEY DEPENDANCIES:->
 =====================
 
 ==> Data Sources and Integration:
 
-		==>Integration with external data sources, such as customer databases, financial systems, and other relevant databases, is often a key dependency. The availability and 		   reliability of data from these sources can significantly impact the claim management process.
+		==> Integration with external data sources, such as customer databases, financial systems, and other relevant databases, is often a key 		   dependency. The availability and reliability of data from these sources can significantly impact the claim management process.
 
 
 ==> Regulatory Compliance:
 
-		==>Compliance with legal and regulatory requirements is essential. Dependencies on legal updates, compliance changes, and industry standards may affect the development and 		   operation of the claim management system.
+		==>Compliance with legal and regulatory requirements is essential. Dependencies on legal updates, compliance changes, and industry standards 		   may affect the development and osperation of the claim management system.
 
 
 ==> User Authentication and Access Control:
 
-		==>Dependence on user authentication systems and access control mechanisms is critical for ensuring that only authorized personnel can access and modify claims data.
+		==>Dependence on user authentication systems and access control mechanisms is critical for ensuring that only authorized personnel can
+		   access and modify claims data.
 
 
 ==> Communication Channels:
 
-		==>Integration with communication channels, such as email, SMS, or other notification systems, is often necessary for keeping stakeholders informed about the status of 		   claims and other relevant updates. 
+		==>Integration with communication channels, such as email, SMS, or other notification systems, is often necessary for keeping stakeholders 		   informed about the status of claims and other relevant updates. 
 
 
 ==> Payment Systems:
 
-		==> Integration with payment systems is crucial for processing claim payments. Dependency on payment gateways and financial institutions should be carefully managed.
-
-
+		==> Integration with payment systems is crucial for processing claim payments. Dependency on payment gateways and financial institutions 		    should be carefully managed.
 
 
 
@@ -434,7 +410,7 @@ COMMOMN EXCEPTIONS:->
 
 ==> there is a term called hystric which will be in use when a service is down which will break the circuit roll back the changes (fallback)
 
-==> we designed the application based on the status codes if the status code is 200 (ok) then only the further process occurs other than that status code the circuit breaker will break the	circuit  leading in stopping the service   
+==> we designed the application based on the status codes if the status code is 200 (ok) then only the further process occurs other than that status code the circuit breaker will break the circuit  leading in stopping the service   
 
 
 

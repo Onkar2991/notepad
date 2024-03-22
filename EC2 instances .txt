@@ -1,0 +1,92 @@
+EC2 instances 
+=====================
+
+==> search for EC2 in the search box , select the EC2 console window
+
+==> Dashboard contains :-> instances running 
+			   auto-scalling groups
+			   key pairs
+			   instances
+			   security Grops 
+			   Load Balancers 
+			   dedicated hosts 
+			   Elastic Ips
+			   snapshots 
+			   volumes , etc 
+
+
+==> click on Launch instances :- 
+			
+		==> here we can configure all the parameters related to our EC2 instance 
+
+
+==> Name and Tags:- 
+		
+		==> here u write the name of instance . U should give unique names to the instances . If byMistake u have given the same name to an instance the AWS will automatically add 		    a String with your instance name 
+
+
+
+==> Application and Os Images(Amazon Machine Image):-
+
+		==> it is similar to docker image 
+		==> it is a snapshot of operating System 
+		==> choose on which operating system u want to deploy the instance 
+
+
+
+==> Instance type
+
+
+		==> each instance have its own capacity , it will have different cpus , memory etc it is more like assembled desktop
+
+		==> select which instance type u want according to ur requirement like t2.nano,t2.micro,t2.small , t2.medium , t2.large , C6in.metal , C6in.4xlarge etc
+
+
+
+==> Key pair (login)
+
+		==> you can use a key pair to securely connect to your instance 
+
+		==> Create a new key pair
+		
+			--> key pair name 
+		
+			--> key pair type (RSA bydefault)
+	
+			--> Private key file format (.pem format to use with OpenSSH)
+	
+			--> create new key pair
+
+			--> download the key file
+	
+			--> then select the created key pair
+
+
+
+
+==> network Settings 
+
+		==> it has network info which will have a byDefault vpc number 
+
+		==> after that the subnet it is also by default 
+
+		==> auto assign public Ip which is by default enabled 
+
+		==> eigther create a new security group or select from existing security group .
+
+
+
+==> Configure the Storage (EBS)
+
+	--> gp2 *we use* 
+	-->io1 ,io2*when more i/p o/p operations are there*
+	--> sc1
+	--> magnetic 
+	--> throughput Optimized HDD(st1 )
+
+
+
+==> Launch the instance 
+
+
+

@@ -37,7 +37,7 @@ i> Singleton:->
 ii> Factory:->
 ===============
 
-	==>when there is superclass and many subclasses and we want to get the object of sub classes based on input and requirement, then we create factory classes in order to take the 	   responsibility of creating object of class based on input  
+	==>when there is superclass and many subclasses and we want to get the object of sub classes based on input and requirement, then we create factory 	   classes in order to take the responsibility of creating object of class based on input  
 	==>loosly coupled and more robust
 	==>The factory pattern takes out the responsibility of instantiating a object from the class to a Factory class.
 	==>getInstance() method of java.util.Calendar, NumberFormat, and ResourceBundle uses factory method design pattern. 
@@ -60,6 +60,9 @@ Differnce between factory and abstract factory
 ==> The factory method is just a method, it can be overridden in a subclass, whereas the abstract factory is an object that has multiple factory methods on it.
 
 ==> The Factory Method pattern uses inheritance and relies on a subclass to handle the desired object instantiation.
+
+
+
 
 
 iv> Builder:->  Creating an object step by step and a method to finally get the object instance.
