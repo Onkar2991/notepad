@@ -1,3 +1,4 @@
+
 Microservices
 ==================
 
@@ -306,15 +307,153 @@ DECOMPOSITION PATTERN :->
 
 
 
+============================================================================================================================================================================================
+
+API Gateway Pattern
+=====================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+============================================================================================================================================================================================
+
+Service Discovery 
+===================
+
+
+==> NEED :-> The microservices -Based Applications typically runs in virtualized or containerized environment . the number of instances and its locations changes Dynamically . We need to 	     know where these instances are and their names to allow requests to arrive at targeted Microservice . hence to discover that we need Service Discovery Mechanism .
+
+
+==> When a microservice architecture is implemented it is neccesary for it to communicate with the other microservice for which it has to know on which instance it is deployed or in which container it is running so for that it uses the mechanism to discover the location and names of the containers or instances it is called as Service Discovery.
+
+==> The service discovery mechanism helps us to determine where the instances Are located .
+
+==> Due to this Service Discovery Mechanism it acts like a Service Registry as it knows where each instances are located .
+
+
+==> Service Discovery handles requests in two parts :
+	
+	==> it provides a mechanism for an instance to register and say "I'm here"
+
+	==> it provides the way to find the service when it is registered.
+ 	
+
+
+==> flow for two microservices communicating with each other 
 
 	
+	==> Service Provider microservice will send the location of it to Service Registry .
+	
+	==> The Service Consumer Microservice will ask the Service Registry for the location of Service Provider .
+
+	==> The Location of Service Provider is serched By the Service registry in the internal Database and returned to the Service Consumer.
+
+	==> Now the service Consumer can make Direct requests to the Service Provider .
 
 
 
 
+==> It has Two Types 
+
+	
+	1> Client Side Service Discovery 
+	
+	2> Server Side Service Discovery
 
 
 
+1> Client Side Service Discovery :-> 
+
+	
+	==> When using Client side Discovery , The Service COnsumer is Responsible for determining the network locations of availaible Service instance and load balancing request between 	    them
+	
+	==> The Client Queries the Service register . 
+
+	==> then the client uses the load Balancing algorithm to choose one of the availaible service Instances and performs a Request.
+	
+	==> Giving Resposibility for client side load balancing is both burden and a Advantage .It’s an advantage because it saves an extra hop that we would’ve had with a dedicated load 	    balancer. It’s a disadvantage because the Service Consumer must implement the load balancing logic.  
+
+
+
+
+2> Server Side Service Discovery
+
+
+	==> Server side Discovery Model is an alternate for Client side Discovery , which uses an intermediatery that acts as a Load Balancer .
+	
+	==> The Client makes a request to a service via load Balancer that acts as a organizer .
+	
+	==> the load balancer quries the service registry and routes each request to an availaible service instance .
+
+	==> in this approch the dedicated actor the load balancer does the job of load balancing . this is the main advantage of this approach.
+
+	==> Creating this level of abstraction makes the service consumer lightweighted , as it doesnt have to deal with the lookup Procedure .
+	
+	
+============================================================================================================================================================================================
+
+
+Service Registry 
+===================
+
+
+==> It is a database containing the network locations of Service instances.
+
+==> A service Registry must be highly availaible and up-to-date .
+
+==> clients can cache the network paths obtained from the service registry , however this information becomes of no use , and clients wont reach the service instances.
+
+==> A service Registry contains the cluster of servers that uses a replication protocol to maintain the consistancy 
+
+==> Two ways by which we can Register a Service 
+	
+	
+	1> Self Registration :->
+
+		==> in this services are responsible for registering and deregistering the services itself in the service Registry.
+	
+		==> if necessary a service instances sends heartbeat requests to keep its registration alive . 
+
+		
+	
+		==> Heartbeats are simple requests to microservice's API. Usually, for REST APIs you send GET /healthcheck, that should respond with HTTP status 200. If the request fails 		    or takes awfully long, it means that microservice is dead or hanged, and load balancer should not direct any requests to it.
+
+		
+	
+		==> It doesnt require any other system components as intermediaries 
+	
+		==> Disadvantage is it couples the services to the service registry, which means you have to wrute the code for registrering the service in each language and framework used
+
+		
+	
+	2> Third-Party Registration 
+
+	
+		==> in this services are not responsible for registering the services in the service registry.instead another component called service register is responsible for 			    registration.
+	
+		==> the service register keeps track of changes to running instances by polling the deployment environment or subscribing the events .
+
+		==> when it detects a newly awailaible service instance , it records it in its database .
+	
+		==> The Service register also deregisters the terminated Service instances. 
+
+		
+	
+		==> it decouples the services from service registry . There is no need to implement service Registration logic for each programming language or Framework.
+
+		==> One disadvantage of this model is that, unless it’s embedded in the deployment environment, it’s yet another highly available system component that needs to be set up 		    and managed.
 
 
 

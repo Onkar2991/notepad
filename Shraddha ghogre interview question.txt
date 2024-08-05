@@ -1,0 +1,35 @@
+// Shraddha ghogre interview questions (Amdocs)
+
+1> introduction 
+2> java 8  features 
+3> what is functional interface and lambda expressions 
+4> create a functional interface and implement it with lambda expression 
+5> why do we need Streams 
+6> internal working of hashmap
+7> what is the work of equals method in hashmap ?
+8> class employee{
+String name ;
+int age ;
+int salary ;}
+
+find the highest salary of the employee using streams
+
+9> Design patterns 
+10> write th code for singletone design pattern 
+11> write the same using multithreading concept 
+12> what are Solid Principles  
+13> Immutable class steps 
+14> Synchronize and volatile keywords 
+15> callable interface 
+16> AOP in spring Boot
+17> write a code having getInstance method and print something after the execution using aop(using @After annotation)
+18> Locks in hibernate 
+19> @transectional annotation 
+20> @bean and @component annotation 
+21> Ways of injecting beans 
+22> pagination in hibernate 
+23> microservice Design patterns 
+24> how do u handle exceptions in springboot 
+
+
+

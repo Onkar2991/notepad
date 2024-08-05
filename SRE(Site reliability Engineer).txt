@@ -1,0 +1,59 @@
+SRE(Site reliability Engineer)
+================================
+
+
+
+==> Tasks and Responsibility:->
+	
+	--> Create Automated processes for operational aspects. Which means the site is acting within the SLA or not which is automatically evaluated.
+	
+	--> configure proper monitoring and logging of the system to get the visibility of the system whats going on inside or the system performance of the system 
+	
+	--> detect issues before or early when they happen and get notified to the correct person with all the information needed 
+	
+	--> they can have their own logic for building such alerts and automated processes 
+	
+	--> Do on call Support when the users are getting isuues with the site or the system
+
+	--> conduct Post Incident Reviews so that the incident doesn't happen again  
+		--> Thorough analysis of the incident 
+		--> Stay blameless after the outage 
+		--> Document everything for future reference 
+
+==> There are developers who work as SRE or there is special SRE team for handling the site or the systems Reliability..
+
+==> SRE Developers must know the Software Development as they work as both Developer(For handling the outage or the incident occured) and Site Reliability Engineer 
+
+
+==> Outage happens when there are multiple bugs or failures in the system 
+ 
+==> Monitoring alerting and Logging is the main task of SRE 
+
+
+
+
+
+Site Reliability Engineer                           		   DevOps
+
+==> SRE is a person who implements Devops 		==> Devops is a Approach  
+    principles
+
+==> mainly focused on Site reliability 			==> Mainly focused in delivering Quality code         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

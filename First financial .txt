@@ -1,0 +1,28 @@
+First financial 
+=====================
+
+hibernate jdbc templete plain sql 
+
+	
+
+--> corporate Banking
+
+--> Onboarding 
+	--> like creating a company ( company id , name ,address, city state code country billing account )
+	--> Creating accounts (savings loan dd salary ach credit cheque  )
+		-->(selecting a bank )--> Account numbers --> Account description --> country 
+	--> Services (company account permission admistraction user approval default  ) 
+	--> PAYMENTS (ach card acc transer limit for trasection min max  wire real time )
+--> Users --> Tcs(admin user , name , email username password phone no zip code) 
+	--> for users u have to select the company accounts services payments 
+	--> the services which are enabled for the company only those will be visble for the users 
+
+
+
+
+
+ 
+
+==> Defect Lifecycle 
+
+backlog --> in process --testing completed --> ready to deploy--> On hold --> delete (if the defect is not valid)

@@ -38,8 +38,7 @@ JWT(Jason Web Token)
 
 	in case of session
 	
-	==> suppose u have two different servers for the same company for different services like Bank and Retirement plans . if you want to access the 	      bank server then the session is stored in the bank server. if u want to access the Retirement server then u dont have the session stored so u 	      have to again store the session in that so that u can access it 
-	
+	==> suppose u have two different servers for the same company for different services like Bank and Retirement plans . if you want to access the bank server then the session is 	stored in the bank server. if u want to access the Retirement server then u dont have the session stored so u have to again store the session in that so that u can access it 
 	in case of JWT
 	
 	==> the two servers will have the same secret key whenever we want to access the servers we dont need to do the same taskfor multiple times 

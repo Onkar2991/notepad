@@ -1,0 +1,16 @@
+endpoint connection 
+components creation 
+
+onSubmit()
+ngOnInit()
+
+
+
+auth.InMemoryAuthenticationMethod 
+auth.WebSecurityConfigureAdapter 
+@EnableWebSecurity annotation  
+noOperationEncoder
+antMatcher 
+encoders
+thymleaf 
+tomcat embeded jasper

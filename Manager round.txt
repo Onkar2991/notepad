@@ -1,0 +1,39 @@
+==> for ensuring code quality we do the following 
+	1> do code reviews and peer testing
+	2> test driven development(writing tests after writing the code to drive the development)
+	3> Use sonar cube 
+
+==> for testing we have used 
+	1> for unit testing - Junit and Mockito 
+	2> for Api Testing - postman 
+
+==> Tools used 
+	1> postman 
+	2> Maven as build tool 
+	
+==> how to analyze the ticket which has been assigned to u 
+	
+	--> firstly we have to read the ticket and analyze the requirements mentioned in the ticket 
+	--> check for dependancies if there are any which are affected by this ticket 
+	--> break down the task into smaller subtasks 
+	--> do the development based on the ticket priority 
+	--> testing the functionality by writing unit test cases then do integration testing after that do the User acceptance Testing (UAT) ( to verify the changes meet the acceptance criteria )
+	--> then deploy the code to the production 
+
+==> CI-CD pipeline workflow ( for Deployemnt)
+	
+	--> Build stage ( where we Build and compile our code)
+	--> Test Stage ( where we can write the Junit test cases for the code)
+	--> Deploy Stage ( where we deploy the code )
+
+==> How do u acces your aws services ?
+
+	--> Using AWS CLI(Command line interface)
+	--> using AWS Console 
+	
+
+==> Tech stack u have Worked on ?
+
+	--> Java , Spring , Spring Boot ,Hibernate, Microservies , Aws , Postgressql 
+	
+==> 

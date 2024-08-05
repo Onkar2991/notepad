@@ -250,7 +250,7 @@ CACHING:->
 
 //==>used where we want to update the data rarely
 
-//==>temperory memory which is present betweeh application and db
+//==>temperory memory which is present betweenv application and db
 
 ==>caching is a mechanism to store copies of data or files in such a manner so that they can be served quickly.
 
@@ -437,7 +437,7 @@ get() method:->
 		
 		==> If the same object is already present in the cache then it returns previously stored data from the cache.
 
-	==> get() method returns null if there is no object present in the database.
+	==> get() method returns null if there is not object present in the database.
 				======
 	
 

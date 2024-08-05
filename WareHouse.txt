@@ -1,0 +1,120 @@
+Good afternoon,
+Hello, my name is pradeep mahadik. I am from sangli, Maharashtra, and currently residing in Pune. I have completed my Higher Secondary education at Balwant college,vita, followed by a Bachelor of Computer application from Adarsh mahavidyalye vita.
+Currently, I am working as a Software Developer at StepStrong Software Pvt. Ltd. I have 2.4 yreas of hands-on experience in backend development using JavaEE and Spring Boot. My expertise includes working with Microservices, JUnit, AWS,  and other essential technologies for robust software development.
+
+Some of my key technical skills are:  Core Java, Java 8, Spring Boot, Microservices, REST API, Hibernate/JPA, PostgreSQL, JUnit, Git, Jenkins, and Docker.
+
+Thats all about me. 
+
+------------------------------PROJECT---------------------------------------
+ Oct 2023 to Present:  service based it may be around 40-50.
+
+my role is team member 
+WareEase is a powerful Warehouse Management System (WMS) designed to make warehouse operations more efficient, accurate, and controlled. It helps organizations of all sizes improve productivity, save costs, and enhance customer satisfaction by leveraging advanced technologies and integrating multiple functional modules.
+
+Purpose:
+WareEase helps organizations efficiently manage daily warehouse operations. It ensures that goods and materials move through warehouses in the most efficient and cost-effective way. Key functions include tracking inventory, picking and receiving goods,putting items away, and providing real-time visibility into inventory locations and quantities. It also optimizes the flow of goods and information in the supply chain.
+
+--------------ROLE--------------
+
+In my current role, I am responsible for developing application features, testing application functionalities, addressing and resolving software issues swiftly, demonstrating software to clients, ensuring timely and accurate project delivery, coordinating +project sprints,  and conducting code reviews.
+
+------------------TECH STACK-----------------------
+
+Technology Stack
+* Spring Boot: For rapid development of the application with
+minimal configuration.
+* Security: spring security
+* Authentication and Authorisation: JWT token
+* Hibernate: For object-relational mapping (ORM) and database
+interactions.
+* Spring MVC: To implement the Model-View-Controller architecture.
+* PostgreSQL: As the relational database to store and manage data.
+* Server: Tomcat(For localhost deployment).
+* HTML: To define the frontend elements.
+* Bootstrap and CSS: ForStyling.
+* FrontEnd: Angular
+* Deployment: on-premises 
+
+Outcome:
+Implementing WareEase results in:
+
+Improved Operational Efficiency: Streamlined processes and reduced manual interventions.
+Optimized Space Utilization: Efficient use of warehouse space and resources.
+Enhanced Inventory Visibility: Real-time tracking and monitoring of inventory.
+Reduced Costs: Minimizing waste and optimizing labor.
+Better Employee Utilization: Efficient allocation and tracking of workforce.
+Optimized Supply Chain Inventories: Better demand forecasting and inventory replenishment.
+Accurate Inventory Management: Reduction of errors and discrepancies.
+Cloud-Based Accessibility: Real-time monitoring and control from anywhere.
+
+	Modules:
+	WareEase consists of 25+ modules, each focusing on different aspects of warehouse management. Key modules include:
+
+	Product Management Module: Manages products stored in the warehouse.
+	Stock Management Module: Handles stock levels for various products.
+	Shelf Management Module: Manages the shelves within the warehouse.
+	Stock Clerk Management Module: Manages employees handling warehouse transactions.
+	Warehouse Transaction Management Module: Handles import/export transactions.
+	Warehouse Management Module: Manages the warehouses.
+	Picking Module: Supports various picking methods like batch, zone, or wave picking.
+	Packing Module: Generates and prints shipping labels, packing slips, etc.
+	Shipping Module: Generates shipping manifests and documentation.
+	Returns Management Module: Processes and tracks product returns.
+	Integration Module: Facilitates communication with external systems like ERP, CRM, and e-commerce platforms.
+	User Management and Security Module: Ensures controlled access and security for users.
+
+	Product Management Module:
+
+	Fields:
+	private Long id
+	private String code
+	private String description
+	private MeasurementUnit measurementUnit
+	The Product Management Module is responsible for handling the management of products stored within the warehouse. It supports:
+	
+	Creation, Retrieval, Modification, and Deletion of product information.
+	Pagination and Sorting for managing large datasets.
+	Integration with other modules and systems within the WMS.
+	
+	Services:
+	ProductService: Implements business logic related to products, including fetching, saving, updating, and deleting products, as well as 	searching based on specific criteria.
+	
+	Stock Management Module:
+	Fields:
+	String id
+	Long warehouseId
+	String warehouseDescription
+	Long shelfId
+	String shelfCode
+	Long productid
+	String productCode
+	Long totalQuantity
+	The Stock Management Module manages stock levels and movements within the warehouse. It supports:
+		
+	Tracking of Stock Quantities, Locations, and Product Details.
+	Real-Time Visibility into inventory status.
+	Pagination and Search Functionality for efficient data handling.
+
+	Services:
+	StockService: Implements business logic related to stock management, including fetching stock details, retrieving stock records, and 	searching for stock based on criteria.
+	Exceptions in Project:
+	Customized Exceptions:
+	ResourceNotFoundException: Thrown when a specific resource identified by its ID is not found.
+	NotEnoughQuantityToExportException: Thrown when there isn't enough quantity to fulfill an export request.
+	MissingRequiredFieldException: Thrown when a required field is missing in a request.
+	InvalidQuantityException: Thrown when an invalid quantity is provided.
+	FieldNotUniqueException: Thrown when a field that is expected to be unique violates the uniqueness constraint.
+	BaseRuntimeException: Custom base exception allowing for consistent handling of exceptions throughout the application.
+	Predefined Exceptions:
+	NullPointerException: Thrown when an application attempts to use null where an object is required.
+	ArrayIndexOutOfBoundsException: Thrown when an array has been accessed with an illegal index.
+	NumberFormatException: Thrown when an application attempts to convert a string to a numeric type but the string does not have the 	appropriate format.
+	ClassCastException: Thrown when code attempts to cast an object to a subclass of which it is not an instance.
+	IOException: Base class for exceptions thrown while accessing information using streams, files, and directories.
+	FileNotFoundException: Thrown when a file with the specified pathname does not exist.
+	SQLException: Provides information about database access errors or other errors.
+	ClassNotFoundException: Thrown when an application tries to load a class through its string name but no definition for the class with 	the specified name could be found.
+	By handling these exceptions, the system ensures robust and reliable operations, enhancing user experience and maintaining data 	integrity.
+
+

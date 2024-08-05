@@ -1,0 +1,26 @@
+HCL tech (Swapnil Rathore)
+================================
+
+1> introduction
+2> which sdlc method you use ?
+3> comparable and comparator difference 
+4> what is polymorphism?
+5> how is an abstract class is different from interface?
+6> how many types we can create a thread ?
+7> checked and unchecked exceptions ?
+8> features of java8
+9> explain lambda expressions and functional interface
+10> write an examples for both 
+11> u have list of employess find the employee whose age is >25 using java8
+12>@Qualifier @RequestMapping 
+13> ow do u secure the rest api ?
+14> profiles in SpringBoot ?
+15> what is springBoot Actuator?
+16> in which scenario u have used mocking ?
+17> ec2 service in aws
+18> build tools u have worked?
+
+
+
+
+

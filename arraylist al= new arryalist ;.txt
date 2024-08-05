@@ -1,0 +1,70 @@
+arraylist al= new arryalist <>;\
+
+ al= new arraylist<>;
+
+
+interface abc
+{
+
+add ()
+substract()
+multiplication ()
+division()
+}
+
+interface fgh extend as {
+
+
+}
+
+
+interface as{
+add()}
+
+
+interface fg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class a {
+}
+
+class b {}
+
+
+class c 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

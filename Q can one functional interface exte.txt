@@ -1,4 +1,4 @@
-Q> can one functional interface extends another functional interface ?
+	Q> can one functional interface extends another functional interface ?
 ans -> we canot extend functional interface to another functional interface if we try to do it the functional interface will not be the functional interface as it will cintain two abstract methods 
 
 

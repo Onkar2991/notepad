@@ -230,6 +230,11 @@ multiple datasources connection
 
 
 
+https://youtu.be/OnK4IKgLl24
+SRE vs Devops 
+
+
+
 
 ============================================================================================================================================================================================
 
@@ -355,6 +360,23 @@ Microservices with Spring Boot — Authentication with JWT
 
 
 
+https://plaid.com/resources/ach/ach-vs-wire-transfers/
+Ach vs wire transfer
+
+https://www.quora.com/How-does-a-credit-or-debit-card-transaction-actually-work-behind-the-scenes#:~:text=Transaction%20reaches%20card%20holder's%20issuing,bank%20settles%20with%20issuing%20bank
+
+https://sea.mastercard.com/en-region-sea/business/merchants/start-accepting/payment-process.html#:~:text=The%20customer%20purchases%20goods%2Fservices%20from%20a%20merchant.&text=The%20merchant
+
+How does a credit or debit card transaction actually work behind the scenes?
+
+
+https://github.com/shantanu-sarkar/OnlineBankingApplication/tree/main
+OnlineBankingApplication
+
+
+
+
+
 
 ============================================================================================================================================================================================
 https://github.com/in28minutes/spring-unit-testing-with-junit-and-mockito/tree/master
@@ -375,6 +397,12 @@ Wallet_Payment_Application
 https://github.com/bezkoder/spring-boot-custom-validation
 spring-boot-custom-validation
 
+
+https://github.com/rppatel79/RiskManagement/tree/master
+Juit application
+
+https://github.com/RameshMF/spring-mvc-tutorial
+multiple Spring boot applications 
 
 
 

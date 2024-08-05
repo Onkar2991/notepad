@@ -22,7 +22,7 @@ EC2 instances
 
 ==> Name and Tags:- 
 		
-		==> here u write the name of instance . U should give unique names to the instances . If byMistake u have given the same name to an instance the AWS will automatically add 		    a String with your instance name 
+		==> here u write the name of instance . U should give unique names to the instances . If byMistake u have given the same name to an instance the AWS will automatically add  a String with your instance name 
 
 
 

@@ -1,0 +1,56 @@
+Q> Http methods
+Q> difference between put and patch 
+Q> how can u update the data using post ?
+Q> difference between Delete and Truncate 
+Q> Why string is immutable ?
+Q> what is Lambda expressions ?
+Q> what is the performance perspective for lambda expression ?
+Q> what is Functional interfaces ?
+Q> what is Excutable Framework ? what is its real time use ?
+Q> what happens when u have two null keys in hashmap? Does it give compile time exception or runtime exception?
+
+
+======================================================================
+How many APIs you have created in your project
+
+Different annotations in spring boot
+
+@data 
+
+@onetomany and @manytoone
+
+What is lazy loading 
+
+Fetch type as eager in one to many how does work internally
+
+If I want load a child class also then which fetch type 
+
+Cascade type 
+
+@transient
+
+How to handle Exceptions 
+
+How to create Custom exception
+
+How can i handle authentication and authorisation apis in application
+
+@valid
+
+ How to validate a variable ?? But it's a json object not dto or pojo
+
+AOP in spring
+
+How can I handle the logging in spring boot
+
+I have perform some activity
+
+Command line runner
+
+Use of application listener
+
+What are the different events are their in application listener
+
+What is time entity 
+
+@Prepersist and @preupdate annotations

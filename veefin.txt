@@ -1,0 +1,118 @@
+1. Which version Of JDK do you use in a project?
+	1.8 vesion(java 8)
+	spring boot version 2.7.14
+
+2. What is Optional class?
+	The Optional class is used to avoid null checks and NullPointerException.
+
+3. How to create object of Optional class? Where did you use in your project?
+	In my projects, I have used the Optional class in various scenarios, particularly to handle potential null values and to make the code 	more readable and less error-prone. 
+	
+4. What is a functional interface?
+	A functional interface in Java is an interface that has exactly one abstract method. These interfaces can have multiple default or 	static methods, but only one abstract method. Functional interfaces provide a target type for lambda expressions and method references.
+	
+5. What is the use of @FunctionalInterface annotation?
+	The @FunctionalInterface annotation in Java is used to indicate that an interface is intended to be a functional interface. While it's 	not mandatory to use this annotation, it provides several important benefits:
+	
+
+6. What is the relation between Functional Interface and Lambda expression?
+	A lambda expression can be used to provide a functional interface. This is because a lambda expression implements a single abstract  	method described in the functional interface.
+
+Program: I have a list of string objects I have to convert all Strings in uppercase.
+Program: I have to convert only the strings that start with "ab".
+
+
+7. What is the use of the filter method and What it uses internally?
+	The filter method in the Stream API is used to filter elements based on a specified condition.
+
+8. In the project how do you interact with the Database?
+	Using JPA define configuration in application.properties file.
+	
+9. What is dialect?
+	 the term "dialect" refers to a component that allows these frameworks to translate their object-oriented queries into queries that are 	 understandable by the underlying database system.
+
+10. What is the use Of @Id?
+	 The @Id annotation specifies that the annotated field or property is the primary key of the entity. This means it uniquely identifies 	 	 each entity instance within the entity table in the database.
+
+11. What is a foreign key?
+	A foreign key is a column (or set of columns) in a table that refers to the primary key or a unique key in another table. It establishes 	a relationship between the two tables.
+
+12. Can we create an entity without Id?
+	While it's technically possible to create an entity without an @Id field in JPA, it goes against the typical usage and conventions of 	relational databases. Having a primary key is essential for ensuring data integrity, efficient querying, and proper ORM functionality. 	Therefore, it's generally recommended to include an @Id annotated field in your entity classes when working with JPA and relational 	databases. 
+	
+13. What are @OneToOne and @OneToMany annotations?
+	The @OneToOne annotation is used to define a one-to-one relationship between two entities. This means that each instance of the first 	entity is associated with exactly one instance of the second entity, and vice versa.
+
+	The @OneToMany annotation is used to define a one-to-many relationship between two entities. This means that each instance of the first 	entity can be associated with multiple instances of the second entity, but each instance of the second entity is associated with only 	one instance of the first entity.
+
+14. What is a Volatile variable?
+	 Declaring a variable as volatile ensures that changes to the variable are always visible to other threads. 
+	 When a variable is declared as volatile, it guarantees that any thread that reads the field will see the most recently written value.
+
+15. What happens in the below scenarios:
+
+public class SomeClass {
+
+public synchronized void m1() {}
+
+public synchronized void m2() {}
+
+}
+
+SomeClass c = new SomeClass();
+
+T1 => c.m1();
+
+T2 => c.m2();
+==================================
+What happens in the below scenario:
+
+public class SomeClass {
+
+public synchronized void m1(){
+//some code
+
+m2();
+
+//some code
+}
+
+public synchronized void m2() {}
+
+}
+
+SomeClass c = new SomeClass();
+
+T1 => c.m1();
+
+==================================
+
+How many instances of Class C will be created in the below scenario?
+
+@Component
+public class C{
+
+}
+
+@Service
+public class S1{
+@Autowired private C c1;
+}
+
+@Service
+public class S2{
+@Autowired private C c2;
+}
+
+
+What do I have to do if I want multiple instances?
+
+
+
+Client Request: A client (e.g., web browser or mobile app) sends a request to the WareEase API.
+Controller Layer: The request is handled by the appropriate controller, which validates and processes the request.
+Service Layer: The controller calls the relevant service, which contains the business logic.
+Repository Layer: The service interacts with the repository layer to perform CRUD operations on the database.
+Data Layer: The repository layer maps the data to entities and interacts with the database.
+Response: The service layer processes the data and returns the result to the controller, which then sends the response back to the client.
+Exception Handling: If any exception occurs, it is caught by the global exception handler, which returns an appropriate error response.
