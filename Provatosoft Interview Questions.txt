@@ -1,0 +1,44 @@
+1> What is microservices ?
+2> what are the sub concepts used to implement microservice architecture?
+3> 
+int[] nums = {12, 2128, 0};
+Arrays.stream(nums).boxed()
+    .forEach(n -> { 
+      Integer i2 = Integer.valueOf(n);
+       System.out.println(" " + (n == i2) );   });
+whats output and explain
+
+4> how does microservices communicate ?
+5> what are design patterns ?
+6> what are different bean scopes ?
+7> difference between @pathvariable and @RequestParam
+8> what will be the url with using @pathvariable and @RequestParam
+9> suppose u have pagination applied in your application then you have page no and getUserId as a parameters then what will be the url ?
+10> what happens when you removed or doesn't passed the userid ?
+11> what happens when you removed or doesn't passed the page no ?
+12> what is thread pool ? how to create that ?
+13>  is it mandatory to use executor service for creating the thread pool ?
+14> what are different ways to create a thread pool and what is Recommended?
+15> what is Compatible feature and @Async Annotation ? 
+16> why we need asynchronous object in application?
+17> what is synchronization ?
+18> what are the problems caused by the synchronization ?
+19> What is DeadLock ?
+20> how to resolve the deadlock situation ?
+21> what is circular dependancy ?
+22> @Qualifier 
+23> what are the types of dependancy injection ? which injection is Recommended?
+24> volatile Keyword
+25> What is docker ?
+26> why docker came in picture ?
+27> what is jenkins ?
+28> have u created any pipelines using jenkins ?
+29> What is EKS ?
+30> What are clusters ?
+31> difference between S3 and RDS ?
+32> What is Cloudwatch ?
+33> Why we check logs ?
+34> if we have performance issue in our application then how to find it ?
+35> What are springboot matrices ?
+36> for monitoring purpose which tool we use ?
+37> what is log4j ?

@@ -1,0 +1,338 @@
+There are in different types of items in a shop, where the number of items of type / is given by quantity[i]. The price of the items is determined dynamically, where the price of the th item is equal to the remaining number of items of type i.
+
+There are m customers in line, and each customer will buy exactly one item of any type. The shopkeeper aims to maximize revenue by selling items optimally.
+
+Determine the maximum revenue the shopkeeper can earn by selling exactly m items.
+
+Example
+
+Consider n=3, m=4, quantity=[1,2,4).
+
+One of the optimal ways to sell the items is as follows:
+
+Item Type       Customers         Amount        Quantity Remaining
+
+3rd 		1			4 	[1, 2, 3]
+
+2nd		1		4+2= 6		[1, 1, 3]
+
+3rd 		1		6+3=9		[1, 1, 2]
+
+3rd		1		9+2=11		[T 'T'T]
+
+The maximum possible revenue is 11.
+
+Function Description
+
+Complete the function getMaximumAmount in the editor with the following parameters:
+
+int quantity[n]: the number of items of each type
+
+
+Returns
+
+long_int: the maximum revenue possible
+
+Constraints
+
+1 ≤ n ≤ 10^5
+
+1 ≤ m ≤ 10^5
+
+1 ≤ quantity[i] ≤ 10^5
+
+
+Sample Input 0
+
+STDIN			FUNCTION
+
+5			the size of quantity [], n = 5
+
+10			quantity = [10, 10, 8, 9, 1]
+
+10
+
+8
+
+9
+
+1
+
+6			m = 6
+
+
+
+Sample Output 0
+
+55
+
+
+write the above java code in below format 
+
+import java.io.*;...
+
+
+
+class Result {
+
+/*
+
+* Complete the 'getMaximumAmount' function below.
+
+*
+
+* The function is expected to return a LONG_INTEGER.
+
+* The function accepts following parameters:
+
+*
+
+1. INTEGER_ARRAY quantity
+
+* 2. INTEGER m
+
+*/
+
+public static long getMaximumAmount(List<Integer> quantity, int m) {
+
+// Write your code here}}
+
+
+=======================================================================================================================
+
+
+
+In the lifecycle of a software development project, adjusting the set of files and directories tracked by the version control system is sometimes necessary. This adjustment can be due to the inclusion of sensitive information, configuration files, or dependencies that should not be shared or tracked through the repository. Git provides mechanisms to exclude specific files and directories from being tracked, while still maintaining their presence in the local project directory.
+
+For this task, within an existing project repository, the objective is to stop tracking the "env" file and the "cache/" directory (including all files within it), without physically removing these items from the project directory. After updating the tracking behavior, a new commit should be made to reflect these changes.
+
+Using the existing project repository located at /home/ubuntu/1792024-git-excluding-specific-files-and-directories:
+
+Implement the necessary git ignore process to exclude ".env" file and the "cache/" directory from being tracked by Git.
+
+Execute the appropriate Git commands to ensure that the "env" file and the "cache/" directory are no longer tracked, while also ensuring they are not deleted from the filesystem.
+
+Confirm that "env" file and the "cache/" directory are effectively excluded from Git tracking.
+
+Commit the changes with the commit message "Exclude from tracking".
+
+Push the commit to the remote repository.
+
+An example of the desired output of git status:
+
+On branch master
+
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+X
+
+An example of the desired output of git ls-files:
+
+.gitignore
+
+README.md
+
+core.module
+
+modules/a.module
+
+modules/b.module
+
+
+An example of the desired output ofgit ls-files --other:
+
+.env
+
+cache/a.cache
+
+cache/b.cache
+
+cache/something.else
+
+An example of the desired output of ls
+
+-al.env cache/*:
+
+-rw-rw-
+
+1 ubuntu ubuntu 52 Jun 9 09:22 .env
+
+-rw-
+
+1 ubuntu ubuntu 11 Jun 9 09:20 cache/a.cache
+
+-rw-rw-r-
+
+1 ubuntu ubuntu 20 Jun 9 09:20 cache/b.cache
+
+1 ubuntu ubuntu 25 Jun 9 09:20 cache/something.else
+
+An example of the desired output of git log --name-status:
+
+commit 8eccc904ff32a87fa184a6da3edd82bab1ccfeb3 (HEAD -> master, origin/master)
+
+Author: Hacker Developer <hacker.developer@hackercompany.com>
+
+Date: Sun Jun 9 09:28:37 2024 +0000
+
+Exclude from tracking
+
+D .env
+
+A .gitignore
+
+D cache/a.cache
+
+cache/b.cache D ca
+
+D cache/something.else
+
+commit 8dbcfaeaf37006384c77e83a89544d1d2032ae61
+
+Author: Hacker Developer <hacker.developer@hackercompany.com>
+
+Date: Sun Jun 9 09:07:44 2024 +0000
+
+Project initialize
+
+A .env
+
+A README.md
+
+A cache/a.cache
+
+A cache/b.cache
+
+A cache/something.else
+
+A core.module
+
+A modules/a.module
+
+A modules/b.module
+
+
+
+========================================================================================================================================================================================
+
+
+Given an array arr of n integers, modify the array to make it positive using the following operation:
+
+In a single operation, select an index i (0 ≤ i<n) and a value x (-1018 ≤x≤ 1018) and change arr[i]to x.
+
+An array is considered positive when the sum of each subarray of length greater than 1 is non-negative. More formally, after the operations, the following condition should hold for all values of land rwhere 0 ≤ /<r<m
+
+arr[1] 20
+
+Determine the minimum number of operations required to make the array positive.
+
+Example
+
+arr[2,5,-8,-1,2]
+
+Assuming 0-based indexing, take 12 and x = 10. The modified array is arr' = [2, 5, 10, -1, 2]. Now, every subarray of length greater than 1 has a non-negative sum. Return the number of operations, 1.
+
+Function Description
+
+Complete the function getMinOperations in the editor with the fo with the following parameter(s):
+
+int arr[n]: an array of integers
+
+Returns
+
+int: the minimum number of operations required
+
+Constraints.
+
+1 <= n <= 10 ^ 5
+
+- 10 ^ 9 <= arr[i] <= 10 ^ 9 where 0 <= i < n
+
+
+Sample Input 0
+
+STDIN 				FUNCTION
+
+5				n = 5
+
+-1				arr= [-1,-1,-1,-1,-1]
+
+-1
+
+-1
+
+-1
+
+-1
+
+
+Sample Output 0
+
+2
+
+
+Explanation
+
+It is possible to make the array positve by performing 2 operations. One way is with (i = 1, x = 10) and (i = 3, x = 15) Then arr'= [-1, 10, -1, 15, -1]
+
+
+
+Sample Input 1
+
+STDIN			FUNCTION
+
+6		n = 6
+
+6		arr = [6,-5,5,10,-1,12]
+
+-5
+
+5
+
+10
+
+-1
+
+12
+
+Sample Output 1
+
+0
+
+Explanation
+
+There is no need to perform any operation. Every subarray of length greater than 1 has a sum greater than or equal to 0.
+
+
+write the above java code in below format
+
+
+
+import java.io.*;.
+
+class Result {
+
+/*
+
+* Complete the 'getMinOperations' function below.
+
+*
+
+* The function is expected to return an INTEGER.
+
+* The function accepts INTEGER_ARRAY arr as parameter.
+
+*/
+
+public static int getMinOperations (List<Integer> arr) {
+
+// Write your code here
+
+}
+
+}
+
+
+

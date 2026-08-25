@@ -1,0 +1,90 @@
+Good Morning,
+
+My name is Chakradhar Karhale. I am from Nanded, Maharashtra, and currently live in Pune. I completed my Bachelor of Engineering from Pune University.
+
+I have 3.2 years of experience in Java development using J2EE, Spring Boot. My skills include working with Spring Boot, RestAPI, Hibernate, microservices.
+
+I have worked with three companies. At Hoonartek, I contributed to two major projects: Relatus, a CRM system for managing customer data and improving sales and support, and second one is LogiWave, it is a platform for better interaction between shipping companies and customers. in MarkGenic Software, where I am worked on the Loan Sphere project, a comprehensive loan management solution for the banking and lending industry.
+
+currently im working with Tagrem India pvt ltd where i working on NAV Our project is a
+CRM-based platform designed to streamline the vehicle donation process for charities.
+
+Thank you.
+
+===================================ROLE====================================
+
+In my current role, I am responsible for developing application features, testing application functionalities, addressing and resolving software issues, demonstrating software to clients, ensuring timely and accurate project delivery, i contribute to the successful execution of project sprint,  and conducting code reviews.
+
+NAV
+
+Description:->
+->Our project is a CRM-based system designed to manage and streamline the process of vehicle donations to charities. The core idea is to make it easy for individuals (donors) to donate their vehicles (like cars, trucks, etc.) to charitable organizations. At the same time, we ensure that every step — from donation to vehicle pickup, repair, sale, and finally, sending a thank-you to the donor — is handled efficiently through multiple dashboards tailored to specific roles.
+
+
+Project Story:
+Imagine someone wants to donate their old car to a charity. Instead of going through a complicated, unclear process, they visit our website CARS (Charitable Adult Rides & Services) where they simply fill out a Vehicle Donation Form. We call this the SSDF Form. This is the first step where the donation journey begins.
+
+Once the form is submitted, the backend CRM takes over.
+
+
+1. DSR Dashboard (Donor Support Representative):
+After submission, the request appears on the DSR Dashboard. This dashboard is used by DSR agents, who are responsible for verifying the information. They contact the donor to confirm vehicle details, ask additional questions if anything is missing, and ensure the SSDF form is fully completed.
+
+This interaction is crucial because it builds trust with the donor and ensures we have accurate information about the vehicle.
+
+
+
+2. Operations Dashboard:
+Once the DSR completes their part, the request moves to the Operations Dashboard. Here, our operational team reviews all the information about the vehicle and prepares it for pickup. The main task at this stage is vendor assignment.
+
+We work with multiple vendors like CATS, IAA, and others. Based on the location, type of vehicle, or current vendor workload, we assign a vendor to handle the vehicle.
+
+
+
+
+3. Vendor Dashboard:
+After a vendor is assigned, the request reaches the Vendor Dashboard. The selected vendor is notified and schedules a vehicle pickup from the donor’s location.
+
+The vendor performs a basic inspection — if the vehicle needs any minor repairs or fixes before selling, they handle that too. Once the vehicle is repaired (if needed), it's put up for sale through their channel.
+
+
+
+
+4. Accounting Dashboard:
+When the vehicle is sold, the sale information is forwarded to the Accounting Dashboard. This is where the financial details are handled — the donation value is finalized, records are updated, and the accounting team ensures all monetary aspects are properly managed.
+
+
+
+
+5. Final Step – Thank You Letter:
+The final and very important step is appreciation. Once the donation process is complete and the vehicle is sold, we send a Thank You Letter to the donor. This is not just a formality — it's our way of closing the loop and making sure the donor feels valued for their contribution.
+
+
+
+modules:
+
+
+
+
+Task:
+
+Scenario:
+
+As a NAV Admin, I implemented a feature to manually update external vendor vehicle IDs (CATS stock number and IAA claim number) to resolve integration edge cases.
+
+✅ When a stock ID or claim number is updated:
+
+I logged the change in the vehicle's activity history (audit log).
+
+I updated the external log table (indition_ceps_external_log) using jsonb_set in PostgreSQL for both history and frontend grid consistency.
+
+Challenge Solved: Ensured real-time consistency between manual updates and external system logs without requiring backend support.
+
+
+
+
+
+
+
+
+

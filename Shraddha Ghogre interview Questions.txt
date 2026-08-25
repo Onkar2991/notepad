@@ -1,0 +1,38 @@
+Shraddha Ghogre interview Questions 
+
+1> oops concepts 
+2> 45 63 1 02 56 71 99 20 separate even and odd no using java8 give me two Seperate lists for each and sort it.. 
+3> what if there are 1000 numbers in list what will be your approach 
+4> what if the list contains a character in the list 
+5> What is wrapper classes ?
+6> Collection and Stream Difference 
+7> Map and Flatmap Difference
+8> what is Synchronize block ?
+9> Wait and notify methods
+10> is it good to use notify and wait in our project?
+11> what is interface give its real time example
+12> why is java platform independent?
+13> what is string pool
+14> what happens when u create a new String using new keyword ?
+15> Advantages of String pool
+16> Memories available in java 
+17> Jvm Role 
+18> SpringBoot Advantages 
+19> @SpringBoot Application Annotation 
+20> @Restcontroller
+21> Restapi advantages 
+22> Rest full form 
+23> use of pathvariable 
+24> difference between requestparam and pathvariable
+25> what is the backend process for the application which is accessible anywhere but deployed at delhi location 
+26> what is bean ?
+27> in Spring mvc and Spring boot what is the difference for creating a bean 
+28> when u will prefer spring mvc
+29> how to create a instance in aws
+30> maven and graddle difference
+31> reposiratories in maven 
+32> employee table we have id  and name name conatins douplicates write aquery to return distint values from table with there id
+33> acid properties
+34> last task in the project 
+35> load balancers
+

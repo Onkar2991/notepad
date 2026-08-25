@@ -1,0 +1,44 @@
+What is concurrency in Lambda AWS ?
+
+what is Lambda limitations & max memory of it ?
+
+Deployment strategy in AWS ?
+
+what is Short-circuiting / throttling in Lambda ?
+
+Lambda + S3 integration without actually using AWS?
+
+Simplified ways to filter logs ?
+
+Filtering by time window (5 PM–10 PM) for millions of requests.
+
+Types of instances 
+
+VPC / Networking
+
+Subnets 
+
+Java Versions
+
+Why Java 11 is used.
+
+Java 8 vs Java 11 
+
+Java 8 features
+
+Streams
+
+How streams use memory.
+
+Lazy evaluation in streams 
+
+Short-circuiting streams 
+
+Collections / Concurrency
+
+HashMap vs ConcurrentHashMap 
+
+if you had 2 condles and both takes 15 mins to burn completly then how will you burn both candles in 10 min?
+
+
+

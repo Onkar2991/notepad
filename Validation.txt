@@ -1,0 +1,82 @@
+Background process after u apply validation 
+============================================
+
+==> When we apply validation in a software application, several processes occur in the background to ensure that the data being processed meets specific criteria or rules before proceeding to the next step.
+
+==> There are mainly two types of validation occurs 
+	
+	1> Client side validation
+		
+	--> users input is captured and then the JavaScript's checks the input against defined validation rules such as an email field is required in a specific format or a password might 	    need some specific length conditions 
+	--> if the input doesn't meet the criteria , an error message is displayed to the user immediately. this helps to provide instatnt feedback without making a server request
+	--> for dynamically updating the UI based on the user input , validation status and error messages are stored into component state 
+
+
+	2> Server side validation 
+	
+	--> After client side validation the data is sent to the server 
+	--> to prevent security vulnerabilities server sanitises the input 
+	--> after that business rules validation occurs the server checks if the input confirms to the business logic or not 
+	--> For database related fields the server might validate the data against existing records for ensuring that no duplicate entries are created (Database validation)
+	--> if any validation fails the server sends an error response back to the client with detailed message 
+
+
+==> Other than this two there are common validation mechanisms like regular expressions like Regex for validating the patterns such as email format or mobile numbers. 
+==> Built in functions like @NotNull, @Size @Email are also there to automatically validate the input fields 
+==> Developers can Define some custom validations logic 
+ 
+
+
+Workflow
+============
+
+User enters a value in a form.
+Client-side validation is performed. If it fails, an error message is shown, and submission is halted.
+If client-side validation passes, the form is submitted to the server.
+The server performs server-side validation, including checks against business logic and the database.
+If server-side validation fails, an error message is returned to the client and displayed to the user.
+If validation passes, the server proceeds with the intended operation, such as storing data in the database or triggering other business processes.
+
+
+
+Benefits of Validation
+========================
+
+
+Data Integrity: Ensures that only valid data enters the system.
+
+Security: Helps prevent malicious input that could exploit vulnerabilities.
+
+User Experience: Provides instant feedback to users, guiding them to correct errors.
+
+
+
+
+Advanced Validation Techniques
+===============================
+
+
+Asynchronous Validation: For complex scenarios, such as checking if an email is already in use, asynchronous validation can be performed, often involving backend calls.
+
+
+Conditional Validation: Certain fields might be validated based on the values of other fields. For example, if a user selects "Yes" for owning a vehicle, additional fields like car model and registration number would be required.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

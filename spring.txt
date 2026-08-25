@@ -102,7 +102,7 @@ how to bind your front end with your backend
 
 ==> in case of our jsps we have webapp package along with our backend code where all the jsp means front end code is present 
 
-==> we use that jsp files in our controller to show the files which we want to show as a reponse of the current operation (CRUD)
+==> we use that jsp files in our controller to show the files which we want to show as a response of the current operation (CRUD)
 
 
 ==> in case of Angular we have different packages which doesn't belong to our backend code 

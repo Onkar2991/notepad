@@ -1,0 +1,231 @@
+INTRODUCTION
+
+Hello
+I am Gauri and I am from Pune itself. I have completed my Bachelors of Engineering 
+in Computer Science. I have over 2.4 years of experience in Java, Spring Boot, 
+Hibernate, specializing in backend development. Currently I am working as a Software developer at Script Build Software pvt 
+Ltd.At ScriptBuild I am working on project FlowMatrix which is based on Logistic domain. The software helps businesses
+manage their supply chain by making it easier to track inventory, fulfill orders, and work with suppliers. 
+It ensures products are always available and helps make better decisions by tracking performance and predicting needs.
+And in my recent most company i.e Step Strong Pvt Ltd I have contributed in two major projects one is AutoNet which is on 
+Automotive Retail & services domain and another one is HealthGaurd which is based on HealthCare Insuance.
+
+
+ROLE
+
+As a software developer, I regularly design, develop, and maintain software solutions. I collaborate with teams to 
+implement new features, fix bugs, and ensure optimal system performance in Agile environments. 
+Additionally, I consistently handle testing, debugging, and write technical documentation to 
+support ongoing improvements and ensure seamless deployments.
+
+
+Roles And Responsibilties :
+
+• Played a key role in developing and implementing modules.
+• Gathered and understood system requirements with stakeholders.
+• Designed and developed core Java-based features for effective data management.
+• Conducted API testing using Postman for seamless integration.
+• Participated in Sprint planning and ensured timely project delivery.
+• Resolved bugs and collaborated with QA for unit testing.
+• Conducted code reviews and fixed Sonar violations.
+• Delivered project features on time, meeting all specifications.
+
+PROJECT
+
+FlowMatrix
+
+                                                    Description 
+It helps businesses manage and improve their supply chain activities. 
+It makes it easier to track and control the movement of goods from suppliers to customers. 
+The software simplifies tasks like keeping track of inventory, fulfilling orders, and working with suppliers.
+It ensures that products are always available and delivered on time. It also helps businesses predict what they will need,
+analyze how well things are going, and make smarter decisions.
+
+                                                     Goal
+The main goal is to make the buying process smoother and more efficient by offering a single platform to manage all 
+suppliers, see everything clearly, and negotiate better deals. 
+
+
+Teck Stack:  Java, Spring Boot Framework, Hibernate,, PostgeSQL, RESTful Services, Postman.
+
+
+                                                 Challenges faced 
+Challenge which we faced during development is data replication. We are unable to manage identical data across 
+multiple locations due to its high availability. 
+How you fixed this? 
+1)Firstly we continuously track the replication process and detect issue.
+2) Communicate with team members and provide regular updates on the status and expected resolution time.
+3) Then we implement Apache Kafka which can handle real time data flow and resolves conflicts.
+4)We test the system and reviewed it and prevent future causes.
+
+
+Modules: We have several modules in this project, including
+1.	Inventory Management
+2.	Order Management
+3.	Warehouse Management
+4.	Shipping Management
+5.	Supplier Relationship Management
+6.	Returns Management
+7.	Basic Reporting and Analytics
+8.	Basic Demand Planning
+9.	Customer Relationship Management (CRM) , etc
+
+
+                                            Modules which I worked on
+1)Inventory Management: 
+It is designed to oversee and control all aspects of inventory within the warehouse. It enables efficient tracking, 
+management, and organization of inventory items to ensure smooth operations and accurate stock levels.
+Sub modules which I worked on is 
+1. Inventory Filters : One is filter by location in which it allows users to view and manage inventory based on specific
+warehouse locations or storage areas and another is filter by supplier which provides the ability to sort and view
+inventory based on the supplier of the items and  This is useful in managing supplier relationships.
+2. Inventory List: The Inventory List module shows all the items in the warehouse. 
+It lists details like item names, quantities, locations, and supplier information. This list is essential
+for daily tasks like checking stock, planning orders, and auditing inventory.
+
+2)Shipping:
+The Shipping module manages the process of sending out orders from the warehouse to customers. 
+It ensures that products are packaged, labeled, and dispatched correctly and efficiently, coordinating with 
+delivery services to track shipments and confirm deliveries. Sub modules which I worked on is 
+1.Delivery Station: Manages location where orders are prepared for final delivery. 
+This submodule tracks the movement of packages through these stations and ensures they are routed to the correct destination.
+
+2.Orders: Handles the processing of customer orders from the time they are placed until they are shipped. 
+This submodule tracks order details, such as customer information, shipping addresses, and order status, 
+ensuring that orders are fulfilled accurately and on time.
+
+3. Product: Manages the details of products being shipped, including product descriptions, quantities, and specific 
+packaging requirements. This submodule ensures that the right products are selected and prepared for each order.
+4. Stock: Manages the availability of products in the warehouse, ensuring that there is enough stock to fulfill orders. 
+This submodule checks inventory levels and updates the system when items are picked and shipped, helping to maintain 
+accurate stock records.
+
+It involved developing and enhancing the Orders submodule in the Shipping module. I worked on tracking order
+processing from placement to shipping,ensuring accurate customer information and order status updates. 
+I also integrated automated inventory checks from the Stock submodule to ensure orders are
+fulfilled in real-time, improving the system's efficiency and accuracy in managing large volumes of customer orders
+
+
+Exception Occurred:
+
+1. CommandAcceptanceException: Solve by adding this property into application.properties 
+"org.hibernate.dialect.MySQL5InnoDBDialect"
+2. UnsatisfiedDependencyException: Solve by adding compatible dependencies to java version
+3. SQLSupportFeatureNotSupportetException: Occurs due to dialect mismatch and solved by providing valid dialect
+
+Recent API u have created 
+
+1)Create Order: POST /api/orders/create --> If created sends msg order created successfully 
+and if stock is not available out of stock 
+2)to fetch order: GET /api/orders/{order_id}
+3)update of the order status (e.g., to "Shipped", "Delivered", or "Cancelled"): PUT /api/orders/update/{order_id}
+4)to delete order: DELETE /api/orders/delete/{order_id}
+
+
+
+
+
+
+
+
+
+Q) Can you describe the FlowMatrix project and your role in it?
+
+Answer: I worked on the FlowMatrix project, which is a monolithic application. My primary focus was the Shipping module, 
+which manages the process of sending orders from the warehouse to customers. I contributed to submodules such as 
+Delivery Station, Orders, Product, and Stock, and worked on features like tracking package movements, order management, 
+product details, and inventory checks to ensure accuracy. 
+
+Q)How did you manage database interactions in the Shipping module?
+
+Answer: I used Hibernate as the ORM framework to manage interactions with PostgreSQL. We used JPA annotations to map 
+Java objects to database tablesand wrote custom queries using JPQL for more complex operations. For instance, 
+in the Stock submodule, we frequently checked inventory levels and used batch processing for 
+bulk updates to ensure database efficiency.
+
+
+Q)Can you explain a challenge you faced while working on the Shipping module and how you resolved it?
+
+Answer: (1) One challenge I faced was ensuring data consistency when updating stock levels, order status, 
+and product details during order processing. 
+To resolve this,we implemented Transaction Management used Spring’s @Transactional annotation to manage transactions. 
+This ensured that all operations were either
+completed successfully or rolled back if any step failed, preventing partial updates and maintaining data integrity.
+
+(2)challenge we faced was handling bulk order processing during peak times, which caused performance issues. 
+We optimized this by introducing batch processing,using Hibernate’s
+bulk operations, and fine-tuning the SQL queries to reduce database load. 
+We also adjusted connection pooling and caching strategies for better performance.
+
+
+Q) You are asked to refactor a part of the Shipping module to convert it into microservices. How would you approach this?
+
+Answer: The first step would be to identify the boundaries of the module and break it down into independent services, 
+like an Order Service, Inventory Service, and Delivery Service. Each microservice would have its own database to ensure 
+loose coupling, and services would communicate via REST APIs or message queues.
+
+Q) What is flow of application?
+In a Spring Boot application, everything starts from the main application class, which sets up the project
+ and gets it running. When a user sends a request, it goes to a controller that handles it. 
+ The controller calls a service to do the main work or business logic. The actual work is done 
+ in the service implementation, which might also get data from a database. Once the service finishes, it sends
+ the results back to the controller, which then prepares the final response and sends it back to the user. 
+ This setup keeps things organized and makes it easier to manage the application.
+ 
+Q)if your application is monolithic how you check health of your application or how u monitor your application?
+
+In a Spring Boot application, we use a feature called Actuator to monitor how well our application is running. 
+Actuator gives us special tools to check the application's health and performance easily.
+Setting up Actuator is straightforward.
+We just need to add it to our project and configure a few settings.
+Using Actuator helps us keep an eye on our application and quickly find and fix any problems, 
+making it a valuable tool for ensuring everything runs smoothly.
+
+Q)How you configure Actuator in your application?
+To set up Spring Boot Actuator for health checks, I would take a few simple steps. First, I would add the 
+Spring Boot Actuator dependency to my project.This is done by including a line in the pom.xml file. 
+Next, I would configure the application settings in the application.properties 
+file to enable the health check endpoint. I would specifically add a line to expose the /actuator/health endpoint 
+so I can access it.After that, I would run the 
+application and check the health status by going to the /actuator/health URL in my browser or using a tool like Postman. 
+This endpoint gives me a quick overview of whether the application is running properly.Finally, if necessary, 
+I could add security measures to restrict access to these endpoints, ensuring only authorized users can check the 
+health status.
+
+Q)What is your daily routine in office?
+My day starts with  checking emails and prioritizing tasks. The daily stand-up call follows, where team members share 
+accomplishments, goals, and challenges.
+ After this the Core development time starts where I focuses on coding, testing, and debugging, with breaks and 
+meetings as needed. A sync-up call follows after this in which reviews
+ progress and aligns next steps. The day concludes with wrap-up and planning, updating tasks and preparing for the next day.
+
+Q)Can you explain how you handled version control with Git in your project?
+
+Answer: We followed Git flow for version control, where we used feature branches for new development. 
+Once the feature was complete, we would open a pull request, which would undergo code review. After approval, 
+it was merged into the develop branch for testing and then into the main branch for production release.
+
+Q)Explain how you set up CI/CD using Jenkins in your project.
+
+Answer: We set up Jenkins for continuous integration and delivery (CI/CD) to automate the build, testing,
+and deployment processes. Whenever code was pushed to Git, Jenkins would trigger a pipeline to:
+Pull the latest code.
+Run unit tests and integration tests using JUnit.
+Build the application using Maven.
+Deploy the built package to the test environment and, after approval, to the production environment.
+
+Q)How did you integrate Jenkins into your development process?
+
+Answer: Jenkins was used as part of our CI/CD pipeline to automate testing and deployments. 
+I set up pipelines that automatically ran unit tests and integration tests whenever new code was pushed to the repository. 
+This ensured that the code was always in a deployable state. If any issues were found, Jenkins notified the team, 
+and we could resolve the problem quickly before it reached production.
+
+
+
+
+
+
+
+													 
+

@@ -6,7 +6,7 @@ Idempotency:->
 ==> HEAD, OPTIONS , GET , PUT , and DELETE are idempotent methods, because they always return the same resource, update the same resource, or remove the same resource
 
 	
-	==> POST  will update the rows in the databses whenever we we post it multiple times , hence it is Non-Idempotent method
+	==> POST  will update the rows in the databases whenever we post it multiple times , hence it is Non-Idempotent method
  
 	==> PATCH is also idempotent 
 
@@ -22,7 +22,7 @@ API:->(Application Programming Interface)
 
 ==> API is gateway between the client and the resource or you can say that it is used to communicate between two software systems
 
-==> clients are the users who want to access informationm
+==> clients are the users who want to access information
 
 ==> resources are the information that the clients require 
 
@@ -37,13 +37,13 @@ SOAP API'S (Simple Object Access Protocol)
 
 ==> SOAP apis are developed in structural and formalized way 
 
-==> it is a Architectural pattern and are not as closely alligned with HTTP requsts 
+==> it is a Architectural pattern and are not as closely aligned with HTTP requests 
 
 ==> SOAP uses XML as the data format for messages being sent and received by an api  client
 
-==> it provides four distinct dimentions ot the api control
+==> it provides four distinct dimensions of the api control
 	
-	==> ENVELOPE:-> Defining the structutre of the message 
+	==> ENVELOPE:-> Defining the structure of the message 
 	
 	==> ENCODING:-> Rules for expressing the type of data.
 	
@@ -64,7 +64,7 @@ USECASE
 BENIFITS:->
 ============
 
-==> SOAP is also known for extensibility as it has other approches for delivering API'S , it uses HTTP for transport but it can also leverage 
+==> SOAP is also known for extensibility as it has other approaches for delivering API'S , it uses HTTP for transport but it can also leverage 
 	
 	==> simple mail transport protocol (SMTP)
 	

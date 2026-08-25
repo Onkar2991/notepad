@@ -1,7 +1,7 @@
 Design patterns:->
 ===================
 
-==> Design patterns are the well proved solutions for commonly occuring problems in software design 
+==> Design patterns are the well proved solutions for commonly occurring problems in software design 
 
 
 ==> Design Patterns are divided into three categories:
@@ -23,14 +23,14 @@ i> Singleton:->
 =================
 
 	==>The singleton pattern restricts the initialization of a class to ensure that only one instance of the class can be created.
-	==>session factory is the example of singletone 
+	==>session factory is the example of singleton 
 	==> sharing a single washing machine among all the residents in a hotel
 
 
 
 ==> make constructor private
 
-==> write a static methods that has return type of object of this singletone class  
+==> write a static methods that has return type of object of this singleton class  
 
 
 
@@ -41,7 +41,7 @@ ii> Factory:->
 	==>loosly coupled and more robust
 	==>The factory pattern takes out the responsibility of instantiating a object from the class to a Factory class.
 	==>getInstance() method of java.util.Calendar, NumberFormat, and ResourceBundle uses factory method design pattern. 
-	==>All the wrapper classes like Integer, Boolean etc, in Java uses this pattern to evaluate the values using valueOf() method. 
+	==>All the wrapper classes like Integer, Boolean etc. in Java uses this pattern to evaluate the values using valueOf() method. 
 	
 		
 iii> Abstract Factory:->
@@ -52,7 +52,7 @@ iii> Abstract Factory:->
 	==>Abstract Factory patterns work around a super-factory which creates other factories.
 
 
-Differnce between factory and abstract factory
+Difference between factory and abstract factory
 ================================================
 
 ==> The main difference between a “factory method” and an “abstract factory” is that the factory method is a single method, and an abstract factory is an object. 

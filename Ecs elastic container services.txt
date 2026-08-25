@@ -1,0 +1,23 @@
+Ecs elastic container services 
+
+
+Eks elastic kubernate Services 
+
+-advanced than ecs for hoisting Services 
+
+cloudwatch 
+
+- for logs checking
+- logs insights 
+
+rds
+
+
+
+cluster 
+
+vault 
+routing  
+
+after Deployment for checking if the deployment happended or not then go to the service there is term called deployement when all deployments history is there 
+

@@ -1,0 +1,100 @@
+mobile device device name mobile code lauchn date write the api for list of mobiles according to their launch dates in descending order 
+
+
+// entity class
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class MobileDevice{
+
+@Id
+@GeneratedValue(stratergy = GenerationType.IDENTITY)
+private long id;
+
+private String deviceName;
+
+private String modelCode;
+
+private LocalDate launchDate;
+
+
+
+}
+
+
+// repository interface
+
+@Repository
+public interface MobileDeviceRepository extends JpaRepository<MobileDevice,Long>{
+List<MobileDevice> findAllByOrderByLaunchDateDesc();
+}
+
+
+//service class
+
+@Service
+public class MobileDeviceService{
+private final MobileDeviceRepository mobileDeviceRepository;
+
+@Autowired
+
+public MobileDeviceService(MobileDeviceRepository mobileDeviceRepository){
+this.mobileDeviceRepository = mobileDeviceRepository;
+
+}
+
+public List<MobileDevice> getAllDevicesSortedByLaunchDate(){
+return mobileDeviceRepository.findAllByOrderByLaunchDateDesc();
+
+//return mobileDeviceRepository.findAll().stream().sorted(Comparator.comparing(MobileDevice::getLaunchDate
+
+}
+
+}
+
+
+
+//controller class
+
+@RestController
+@RequestMapping("/api")
+public class MobileDeviceController{
+private final MobileDeviceService mobileDeviceService;
+
+@Autowired
+public MobileDeviceController(MobileDeviceService mobileDeviceService){
+
+this.mobileDeviceService=mobileDeviceService;
+
+}
+
+
+public List<MobileDevice> getMobileDevicesSortedByLaunchDate(){
+return mobileDeviceService.getAllDevicesSortedByLaunchDate();
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

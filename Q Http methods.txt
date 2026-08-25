@@ -6,8 +6,8 @@ Q> Why string is immutable ?
 Q> what is Lambda expressions ?
 Q> what is the performance perspective for lambda expression ?
 Q> what is Functional interfaces ?
-Q> what is Excutable Framework ? what is its real time use ?
-Q> what happens when u have two null keys in hashmap? Does it give compile time exception or runtime exception?
+Q> what is Executable Framework ? what is its real time use ?
+Q> what happens when u have two null keys in HashMap? Does it give compile time exception or runtime exception?
 
 
 ======================================================================

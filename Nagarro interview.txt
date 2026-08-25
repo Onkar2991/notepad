@@ -1,0 +1,27 @@
+1> write a code for counting the frequency of each element in an array 
+2> what is immutable class ? create a immutable class 
+3> add one address field which return type is address in the same immutable class 
+4> Functional interfaces 
+5> what is default methods 
+6> if a interface have one default method so can we use lambda on it ?(its not a functional interface )
+7> Hashmap internal working 
+8> Runnable and Callable interfaces ? when to use what ?
+9> Thread local 
+10> Checked and unchecked exceptions 
+11> What is jsf?
+12> can we use jsf with springboot ?
+13> can we execute loop with jsf?
+14> What is primefaces ?
+15> P:ajax vs f:ajax ?
+16> Bean Scope
+17> how to handle cyclic dependancy ?
+18> what is records in java ?
+19> what is sealed class ?
+20> query for to find the duplicates by email id 
+21> what is Delete truncate drop
+22> JPA pagination and Sorting ?
+23> Different states of JPA?
+24> How two microservices communicate ?
+25> how to do authorization and authentication in microservices ?
+26> Circuit breaker design pattern in microservices ?
+27> @Mock vs @Spy  

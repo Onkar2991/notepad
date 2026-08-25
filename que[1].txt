@@ -28,13 +28,13 @@ lambda
 stream-program
 functional interface
 optional class 
-method referance
+method reference
 date and time
 misleneous 
 
 hibernate
 orm tool
-anotation
+annotation
 serialization
 session and session factory
 synchronization
@@ -51,15 +51,15 @@ why rest api are state less
 what is bean and bean factory
 what is rest template
 jar or war
-maven and craddle
+maven and Gradle
 
 
 project 
 self intro
 
-devlopment environment
+development environment
 
-git and github all
+git and GitHub all
 
 aws
 ec2

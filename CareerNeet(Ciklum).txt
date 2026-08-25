@@ -1,0 +1,23 @@
+Onkar 
+Carrerneet 1st round 
+
+1> Difference between overloading and overriding 
+2> Solid principles
+3> what is dependency inversion 
+4> Spring bean lifecycle 
+5> What is the difference between @GetMapping, @PostMapping, and @PutMapping annotations?
+6> How do you implement REST APIs in Spring Boot?
+7> What is the concept of AOP (Aspect-Oriented Programming) in Spring?
+8> What is the difference between JPA Repository and CRUD Repository
+9> joins in sql 
+10> What are indexes in databases, and why are they important?
+11> What are stored procedures and when should you use them in SQL?
+12> How would you improve the performance of application 
+13> What are some common HTTP methods
+14> What is the difference between ArrayList and LinkedList in Java?
+15> What is the difference between a HashMap and a HashSet in Java?
+16> What is treeMap
+17> What is the difference between String and StringBuilder in Java?
+18> How to create a multithreaded application ?
+19> What is an API Gateway in a microservices architecture?
+20> Write a java 8 code for reversing a string without using any loops(no for foreach do while) and inbuild methods 

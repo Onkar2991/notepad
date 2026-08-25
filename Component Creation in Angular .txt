@@ -90,19 +90,3 @@ Component Creation in Angular
 			})
 
 ==> An Angular component requires a template defined using template or templateUrl. You cannot have both properties in a component.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-tue 12.30

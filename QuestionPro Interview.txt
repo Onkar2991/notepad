@@ -1,0 +1,21 @@
+Introduction 
+Why are u changing the current company? 
+which java version you are currently working on ?
+feature of java 8
+what are Functional Interfaces ? why do we use it ?  
+what are Lambda expressions ? 
+what is Default method
+findfirst and findany in Streams 
+what is optional class ? 
+what are solid principles ?
+what are design patterns  
+what is singleton design pattern ? what is the use case?
+what if we keep catch block empty ?
+what is indexing ? how do u decide the indexing ?
+
+program to sort an array , array has eighter 0 or 1 as its elements sort it in like all the zero should be on left side and 1 should be in right side without using inbuilt methods 
+
+String Input ="QuestionPro@Test"
+String output="tsetorPnoit@seuQ"
+write a program for reversing a String without using inbuilt methods where Special characters place should not be changed
+

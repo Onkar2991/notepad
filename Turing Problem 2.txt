@@ -1,0 +1,81 @@
+A digit-only keyboard contains all 10 digits from o to 9. They all exist in one line.
+
+Given a string of 10 digits illustrating how the keys are positioned. To type a digit, you start from index zero to the index of the target digit. It takes bl milliseconds to move from index a to index b
+
+Write a function to calculate the number of milliseconds needed to type a number with one finger.
+
+Example 1:
+
+Input digits "0123456789", num = "210"
+
+Outout: 4
+
+Example 2:
+
+Input digits "8459761203, num="5439"
+
+Output: 17
+
+Constraints:
+
+digits.length == 10
+
+digits contains each digit [0-9] exactly once in some order.
+
+1<= num.length<= 10^4
+
+num[i] is digit.
+
+
+code
+
+
+import java.util.*;
+
+import java.lang.*;
+
+class Solution {
+
+    public int solution(String digits, String num) {
+        // Map each digit to its index in the "digits" string
+        Map<Character, Integer> positionMap = new HashMap<>();
+        for (int i = 0; i < digits.length(); i++) {
+            positionMap.put(digits.charAt(i), i);
+        }
+
+        // Variable to store the total time in milliseconds
+        int totalMilliseconds = 0;
+        
+        // Starting at index 0 (before the first digit)
+        int currentIndex = 0;
+
+        // Traverse through each digit in the 'num' string
+        for (char digit : num.toCharArray()) {
+            // Find the index of the target digit in the 'digits' string
+            int targetIndex = positionMap.get(digit);
+            // Calculate the milliseconds to move from the current index to the target index
+            totalMilliseconds += Math.abs(currentIndex - targetIndex);
+            // Update the current index to the target index
+            currentIndex = targetIndex;
+        }
+
+        // Return the total time in milliseconds
+        return totalMilliseconds;
+    }
+}
+
+public class Main {
+
+    public static void main(String args[]) {
+        // Read input
+        Scanner sc = new Scanner(System.in);
+        String a = sc.nextLine();
+        String b = sc.nextLine();
+        
+        // Get the output from the Solution class
+        int output = new Solution().solution(a, b);
+        
+        // Print the output
+        System.out.println(output);
+    }
+}

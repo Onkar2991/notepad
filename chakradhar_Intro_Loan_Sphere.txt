@@ -1,0 +1,770 @@
+portal : hrms
+client: easypay
+march 22 friday
+
+Good afternoon,
+
+My name is Chakradhar Karhale. I am from Nanded, Maharashtra, and currently live in Pune. I completed my Bachelor of Engineering from Pune University.
+
+I have 2.7 years of experience in Java development using J2EE, Spring Boot. My skills include working with Spring Boot, RestAPI, Hibernate, microservices.
+
+I have worked with two companies. At Hoonartek, I contributed to two major projects: Relatus, a CRM system for managing customer data and improving sales and support, and second one is Ship Mate, it is a platform for better interaction between shipping companies and customers. I am currently employed at MarkGenic Software, where I am working on the Loan Sphere project, a comprehensive loan management solution for the banking and lending industry.
+
+Thank you.
+
+===================================ROLE====================================
+
+In my current role, I am responsible for developing application features, testing application functionalities, addressing and resolving software issues, demonstrating software to clients, ensuring timely and accurate project delivery, i contribute to the successful execution of project sprint,  and conducting code reviews.
+
+
+
+=================================DESCRIPTION==============================
+
+The Loan Sphere is designed to manage the end-to-end process of loan management within the banking and lending domain. 
+It automates various stages of the loan lifecycle, including loan origination, loan disbursement, loan collection, and closure.
+It includes features for defining loan products, handling transactions, managing loan charges, generating repayment schedules, and integrating with accounting systems.                                                                                                                                                                                                                                                                                                        
+The system also makes it easy to create reports, adjust or remove interest charges when needed, process refunds for overpayments, and handle loan foreclosure processes. This helps ensure that everything runs smoothly.
+
+
+===================================PURPOSE============================
+The purpose of the Loan Sphere is to provide a comprehensive and efficient solution for managing the entire loan lifecycle within the banking and lending industry. It automates key tasks like loan application, disbursement, repayment, and closing, helping to reduce manual work and errors. The system also ensures that everything is done according to the rules, improves customer service, and helps the business run smoothly and successfully.
+
+
+
+=========================MODULES==============================
+
+There are 20+ modules in my project like:-
+
+1)User Management Module:
+2)Loan Product:
+3)Loan Application:
+4)Loan Creation:
+5)Loan Disbursement Module:
+6)Account and Transaction Management:
+7)Loan Collection Module:
+8)Delinquency Management:
+9)Payoff and Loan Termination:
+10)Charges and Repayment:
+11)Statements and Refunds:
+12)Reporting and Analytics:
+13)Accounting and Integration:
+14)User and Security Management:
+15)Customer Service and Notifications:
+16)Foreclosure Module:
+
+
+
+==================Loan Disbursement Module========================
+The Loan Disbursement Module is a final step of the loan process where the approved funds are transferred to the borrower's designated account. This module ensures that disbursement is carried out smoothly and aligns with the loan agreement terms.
+
+After the loan disbursement process, there are certain things a borrower needs to perform. First, the bank or financial institute sends a letter of confirmation to your email address as soon as the fund is transferred. You need to check the letter and might acknowledge it. You will be given information about your interest rate, principal outstanding for each month, etc.
+
+
+===================OR====================
+The Loan Disbursement Module is responsible for managing the final step in the loan process, where approved loan funds are transferred to the borrower designated account. This module ensures that disbursement is carried out smoothly and aligns with the loan agreement terms. It handles creating disbursement records, updating existing records, retrieving disbursement details, and managing disbursement statuses.
+
+
+==============ENDPOINTS===============================================
+1. Create Loan Disbursement
+Endpoint: POST /api/loan-disbursements
+Description: Creates a new loan disbursement record.
+Request Body:
+json
+{
+  "loanId": "string",
+  "disbursementDate": "yyyy-MM-dd",
+  "disbursementAmount": 0.00,
+  "disbursementMethod": "string", // e.g., "Bank Transfer", "Cheque"
+  "status": "string" // e.g., "Disbursed", "Pending"
+}
+Response:
+json
+
+{
+  "id": "string",
+  "loanId": "string",
+  "disbursementDate": "yyyy-MM-dd",
+  "disbursementAmount": 0.00,
+  "disbursementMethod": "string",
+  "status": "string"
+}
+
+
+2. Get Loan Disbursement by ID
+Endpoint: GET /api/loan-disbursements/{id}
+Description: Retrieves a loan disbursement record by its ID.
+Response:
+json
+
+{
+  "id": "string",
+  "loanId": "string",
+  "disbursementDate": "yyyy-MM-dd",
+  "disbursementAmount": 0.00,
+  "disbursementMethod": "string",
+  "status": "string"
+}
+
+
+3. Update Loan Disbursement
+Endpoint: PUT /api/loan-disbursements/{id}
+Description: Updates an existing loan disbursement record.
+Request Body:
+json
+
+{
+  "disbursementDate": "yyyy-MM-dd",
+  "disbursementAmount": 0.00,
+  "disbursementMethod": "string",
+  "status": "string"
+}
+Response:
+json
+
+{
+  "id": "string",
+  "loanId": "string",
+  "disbursementDate": "yyyy-MM-dd",
+  "disbursementAmount": 0.00,
+  "disbursementMethod": "string",
+  "status": "string"
+}
+
+
+5. List All Loan Disbursements
+Endpoint: GET /api/loan-disbursements
+Description: Retrieves a list of all loan disbursement records, optionally with pagination.
+Request Parameters:
+page (optional): Page number for pagination.
+size (optional): Number of records per page.
+Response:
+json
+
+{
+  "content": [
+    {
+      "id": "string",
+      "loanId": "string",
+      "disbursementDate": "yyyy-MM-dd",
+      "disbursementAmount": 0.00,
+      "disbursementMethod": "string",
+      "status": "string"
+    }
+  ],
+  "pageable": {
+    "sort": {
+      "sorted": true,
+      "unsorted": false
+    },
+    "offset": 0,
+    "pageSize": 20,
+    "pageNumber": 0
+  },
+  "totalPages": 1,
+  "totalElements": 1,
+  "last": true,
+  "first": true,
+  "numberOfElements": 1
+}
+
+6. Get Disbursements by Loan ID
+Endpoint: GET /api/loan-disbursements/loan/{loanId}
+Description: Retrieves all disbursements for a specific loan.
+Response:
+json
+
+{
+  "content": [
+    {
+      "id": "string",
+      "loanId": "string",
+      "disbursementDate": "yyyy-MM-dd",
+      "disbursementAmount": 0.00,
+      "disbursementMethod": "string",
+      "status": "string"
+    }
+  ]
+}
+
+
+
+**Disbursement Process
+Initiation: 
+=>When a loan is approved, a request to create a disbursement record is made through the POST /api/loan-disbursements endpoint. The request includes details such as the loan ID, disbursement date, amount, method, and status.
+
+Validation: 
+=>The system validates the input data, checks the loan status, and verifies if the loan has already been disbursed or if sufficient funds are available.
+
+Processing:
+=> Upon successful validation, the disbursement amount is processed according to the specified method (e.g., bank transfer or cheque). The system updates the disbursement record and changes the loan status if necessary.
+
+Notification:
+=> After the disbursement, the borrower receives a confirmation letter via email, detailing the disbursement information such as the interest rate, repayment schedule, and outstanding principal.
+
+Updates:
+=> The disbursement record can be updated or deleted if required. For example, if there is a need to correct the disbursement details, the PUT /api/loan-disbursements/{id} endpoint can be used.
+
+
+
+***Ensuring Smooth Fund Transfer
+
+Transactional Integrity:
+=> The module uses transactions to ensure that disbursement operations are atomic. If a transaction fails, changes are rolled back to maintain data consistency.
+
+Concurrency Management:
+=> Optimistic locking is used to handle concurrent updates, preventing conflicts when multiple processes attempt to update disbursement records simultaneously.
+
+Exception Handling:
+=> The module includes comprehensive exception handling to manage issues such as loan not found or insufficient funds. Global exception handling ensures that errors are reported with meaningful messages.
+
+Validation Checks:
+=> Input data is validated to prevent incorrect or incomplete disbursements. The system checks that the loan exists, is in the correct status, and that the disbursement amount is valid.
+
+Audit Trails:
+=> Logs and audit trails are maintained to track disbursement actions, providing transparency and accountability in the disbursement process.
+
+
+
+
+
+
+==========================EXCEPTION========================================
+NullPointerException
+
+Description: This exception is thrown when the application attempts to use null where an object is required.
+Scenario: Occurs if the application tries to access or modify loan details without proper initialization.
+Example Message: "Null pointer exception encountered while processing loan with id: {loanId}"
+
+
+ArithmeticException
+
+Description: This exception is thrown when an arithmetic operation fails, such as division by zero.
+Scenario: Occurs in calculations related to loan interest or EMI if there is a division by zero or invalid arithmetic operation.
+Example Message: "Arithmetic error occurred while calculating EMI for loan with id: {loanId}"
+
+
+IndexOutOfBoundsException
+
+Description: This exception is thrown when an index is out of range for an array or collection.
+Scenario: Occurs when accessing elements in lists or arrays, such as loan disbursement histories.
+Example Message: "Index out of bounds while accessing loan disbursement history"
+
+
+SQLException
+
+Description: This exception is thrown when there is an error accessing or interacting with a database.
+Scenario: Occurs during database operations such as querying or updating loan records.
+Example Message: "Database error occurred while accessing loan details"
+
+
+
+IOException
+
+Description: This exception is thrown when an I/O operation fails or is interrupted.
+Scenario: Occurs during file operations, such as reading or writing loan documents or reports.
+Example Message: "I/O error occurred while processing loan file"
+
+
+ClassNotFoundException
+
+Description: This exception is thrown when an application tries to load a class at runtime and the class cannot be found.
+Scenario: Occurs if there is a configuration issue or missing class related to loan processing.
+Example Message: "Class not found for loan processing: {className}"
+
+
+LoanNotFoundException:
+
+Description: Triggered when a requested loan cannot be found in the system.
+Scenario: Occurs in APIs like getLoanDetails, updateLoanStatus, disburseLoan, or cancelLoanDisbursement if the loanId does not exist.
+
+Example Message: "Loan not found with id: {loanId}"
+
+
+DisbursementAlreadyProcessedException:
+
+Description: Triggered when attempting to disburse a loan that has already been disbursed.
+Scenario: Occurs in disburseLoan if the loan status is already marked as "DISBURSED".
+
+Example Message: "Loan has already been disbursed with id: {loanId}"
+
+
+InsufficientFundsException:
+
+Description: Triggered when attempting to disburse a loan but there are insufficient funds available.
+Scenario: Occurs in disburseLoan when the system checks for available funds.
+
+Example Message: "Insufficient funds to disburse loan with id: {loanId}"
+
+InvalidEMICalculationException:
+
+Description: Triggered when there is an error in calculating the EMI for a loan.
+Scenario: Occurs in calculateEMI if there are issues with the interest rate or loan amount.
+
+Example Message: "Error calculating EMI for loan with id: {loanId}"
+
+
+ServiceUnavailableException:
+
+Description: Triggered when the loan service is temporarily unavailable.
+Scenario: Occurs when the service is down or experiencing issues.
+
+Example Message: "Loan service is currently unavailable. Please try again later."
+
+
+TransactionFailureException
+
+Description: Triggered when a transaction involving loan operations fails.
+Scenario: Occurs when a database transaction cannot be committed.
+
+Example Message: "Transaction failed for loan operation with id: {loanId}"
+
+
+ResourceNotFoundException:
+
+Description: Triggered when a requested resource (e.g., loan, customer) cannot be found.
+Scenario: Occurs in various APIs when the requested resource does not exist.
+
+Example Message: "Resource not found with id: {resourceId}"
+
+
+==============================================================================================
+ 
+Domain - Banking and Lending Solutions
+java version - 8
+spring boot - 2.7
+
+Role: Currently I am working as team member 
+Team Size = 10(4 developer, 3 frontEnd,1BA 1 Team lead , 1 manager )
+
+
+============Technologies Used===============
+
+This project implements Spring Boot framework with given dependencies
+Lombok --> Java annotation library which helps to reduce boilerplate code.
+Spring Web --> Builds web, including RESTful, applications using Spring MVC
+Spring Security --> Highly customizable authentication and access-control framework for Spring applications.
+Spring Data JPA --> Persists data in SQL stores with Java Persistence API using Spring Data and Hibernate
+PostgreSQL Driver --> JDBC & R2DBC driver allowing Java programs to connect to PostgreSQL database using standart Java code
+Swagger --> OAS Rest Documentation
+JUnit, Mockito -> (Unit Testing)
+SLF4J --> Logging
+
+
+=============================================================================================
+
+
+
+
+
+
+========================================QUESTIONS ON PROJECT===========================
+
+
+
+=========================================LAST DEVELOPMENT =============================
+
+
+1)When asked about the last development you were working on.
+=>Answer:
+
+"The most recent development I was working on Loan Disbursement Module. My task involved enhancing the disbursement process by integrating a new feature that automates the generation of repayment schedules immediately after a loan is disbursed.
+
+This involved adding new endpoints to the LoanDisbursementController and updating the service layer to calculate the EMI (Equated Monthly Installment) based on the loan terms, interest rate, and disbursement date.This calculation ensures that the borrower knows how much they need to repay each month. I also implemented logic to ensure that any previous disbursements for the same loan are checked to prevent duplicate processing.
+
+
+RepaymentScheduleService:
+
+=> public List<RepaymentSchedule> generateRepaymentSchedule(Loan loan) { 
+        List<RepaymentSchedule> schedule = new ArrayList<>();
+
+  //creates a repayment plan for a loan by calculating how much the borrower will pay every month
+
+        // Example calculation logic
+        double loanAmount = loan.getLoanAmount();   //It first retrieves the loan amount
+        double interestRate = loan.getInterestRate(); //interest rate
+        int tenureMonths = loan.getLoanTenure();     //and the number of months for which the loan will be repaid
+
+        double monthlyRate = interestRate / 12 / 100;//100 is used to convert the annual interest rate from a percentage to a decimal.
+        double emi = (loanAmount * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -tenureMonths));//it will take base and exponent as paramater
+
+        for (int month = 1; month <= tenureMonths; month++) {
+            RepaymentSchedule payment = new RepaymentSchedule();
+            payment.setLoan(loan);
+            payment.setInstallmentNumber(month);
+            payment.setInstallmentDate(addMonths(loan.getDisbursementDate(), month));
+            payment.setInstallmentAmount(emi);
+
+            schedule.add(payment);
+        }
+
+
+
+==>PAGINATION======
+
+In this Loan Disbursement module, we created an API that allows users to easily retrieve loan disbursement records. Users can filter the data by loanId or customerId, which helps them find disbursements for specific loans or customers. We also added pagination with offset and limit parameters, so large amounts of data can be fetched in smaller, manageable chunks. Users can sort the results by fields like disbursementDate in either ascending or descending order.
+
+The service layer handles these parameters by checking what filters the user has provided and then fetching the right data. If both loanId and customerId are given, it fetches records matching both. If only one is provided, it fetches based on that, and if no filters are given, it retrieves all disbursements with pagination and sorting.
+
+The repository layer uses custom queries to get this data from the database. This whole setup makes it easy for users to search, filter, and view loan disbursement records in a flexible and user-friendly way.
+==========================================================================
+
+
+==================================ISSUES I FACE===========================
+
+2)Calculating Repayment Schedules
+
+Challenge:
+=> Accurately calculating repayment schedules, including Equated Monthly Installments (EMIs), involves complex financial calculations. The complexity increases with varying interest rates, loan tenures, and loan types. Common challenges include:
+
+Accurate EMI Calculation: Ensuring that EMI calculations adhere to financial formulas, which may include factors like interest compounding and principal adjustments.
+
+Handling Different Loan Types: Different loan types (e.g., fixed-rate, variable-rate) require different calculation methods. 
+
+Interest Rate Variations: Changes in interest rates or loan tenure can impact the repayment schedule.
+
+Business Rules Compliance: Calculations need to align with business rules and regulatory requirements.
+
+
+Solution:
+Implement a Dedicated EMI Calculation Service: Create a dedicated service to handle EMI calculations, ensuring that it uses correct financial formulas and adheres to business rules. 
+
+
+    public double calculateEMI(double principal, double annualInterestRate, int tenureInMonths) {
+        double monthlyInterestRate = annualInterestRate / 12 / 100;
+        return (principal * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, tenureInMonths)) 
+                / (Math.pow(1 + monthlyInterestRate, tenureInMonths) - 1);i got this formula i just have to implement this formula in metjod
+
+
+
+
+
+1)Data Consistency Issues
+
+Challenge: Ensuring data consistency between the loan records and disbursement records can be complex, especially if there are concurrent updates or transactions
+
+1)Incorrect Data: Disbursements might be recorded incorrectly if multiple processes try to update the same record at the same time.
+2)Data Loss: Updates might overwrite each other, leading to loss of critical information.
+3)Inconsistent State: The loan's status or related financial data might become inconsistent, affecting downstream processes.
+
+
+Solution:
+Transactional Management with Rollback:
+
+Transactional Management: To maintain data consistency, it's crucial to use transactions. A transaction ensures that a series of operations are executed as a single unit. If any part of the transaction fails, the entire transaction is rolled back, and the system state is reverted to its previous consistent state.
+
+Implementation: In Spring Boot, this can be achieved using the @Transactional annotation on service methods. This annotation ensures that the method's execution is wrapped in a transaction.
+
+
+
+
+
+
+
+
+
+
+3)Exception Handling
+Challenge: Handling exceptions like LoanNotFoundException or DisbursementAlreadyProcessedException to ensure the system behaves gracefully and provides meaningful feedback.
+
+
+
+Solution: To handle exceptions effectively and provide meaningful feedback, you can use Spring Boot's @ControllerAdvice to create a global exception handling mechanism. Here’s how you can implement this:
+
+1)Create a Custom Exception Class: 
+           =>Define custom exception classes for specific scenarios.
+
+
+2)Implement a Global Exception Handler with @ControllerAdvice: 
+         =>Use @ControllerAdvice to define a global exception handler that intercepts exceptions thrown by your controllers. This allows you to handle exceptions in a centralized manner and customize the response.
+
+
+@ExceptionHandler: This annotation specifies the exception type to be handled by the method. For instance, @ExceptionHandler(LoanNotFoundException.class) handles LoanNotFoundException.
+
+@ResponseStatus: This annotation sets the HTTP status code for the response. For example, HttpStatus.NOT_FOUND returns a 404 status code.
+
+@ResponseBody: This annotation ensures the method's return value is written directly to the HTTP response body.
+
+Define a Custom Error Response Structure: Create a class to represent the error response structure, making it easier for clients to understand the error.
+
+
+
+
+
+================================ARCHITECTURE OF PROJECT============================
+
+
+To describe the architecture of your Loan Management project
+
+1. High-Level Overview
+The Loan Management System is designed to manage the entire lifecycle of loans within the banking and lending domain. It follows a modular architecture with clear separation of concerns, allowing each module to handle specific aspects of loan management. The system is built using a monolithic architecture approach, which integrates various functionalities into a single application.
+
+
+2)MODULES:
+
+
+3)Technology Stack:
+
+Java 8: Core programming language.
+Spring Boot 2.7: Framework for building and deploying the application.
+Hibernate: For database interaction and ORM.
+PostgreSQL: Database management system.
+Spring Security: Authentication and authorization.
+Swagger: API documentation.
+JUnit, Mockito: For unit testing.
+Log4j2: Logging framework.
+
+
+
+Interaction Flow
+Loan Application Process:
+Users apply for loans through the Loan Application Module.
+
+Applications are reviewed and approved in the Loan Creation Module.
+
+Approved loans are processed in the Loan Disbursement Module.
+
+Disbursement and Repayment:
+
+The Loan Disbursement Module handles the transfer of funds to the borrower.
+Repayments are managed by the Loan Collection Module, which updates records and processes payments.
+
+Reporting and Analytics:
+Reporting and Analytics Module generates reports and provides insights based on data from other modules.
+
+Integration:
+The Accounting and Integration Module interfaces with external accounting systems to manage financial transactions and records.
+
+
+=====================================================================================
+
+Q)how do you achieve abstraction in your project?
+=>in my project there is interfaces like LoanService, CustomerService.
+for ex we have LoanService Interface and inside this interface we have some methods like applyLoan, approveLoan, calculateEmi,like that, now we have anoher class like HomeLoanService and we implement this LoanService inside that and we override all those method inside this class and provide implementation.
+
+
+Q)where u used polymorphism in your project?
+=>polymorphism can be used where different types of loans (e.g HomeLoan, CarLoan, PersonalLoan) are handle using same interface or abstract class, but there behaviour(intrestCalculation) is different based upon the loan type.
+
+Q)Where you used encapsulation in your  loan management project?
+=> Loan class that encapsulates the details of the loan, such as principal amount, interest rate, loan term, etc. By making these attributes private and providing public getter and setter methods, you can control access to these fields and ensure that any modifications follow specific business rules.
+
+Q)where we used overloading and overriding in your project?
+=>for method overloading we have Methods to fetch loan details 
+1)getLoanDetails(Long loanId)
+2)getLoanDetails(String customerName)
+================================================================================================
+
+==========================LOAN CREATION MODULE=============================
+The Loan Creation Module is a crucial part of the Loan Management System, responsible for setting up new loan records after an application is approved. It ensures that all essential details about the loan, such as the loan amount, interest rate, and repayment terms, are accurately recorded. This module initiates the loan process by creating comprehensive loan records that are essential for subsequent stages, including disbursement and repayment. By capturing all necessary information, the Loan Creation Module ensures that loans are correctly configured and ready for further processing.
+
+===================HOW IT WORKS BEFORE LOAN DISBURSEMENT===========================
+
+=>Before the actual disbursement of the loan:
+
+1)Loan Record Initialization: 
+What It Does: 
+=>When a loan application is approved, this step involves creating a new loan record in the system.
+Details Captured: This includes the loan amount, interest rate, tenure (length of the loan), and terms of the loan.
+
+
+2)Loan Agreement Setup: 
+What It Does: 
+=>Documents all the terms and conditions of the loan agreement.
+Details Included: Repayment schedule, interest rates, and any additional conditions
+
+
+3)Customer Association: The loan is linked to the customer’s profile in the system.
+
+
+4)Loan Status Management: 
+What It Does:
+=> Manages and tracks the status of the loan throughout its lifecycle.
+Status Examples: Created, Pending, Approved, or Ready for Disbursement.
+
+
+5)Compliance and Validation: The loan details are validated to ensure everything is correct and complies with regulations.
+
+6)Record Maintenance: The loan record is maintained and updated as needed.
+
+7)Integration: 
+What It Does: 
+=>Works with other modules like Loan Disbursement, Loan Collection, and Reporting.
+Purpose: Ensures that the loan creation process is seamlessly integrated with other aspects of the loan management system.
+
+========================================================================================================================
+
+Q)Why Looking For a Job Change?
+I’m looking for a new chance to push myself and improve my abilities. My goals for expansion and impact are nicely matched with your company’s creative initiatives and collaborative work environment. I’m eager to share my knowledge and pick up new skills from a talented group.
+
+Q)if you have offer why are looking for another opportunity?
+"I appreciate the offer I have received, and it's a great opportunity. However, I am exploring other options because I am looking for a role that aligns more closely with my long-term career goals and provides greater opportunities for professional growth."
+
+Q)Reason for Switch: 
+In my current role at a startup, there have been financial issues and concerns about job stability. I’m seeking a more stable environment where I can grow and contribute to a company long-term. This opportunity seems like a great fit for my skills in Java Developer, and I’m excited about the chance to be part of your team.
+
+
+
+
+UST global 
+9.6 
+hydrabad
+
+
+projects:
+Loan Sphere: May to till date
+Relatus:  Mar 2023 - feb 2024
+Ship Mate:jan 2022 - feb 2023
+========================================================
+
+==========================TABLES IN PROJECT=====================================
+
+1. Borrowers
+Purpose: Stores information about individuals or entities that have taken out loans.
+
+Key Fields:
+
+borrower_id (Primary Key): Unique identifier for each borrower.
+first_name: Borrower's first name.
+last_name: Borrower's last name.
+email: Borrower's email address.
+phone_number: Contact number.
+address: Physical address.
+date_of_birth: Borrower's date of birth.
+credit_score: Borrower's credit score.
+
+2. Loans
+Purpose: Contains details of each loan issued to borrowers.
+
+Key Fields:
+
+loan_id (Primary Key): Unique identifier for each loan.
+borrower_id (Foreign Key): References the Borrowers table.
+loan_amount: Total amount of the loan.
+interest_rate: Applicable interest rate.
+loan_term: Duration of the loan in months or years.
+loan_status: Current status (e.g., Approved, Pending, Rejected).
+application_date: Date when the loan was applied for.
+approval_date: Date when the loan was approved.
+
+
+3. Loan_Disbursements
+Purpose: Manages the disbursement details of approved loans.
+
+Key Fields:
+
+disbursement_id (Primary Key): Unique identifier for each disbursement.
+loan_id (Foreign Key): References the Loans table.
+disbursement_date: Date when the funds were disbursed.
+disbursement_amount: Amount disbursed.
+disbursement_method: Method of disbursement (e.g., Bank Transfer, Cheque).
+status: Current status of the disbursement (e.g., Disbursed, Pending).
+
+
+4. Users
+Purpose: Stores information about system users who manage loans and disbursements.
+
+Key Fields:
+
+user_id (Primary Key): Unique identifier for each user.
+username: User's login name.
+password_hash: Hashed password for security.
+role: User role (e.g., Admin, Loan Officer).
+email: User's email address.
+created_at: Account creation timestamp.
+updated_at: Last account update timestamp.
+
+
+5. Transactions
+Purpose: Records all financial transactions related to loan disbursements and repayments.
+
+Key Fields:
+
+transaction_id (Primary Key): Unique identifier for each transaction.
+loan_id (Foreign Key): References the Loans table.
+disbursement_id (Foreign Key): References the Loan_Disbursements table.
+transaction_date: Date of the transaction.
+amount: Transaction amount.
+transaction_type: Type of transaction (e.g., Disbursement, Repayment).
+status: Current status of the transaction (e.g., Completed, Failed).
+
+
+6. Notifications
+Purpose: Manages communication sent to borrowers regarding their loans and disbursements.
+
+Key Fields:
+
+notification_id (Primary Key): Unique identifier for each notification.
+borrower_id (Foreign Key): References the Borrowers table.
+loan_id (Foreign Key): References the Loans table.
+message: Content of the notification.
+sent_date: Date when the notification was sent.
+notification_type: Type of notification (e.g., Email, SMS).
+
+
+7. Audit_Trails
+Purpose: Maintains a log of all actions performed within the system for transparency and accountability.
+
+Key Fields:
+
+audit_id (Primary Key): Unique identifier for each audit record.
+user_id (Foreign Key): References the Users table.
+action: Description of the action performed.
+timestamp: Date and time when the action was performed.
+details: Additional details about the action.
+
+
+8. Repayment_Schedules
+Purpose: Defines the repayment plan for each loan.
+
+Key Fields:
+
+schedule_id (Primary Key): Unique identifier for each schedule entry.
+loan_id (Foreign Key): References the Loans table.
+due_date: Scheduled date for repayment.
+principal_amount: Portion of the payment allocated to the principal.
+interest_amount: Portion of the payment allocated to interest.
+total_payment: Total payment amount.
+status: Current status of the payment (e.g., Pending, Paid).
+
+
+9. Disbursement_Methods
+Purpose: Enumerates the available methods for loan disbursement.
+
+Key Fields:
+
+method_id (Primary Key): Unique identifier for each disbursement method.
+method_name: Name of the disbursement method (e.g., Bank Transfer, Cheque).
+description: Description of the disbursement method.
+
+
+10. Loan_Status_History
+Purpose: Tracks the history of status changes for each loan.
+
+Key Fields:
+
+history_id (Primary Key): Unique identifier for each history record.
+loan_id (Foreign Key): References the Loans table.
+previous_status: The loan's previous status.
+new_status: The loan's new status.
+changed_by (Foreign Key): References the Users table.
+change_date: Date when the status was changed.
+
+
+
+==============Relationships Between Tables======================
+Borrowers to Loans: One-to-Many
+A borrower can have multiple loans.
+
+Loans to Loan_Disbursements: One-to-Many
+Each loan can have multiple disbursements (e.g., multiple installments).
+
+Loans to Transactions: One-to-Many
+Each loan can have multiple transactions related to disbursements and repayments.
+Users to Audit_Trails: One-to-Many
+Each user can perform multiple actions that are logged in the audit trails.
+Loans to Repayment_Schedules: One-to-Many
+Each loan has a repayment schedule consisting of multiple payment entries.
+Disbursement_Methods to Loan_Disbursements: One-to-Many
+Each disbursement method can be used for multiple disbursements.
+Loans to Loan_Status_History: One-to-Many
+Each loan can have multiple status history records.

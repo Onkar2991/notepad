@@ -1,18 +1,18 @@
-1> Introduction 
-2> Which SpringBoot version u are using ?
+1> Introduction
+2> Which Springboot version u are using ?
 3> Specific things in that spring version ?
 4> If your current project is monolithic then how u worked on microservices ?
 5> Advantages of Microservices which u have experienced in real time 
 6> Why do u say it is easy to deploy in microservices ?
-7> How do u scale ur application in microservices ?
-8> example suppose u have a e-commerse application which contains three microservices one is item microservice , second one is cart , third one is payment microservice.. how do u scale the item microservice??
-9> What is horizonatl and vertical scalling ?
+7> How do u scale Ur application in microservices ?
+8> example suppose u have a e-commerce application which contains three microservices one is item microservice , second one is cart , third one is payment microservice.. how do u scale the item microservice??
+9> What is horizontal and vertical scaling ?
 10> how are u deploying ur application?
 11> which services used while deploying the application ?
 12> have u tried anything in spring boot version 3?
-13> example suppose u have a e-commerse application which contains three microservices one is item microservice , second one is cart , third one is payment microservice.. suppose you have 10 items in the cart for making the payment how do u pass this items to payment give me some 2-3 approches .... component communication .. how do u pass this items to payment services ? how the payment microservice will get to know that there are 10 items in the cart as they are completly independant from each other ?
+13> example suppose u have a e-commerce application which contains three microservices one is item microservice , second one is cart , third one is payment microservice.. suppose you have 10 items in the cart for making the payment how do u pass this items to payment give me some 2-3 approaches .... component communication .. how do u pass this items to payment services ? how the payment microservice will get to know that there are 10 items in the cart as they are completely independent from each other ?
 14> from where u are invoking the rest-template ?
-15> alternative for Rest-templete for inter module communication?
+15> alternative for Rest-template for inter module communication?
 16> @ControllerAdvise annotation 
 
 17> 
@@ -21,11 +21,89 @@ sun.security.validator.ValidatorException: PKIX path building failed: sun.securi
 
 have u seen this in ur application ?
 
-18> what is KeyStore And TrustStore? 
+18> what is KeyStore And Trust Store? 
 19> Which build tool u are currently using ?
 20> How do u handle the passwords in the databases (in case of connecting to a database) ? if u hash it then how will u get back that password ?
 21> which code repository u are using?
 22> in Spring boot application u have to apply jBoss server instead of tomcat server how u can do that?
-23> which services u are familier in AWS ?
+23> which services u are familiar in AWS ?
 
 
+
+================================================================================================================================================
+
+1. What are the SOLID principles?  
+2. What are the types of Dependency Injection in Spring Boot?  
+3. What is @Autowired annotation?  
+4. If two beans are present with @Autowired, how do we resolve ambiguity using @Qualifier?  
+5. How to read properties from application.properties in a Spring Boot application?  
+6. How to configure Kafka in a Spring Boot application?  
+7. Does Kafka need a schema? What is it and where does it belong?  
+8. A service receives Kafka events and stores them in PostgreSQL – how to ensure 10 events are received for a transaction?  
+9. What if fewer than 10 events are received?  
+10. How do you ensure DB contains all 10 events before triggering the next step?  
+11. What’s the difference between Checked and Unchecked exceptions?  
+12. How do you debug an OutOfMemoryError in an application?  
+13. How do you handle exceptions in REST APIs?  
+14. How to handle exceptions globally in Spring Boot?  
+15. If Service A calls Service B and doesn’t get a response – how do you handle it?  
+16. How to configure retries for failed service calls?  
+17. How does HashMap work internally?  
+18. What is a hash collision in a HashMap?  
+19. What is Unit Testing and how do you mock dependencies?  
+20. What is Integration Testing?  
+21. What are the most common Git commands you use?  
+22. What branching strategy is followed in your company?  
+23. How do two developers work on the same feature branch?  
+24. How is CI/CD set up with Jenkins in your project?  
+25. How do you check and fix daily Jenkins errors?  
+26. How do you optimize a slow SQL query?
+
+================================================================================================================================================
+
+
+What is RestController?
+
+What if I use Controller instead of RestController?
+
+What is Autowired?
+
+What is a Bean?
+
+What is the difference between Bean and Object?
+
+What is Auto wired creating?
+
+What if I get an ambiguous bean exception? How can I resolve it?
+
+If there are multiple interfaces, how can we specify which one to use?
+
+What is ResponseEntity and ResponseResult in Spring Boot?
+
+How do you handle exceptions with HTTP status codes in Spring Boot?
+
+Can we use Stream API instead of repository for fetching data?
+
+What does the line .map(emp -> new EmployeeDTO(emp, maxCommits)) do in the Stream API?
+
+How to get the latest transaction from a list using Stream API?
+
+What is the difference between == and === in React?
+
+What are the ways to create a thread in Java?
+
+What are the scopes of Spring beans?
+
+Why do we use the Prototype scope in Spring beans?
+
+What is the lifecycle of a Spring Bean?
+
+What is Comparable and how does it differ from Comparator?
+
+What is the difference between Comparable and Comparator in a table format?
+
+What is a Spring Bean and its purpose?
+
+How do you handle exceptions with HTTP status codes in Spring Boot?
+
+How to implement a logic that returns the latest transaction in a list, using Stream API

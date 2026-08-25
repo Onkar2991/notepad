@@ -1,0 +1,14 @@
+beyondsquare interview
+
+
+create a HashMap with string and integer put values to hash map 5 records and then sort the HashMap in ascending and descending order using java 8
+
+write a java 8 code to count the occurrence of each character from hcadjhvcsav
+
+write a query for getting all the employees having same titles along with their names if title have same names then output should be  in single row for title and name can have multiple rows
+
+
+in department table dept id dept name dept location i want a query which will show me all the employess with location  if the employee does not have any dept id then it is not associated with any location then it will return null for those employees i dont want null instead i want that location as banglore
+
+
+

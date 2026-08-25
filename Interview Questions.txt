@@ -1,0 +1,20 @@
+What's the difference between post and put
+For updating the data can we use post ?
+If we want to use post then what we have to do ?
+Can you explain the stateless api and stateful api
+Which protocol you use 
+Login page is stateful or stateless api?
+What's is the difference between http and HTTPS 
+To implement https what we need to do 
+Who will provide ssl Certificate ?
+Diff between monolithic and microservices 
+Is it possible to implement the rest api in monolithic 
+Write single tone class
+Write query to fetch the software from MarkGenic Software Pvt Ltd
+We have to call the store procedure in java then what we have do
+In spring boot how to connect the database using jpa
+What the difference between string and string buffer 
+can you use this operator in static methods
+Can you explain the Kafka
+Kubernetes
+Do you know encryption and decryption 

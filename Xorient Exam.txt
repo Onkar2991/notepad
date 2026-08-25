@@ -1,0 +1,144 @@
+Xorient Exam 
+====================
+
+
+import java.util.*;
+
+import java.io.*;
+
+class Main {
+
+    public static String StringChallenge(String sen) {
+        // Define the challenge token
+        String challengeToken = "hx0qft3uc57";
+
+        // Split the input sentence into words, ignoring punctuation
+        String[] words = sen.split("\\s+");
+        String longestWord = "";
+
+        for (String word : words) {
+            // Remove punctuation
+            String cleanedWord = word.replaceAll("[^a-zA-Z0-9]", "");
+            // Check if it's the longest word
+            if (cleanedWord.length() > longestWord.length()) {
+                longestWord = cleanedWord;
+            }
+        }
+
+        // Remove characters from the longest word that are in the challenge token
+        StringBuilder finalOutput = new StringBuilder();
+        for (char c : longestWord.toCharArray()) {
+            if (challengeToken.indexOf(Character.toLowerCase(c)) == -1) {
+                finalOutput.append(c);
+            }
+        }
+
+        // Return the final output or "EMPTY" if it's empty
+        return finalOutput.length() > 0 ? finalOutput.toString() : "EMPTY";
+    }
+
+    public static void main(String[] args) {
+        // Keep this function call here
+        Scanner s = new Scanner(System.in);
+        System.out.print(StringChallenge(s.nextLine()));
+    }
+}
+
+
+
+
+import java.util.*;
+
+import java.io.*;
+
+class Main {
+
+    public static String StringChallenge(String str) {
+        // Step 1: Perform Run-length encoding
+        StringBuilder encodedString = new StringBuilder();
+        int count = 1;
+
+        for (int i = 1; i < str.length(); i++) {
+            if (str.charAt(i) == str.charAt(i - 1)) {
+                count++;
+            } else {
+                encodedString.append(count).append(str.charAt(i - 1));
+                count = 1; // Reset count for the new character
+            }
+        }
+        // Append the last group
+        if (str.length() > 0) {
+            encodedString.append(count).append(str.charAt(str.length() - 1));
+        }
+
+        // Step 2: Replace characters in the encoded string with -[CHAR]-
+        String challengeToken = "7hg5vmeaf";
+        StringBuilder finalOutput = new StringBuilder();
+
+        for (char ch : encodedString.toString().toCharArray()) {
+            if (challengeToken.indexOf(ch) != -1) {
+                finalOutput.append("-").append(ch).append("-");
+            } else {
+                finalOutput.append(ch);
+            }
+        }
+
+        return finalOutput.toString();
+    }
+
+    public static void main(String[] args) {
+        // keep this function call here
+        Scanner s = new Scanner(System.in);
+        System.out.print(StringChallenge(s.nextLine()));
+    }
+}
+
+
+import java.util.*;
+import java.io.*;
+
+class Main {
+
+    public static String runLengthEncoding(String str) {
+        StringBuilder encoded = new StringBuilder();
+        int count = 1;
+
+        for (int i = 1; i < str.length(); i++) {
+            if (str.charAt(i) == str.charAt(i - 1)) {
+                count++;
+            } else {
+                encoded.append(count).append(str.charAt(i - 1));
+                count = 1;
+            }
+        }
+        // Append the last group
+        encoded.append(count).append(str.charAt(str.length() - 1));
+
+        return encoded.toString();
+    }
+
+    public static String removeChallengeTokenChars(String str, String challengeToken) {
+        StringBuilder result = new StringBuilder();
+        String lowerCaseToken = challengeToken.toLowerCase();
+
+        for (char c : str.toCharArray()) {
+            if (lowerCaseToken.indexOf(Character.toLowerCase(c)) == -1) {
+                result.append(c);
+            }
+        }
+
+        return result.length() > 0 ? result.toString() : "EMPTY";
+    }
+
+    public static String StringChallenge(String str) {
+        String encoded = runLengthEncoding(str);
+        String finalOutput = removeChallengeTokenChars(encoded, "hx0qft3uc57");
+        return finalOutput;
+    }
+
+    public static void main(String[] args) {
+        // keep this function call here
+        Scanner s = new Scanner(System.in);
+        System.out.print(StringChallenge(s.nextLine()));
+    }
+}w

@@ -252,7 +252,7 @@ MONOLITHIC to MICROSERVICES MIGRATION process:->
 	==> separate applications based on those needs.
 
 
-
+r4  
 	1> Identify logical components.
 	2> Flatten and refactor components.
 	3> Identify component dependencies.

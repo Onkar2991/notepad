@@ -32,7 +32,7 @@ Solution:->
 	
 		==> the next time the consumer removes an item from buffer it notifies the producer who starts to fill the buffer again 
 		
-		==> similarly the consumer should go to sleeep if the buffer is empty 
+		==> similarly the consumer should go to sleep if the buffer is empty 
 		
 		==> the next time producer puts data into buffer it wakes up the consumer 
 

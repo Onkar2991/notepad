@@ -1,0 +1,154 @@
+Nityo interview Question 
+
+
+what is polymorphism ?
+
+class A { void display() {
+
+System.out.println("A"); } }
+
+class B extends A { void
+
+display() {
+
+System.out.println("B"); } }
+
+public class Main { public static
+
+void main(String[] args) { A a =
+
+new B(); a.display(); } }
+
+class A {
+
+void display() {
+
+System.out.println("A");
+
+}
+
+}
+
+class B extends A {
+
+void display() (System.out.println("B");
+
+}
+
+}
+
+public class Main {
+
+public static void main(String[]
+
+args) {
+
+A a = new B():
+
+a.display();
+
+}
+
+} 
+which type of polymorphism is above code used ? write output of it 
+
+
+String s1 = "Hello";
+String s2 = new String("Hello");
+System.out.println(s1 == s2);
+
+what will be the output of above code ?
+
+
+public static void main(String[]
+
+args) {
+
+System.out.println(print()); }
+
+public static int print() {
+
+try {
+
+return 1:
+
+} catch (Exception e) {
+
+return 2:
+
+} finally {
+
+return 3:
+
+}}} 
+
+what will be the output of above code ?
+
+
+
+public class Main {
+
+public static void main(String
+
+args) {
+
+try {
+
+int a = 10/0;
+
+} catch (Exception e) {
+
+System.out.println("Exception
+
+caught: " + e);
+
+}catch (ArithmeticException e)
+
+{
+
+System.out.println("Arithmetic Exception caught: " + e); }
+
+}
+
+}
+
+what will be the output of above code ?
+
+
+
+
+list Set difference 
+stream and parallel stream difference 
+
+how two services comuunicate with each other 
+how to communicate asynchronously in microservices 
+can a application hava multiple datasources ?
+how do manage that ?
+Actuator in springboot 
+
+
+
+Given a list of email IDs (some valid, some invalid), extract the domain names of the valid email IDs and count their occurrences using java 8:
+
+INPUT: abc@gmail.com, adf@gmail.com, asf@yahoo.com, asd@rediffmail.com, asd, asd@nitor.com
+
+Expected output:
+
+gmail.com- 2
+
+yahoo.com - 1
+
+rediffmail.com - 1
+
+nitor.com - 1 
+
+
+how to create a custom exception ?
+throw and throws difference 
+how many ways we can handle exceptions ?
+
+list contains integer 1 2 3 4 5 u need to square of each number using java 8 
+list contains integer 1 2 3 4 5 1 2 write a java 8 code for duplicate elements count 
+
+
+

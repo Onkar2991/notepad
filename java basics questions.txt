@@ -62,5 +62,3 @@ Q. Why pointers are not used in Java?
 
 A pointer is a variable which can hold the address of another variable or object. But, Java does not support pointer due to security reason, because if you get the address of any variable you could access it anywhere from the program without any restriction even variable is private.
 
-
-Q. 

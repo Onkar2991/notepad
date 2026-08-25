@@ -1,0 +1,16 @@
+1> i have a pojo class movie which contains two variables movie name and release date , i have a list which contains 1000 movies in it then sort the list by movies name first and if i have same movie names in the list then sort it by release date using java8
+2> i have classes which are used for serialization suppose multiple developers are using the same classes mistakenly then is it possible that all the classes are serialized ?
+3> Is it possible to deserialize that classes then ?
+4> What are SOLID principles ?
+5> do you know about multithreading ? what is the difference between thread class and runnable interface ?
+6> Internal working of HashSet 
+7> @SpringBootApplication ?
+8> what is cyclic dependency ?
+9> how do u handle exceptions in spring boot?
+10> in microservices how to manage passwords in config servers ?
+11> What is n+1 problem ?
+12> Difference between get() and load()?
+13> difference between @component and @Bean 
+14> What are junit ?
+15> how to create proxy object using Mockito ?
+16> in a controller class i have autowired the service class which is private and all its fields are private then while writing the test cases how do i set the variables which are private ?

@@ -1,0 +1,20 @@
+1> how to handle concurrancy in java ?
+2> hashmap vs concurrent hashmap 
+3> what are solid principles ?
+4> What is functional interface ? how many default methods are there in the functional interface ?
+5> Why we use default method ?
+6> Suppose you want to add new implimentations in functional interfaces then what will u use ? (Abstract or Default methods)
+7> == and .equals ?
+8> suppose u have two strings hello then for comparing what will u use ?
+9> collections 
+10> checked vs uncheked exceptions
+11> how microservices communicate with each other ?
+12> what is restAPI ?
+13> difference between EC2 vs Lambda 
+14> S3 vs EBS ?
+15> primary key vs foreign key ?
+16> for commiting the code changes which git command do u use ? what is the "-m" in that ?
+17> how do u troubleshoot the application ?
+18> what is docker ?
+19> u have a arraylist of integer having duplicates find the duplicate elements in it ?
+ 

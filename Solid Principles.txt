@@ -6,7 +6,7 @@ S ==> single responsibility
 O ==> open close 
 L ==> liskov substitution
 I ==> interface segregation 
-D ==> dependancy injection 
+D ==> dependency injection 
 
 
 
@@ -31,7 +31,7 @@ D ==> dependancy injection
 	
 		==> this principle follows coding to interface principle 
 		
-		==> if a class A is subtype of class B then we should be able to replace class A without disrupting the behaviour of program 
+		==> if a class A is subtype of class B then we should be able to replace class A without disrupting the behavior of program 
 
 
 
@@ -43,7 +43,7 @@ D ==> dependancy injection
 
 
 
-==> Dependancy Inversion :-> 
+==> Dependency Inversion :-> 
 
 		==> The principle of dependency inversion refers to the decoupling of software modules. This way, instead of high-level modules depending on low-level modules, both will 		    depend on abstractions.
 
@@ -78,20 +78,20 @@ D ==> dependancy injection
   
 ============================================================================================================================================================================================
 
-ACID prperties:->
+ACID properties:->
 =====================
 
 ==> in order to maintain consistency in the database , before and after a transection certain properties are followed this properties are called as ACID properties 
 
 
 
-A => Automacity    ==> Eighter the transection completes or doesnt happens . there is no intermediate situation between this two 
+A => Atomicity    ==> Eighter the transection completes or doesn't happens . there is no intermediate situation between this two 
 
-C => Consistency   ==> The data must be consistant before and after the transection 
+C => Consistency   ==> The data must be consistent before and after the transection 
 
 I => Isolation     ==> Multiple transections occurs at  a same time without disturbing the other transections  
 
-D => Durability    ==> the changes of a sucessfull transection occurs even if the system failures 
+D => Durability    ==> the changes of a successful transection occurs even if the system failures 
 
 
 
@@ -103,7 +103,7 @@ Transection Isolation levels:->
 ==============================
 
 
-==> in order to maintain consistancy in database , transection follows ACID properties 	in that isolation determines how transection integrity is visible to other users and systems.
+==> in order to maintain consistency in database , transection follows ACID properties 	in that isolation determines how transection integrity is visible to other users and systems.
 
 
 ==> The choice of isolation level depends on the specific requirements of the application. Higher isolation levels offer stronger data consistency but can also result in longer lock times     	and increased contention, leading to decreased concurrency and performance.
@@ -112,15 +112,15 @@ Transection Isolation levels:->
 ==> Lower isolation levels provide more concurrency but can result in data inconsistencies.
 
 
-==> a transection isolation level is defined on the following phenomina 
+==> a transection isolation level is defined on the following phenomena 
 
 	1> Dirty Read 
 
 		==> it is a situation where a transection reads a data which is not yet committed 
 	
-		==> ex:-> if transection1 updates a row and leaves it uncommited meanwhile transection2 reads the updated row 
+		==> ex:-> if transection1 updates a row and leaves it uncommitted meanwhile transection2 reads the updated row 
 				
-			  if the transection1 rolls back the changes then transection2 will have the data which doesnt even existed
+			  if the transection1 rolls back the changes then transection2 will have the data which doesn't even existed
 
 	
 
@@ -134,7 +134,7 @@ Transection Isolation levels:->
 
 	3> Phantom read
 		
-		==> when two same queries are executed for a same transection but the rows retrived by the two , are different then it is said Phantom read 
+		==> when two same queries are executed for a same transection but the rows retrieved by the two , are different then it is said Phantom read 
 	
 		==> ex:-> transaction T1 retrieves a set of rows that satisfy some search criteria then Transaction T2 generates some new rows that match the search criteria for 				  transaction T1. 
 
@@ -142,23 +142,23 @@ Transection Isolation levels:->
 
 
 
-==> Based on the above phenomenas isolation levels are divided into four types
+==> Based on the above phenomena's isolation levels are divided into four types
 
 
-	i> Read Uncommited 
+	i> Read Uncommitted 
 
 		==> it is the lowest Isolation level 
 
-		==> in this isolation level the transection may read the uncommited changes made by another transections , hence allows Dirty Reads
+		==> in this isolation level the transection may read the uncommitted changes made by another transections , hence allows Dirty Reads
 
 		==> in this level of isolation , transections are not isolated form each other 
 		
 		==> This can result in dirty reads, non-repeatable reads, and phantom reads.
 		
 	
-	ii> Read Commited 
+	ii> Read Committed 
 
-		==> this isolation level guarentees that any data read is committed at the moment it is read 
+		==> this isolation level guarantees that any data read is committed at the moment it is read 
 	
 		==> thus it does not allow dirty read 
 		
@@ -169,11 +169,11 @@ Transection Isolation levels:->
 	
 	iii> Repeatable Read 
 
-		==> this is the most restrective isolation level
+		==> this is the most restrictive isolation level
 	
 		==> this transection holds read lock on all the rows it is references and write locks on referenced rows for update and delete actions 
 	
-		==> since other transections cannot read , update or delete  these rows  thats why it avoids non-repeatable reads
+		==> since other transections cannot read , update or delete  these rows  that's why it avoids non-repeatable reads
 
 		==> phantom reads are still possible.
 
@@ -183,7 +183,7 @@ Transection Isolation levels:->
 
 		==> this is the highest isolation level 
 	
-		==> a serializable execution is guarenteed to be serializable 
+		==> a serializable execution is guaranteed to be serializable 
 	
 		==>  All transactions must be executed sequentially
 
@@ -194,7 +194,7 @@ Transection Isolation levels:->
 ==> some DBMS may also support additional custom isolation levels or features such as snapshot isolation and multi-version concurrency control (MVCC) that provide alternative solutions to 	the problems addressed by the standard isolation levels.                             ====================    ========================================
 		 
 
-	==> SnapShot isolation level 
+	==> Snapshot isolation level 
   	   ===========================
 
 		
@@ -218,12 +218,12 @@ Transection Isolation levels:->
 Advantages of Transaction Isolation Levels:
 ===========================================
 
-==> Improved concurrancy: 
+==> Improved concurrency: 
 			
 		==> Transaction isolation levels can improve concurrency by allowing multiple transactions to run concurrently without interfering with each other.
 	
 
-==> control over data consistancy:
+==> control over data consistency:
 	
 		==> Isolation levels provide control over the level of data consistency required by a particular application.
 
@@ -280,19 +280,19 @@ TRANSECTION PROPOGATION:->
 
 ==> Propagation defines our business logic’s transaction boundary. Spring manages to start and pause a transaction according to our propagation setting.
 
-==> There are different levels of transection prapogation and they are as follows
+==> There are different levels of transection propagation and they are as follows
 
 
 
 
-1) REQUIRED propogation :->
+1) REQUIRED propagation :->
 ============================
 
 
 
-==> It is the deault propogation . 
+==> It is the default propagation . 
 
-==> Spring checks if there is active transection , and if the transection doesnt exists , it creates a new transection 
+==> Spring checks if there is active transection , and if the transection doesn't exists , it creates a new transection 
 
 ==> if the transection exists , the business logic appends to currently active transection 
 

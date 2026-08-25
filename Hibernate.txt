@@ -250,7 +250,7 @@ CACHING:->
 
 //==>used where we want to update the data rarely
 
-//==>temperory memory which is present betweenv application and db
+//==>temporary memory which is present between application and db.
 
 ==>caching is a mechanism to store copies of data or files in such a manner so that they can be served quickly.
 
@@ -260,7 +260,7 @@ CACHING:->
 
 ==>caching is performance optimization technique
 
-==>database oprerations are always expensive hence we use caching mechanism 
+==>database operations are always expensive hence we use caching mechanism 
 
 ==> we always cache the entire object in the cache memory instead of storing its properties 
 
@@ -270,9 +270,9 @@ profiling tools
 thread dump
 
 
-cache Stratergy:->  LRU Time basesed
+cache Stratergy:->  LRU Time basses
 ==================
-1> cahce-aside:->
+1> cache-aside:->
 
 	==>When a client requests data, first, the system checks if the data is in the cache. Suppose the data is unavailable (a cache miss). In that case, it fetches the data from the 	   database, stores it in the cache, and then returns it to the client.
 
@@ -329,9 +329,9 @@ cache types:->
 
 2> Second level cache:->(ehCache(xml base))       (@Cacheble(annotation based))
 
-	==>The second-level cache is by default disabled, the developer needs to enable it explicitly, and the SessionFactory object is responsible to maintain it.
+	==>The second-level cache is by default disabled, the developer needs to enable it explicitly, and the Session Factory object is responsible to maintain it.
 
-	==>The second-level cache is accessible by the entire application means data hold by SessionFactory can be accessible to all the sessions
+	==>The second-level cache is accessible by the entire application means data hold by Session Factory can be accessible to all the sessions
 
 	==>once the session factory is closed all the cache associated with that is also removed from the memory.
 
@@ -342,7 +342,7 @@ cache types:->
 		==> EH cache :-> 
 	
 				==> efficient memory caching solution for hibernate 
-				==> it has features like expiration policies , distributed caching and persistant caching (like session)
+				==> it has features like expiration policies , distributed caching and persistent caching (like session)
 
 		
 		==> infispan :-> 
@@ -355,7 +355,7 @@ cache types:->
 		
 		==> cache lookup 
 
-		==> database queary
+		==> database query
 	
 		==> cache eviction
 

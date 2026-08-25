@@ -1,0 +1,51 @@
+Chakradhar Karhale Interview questions 
+"Reqpedia"
+
+
+what happens when you declare a main method private ?
+
+what is optional.orElse() and optional.orElseGet()
+
+vector vs arraylist difference 
+
+how you configure components in springboot ?
+
+how you declare custom properties in application.properties file 
+
+cascading types in hibernate 
+
+what is api gateway
+
+design patterns in java ? explain its use in your project 
+
+Super() vs this() difference 
+
+
+Write a SQL query to find duplicate email addresses in a Users table and how many times each is repeated.
+
+Table:
+
+Users(user_id, name, email)
+
+Expected Output:
+
+email		|	count
+
+john@mail.com		12
+
+alex@mail.com		13
+
+
+
+Write a Java method to count how many words in a sentence start with a capital letter. Ignore punctuation and trim extra spaces.
+
+Example:
+
+Input: "Hello world! This Is a
+
+Test."
+
+Output: 4 // Hello, This, Is. Test
+
+Write using java 8 Strems
+

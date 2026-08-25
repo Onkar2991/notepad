@@ -1,0 +1,231 @@
+Given an array of numbers, find the index of the smallest array element (the pivon, for which the sums of all elements to the left and to the right are equat. The array may not be reordered.
+
+Example
+
+arr=[1,2,3,4,6]
+
+the sum of the first three elements, 1+2+3=6. The value of the last element is C
+
+• Using zero based indexing, arr[3]=4 is the pivot between the two subarrays.
+
+• The index of the pivot is 3.
+
+Function Description
+
+Complete the function balancedSum in the editor below.
+
+balancedSum has the following parameter(s):
+
+int arr[n]: an array of integers
+
+Returns:
+
+int: an integer representing the index of the pivot
+
+
+Constraints
+
+• 3≤n≤105
+
+• 1≤am[i]≤2×10, where 0≤ i<n
+
+• It is guaranteed that a solution always exists.
+
+► Input Format for Custom Testing
+
+Sample Case 0
+
+Sample Input 0
+
+STDIN			Function Parameters
+
+4			→ arr size n = 4
+
+1			→ arr = [1, 2, 3, 3]
+
+2
+
+3
+
+3
+
+
+
+
+
+Sample Output 0
+
+2
+
+Explanation 0
+
+• The sum of the first two elements, 1+2=3. The value of the last element is 3.
+
+Using zero based indexing, arr[2]=3 is the pivot between the two subarrays.
+
+• The index of the pivot is 2
+
+
+code:-
+======
+import java.io.*;
+import java.util.*;
+import java.util.stream.*;
+
+class Result {
+    /*
+    Complete the 'balancedSum' function below.
+    The function is expected to return an INTEGER.
+    The function accepts INTEGER_ARRAY arr as parameter.
+    */
+    
+    public static int balancedSum(List<Integer> arr) {
+        int totalSum = arr.stream().mapToInt(Integer::intValue).sum();
+        int leftSum = 0;
+        
+        for (int i = 0; i < arr.size(); i++) {
+            totalSum -= arr.get(i); // Remove current element from total sum (acting as right sum)
+            
+            if (leftSum == totalSum) { // If left sum equals right sum, return index
+                return i;
+            }
+            
+            leftSum += arr.get(i); // Add current element to left sum
+        }
+        
+        return -1; // This line will never be reached due to guaranteed solution
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+        
+        int arrCount = Integer.parseInt(bufferedReader.readLine().trim());
+        
+        List<Integer> arr = IntStream.range(0, arrCount).mapToObj(i -> {
+            try {
+                return bufferedReader.readLine().replaceAll("\\s+$", "");
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        })
+        .map(String::trim)
+        .map(Integer::parseInt)
+        .collect(Collectors.toList());
+        
+        int result = Result.balancedSum(arr);
+        
+        bufferedWriter.write(String.valueOf(result));
+        bufferedWriter.newLine();
+        
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
+
+
+
+============================================================================================================================================================================================
+
+
+A password manager wants to create new passwords using two strings given by the user, then combined to create a harder-to-guess combination. Given two strings, interleave the characters of the strings to create a new string. Beginning with an empty string, alternately append a character from string a and from string b. If one of the strings is exhausted before the other, append the remaining letters from the other string all at once. The result is the new password.
+
+Example
+
+If a = 'hackerrank' and b = 'mountain, the result is hmaocuknetrariannk.
+
+Function Description
+
+Complete the function newPassword in the editor below.
+
+newPassword has the following parameter(s):
+
+string a: the first string
+
+string b: the second string
+
+Returns:
+
+string: the merged string
+
+Constraints
+
+1<=lengths of a , b <= 25000
+
+All characters in a and bare lowercase letters in the range ascii['a'-'z']
+
+► Input Format For Custom Testing
+
+▼ Sample Case 0
+
+Sample Input
+
+STDIN				Function
+
+abc 		->  		  a = 'abc'
+
+def		-> 		 b= 'def'
+
+Sample Output
+
+adbecf
+
+Explanation
+
+Alternately taking characters from each string, the merged string is 'adbecf'.
+
+
+code :-
+===========
+
+import java.io.*;
+
+class Result {
+    /*
+    Complete the 'newPassword' function below.
+    * The function is expected to return a STRING.
+    * The function accepts following parameters:
+    * 1. STRING a
+    * 2. STRING b
+    */
+    public static String newPassword(String a, String b) {
+        StringBuilder result = new StringBuilder();
+        int lenA = a.length(), lenB = b.length();
+        int i = 0, j = 0;
+        
+        while (i < lenA && j < lenB) {
+            result.append(a.charAt(i++));
+            result.append(b.charAt(j++));
+        }
+        
+        while (i < lenA) {
+            result.append(a.charAt(i++));
+        }
+        
+        while (j < lenB) {
+            result.append(b.charAt(j++));
+        }
+        
+        return result.toString();
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        String a = bufferedReader.readLine();
+        String b = bufferedReader.readLine();
+
+        String result = Result.newPassword(a, b);
+
+        bufferedWriter.write(result);
+        bufferedWriter.newLine();
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}

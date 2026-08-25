@@ -1,0 +1,94 @@
+PCMS (Parameter Comparison Management Service)
+========================================================
+
+==> The Parameter Comparison Management Service (PCMS) is a specialized application designed to streamline the configuration     	and optimization of wind turbines by managing and comparing various parameter sets.
+==> It plays a critical role in ensuring that the right parameter values are passed for turbine setup, performance tuning, and 	energy generation efficiency
+
+==> project architecture --> monolithic application (single war file) (migration)
+		     	 --> synchronous communication 
+		     	 --> 30-40 modules
+
+==> roles and responsibility
+
+	==> team member         ==> participating in sprint planning (story spill over)(depends on complexity of the story) 
+				==> requirement analysis of the story 
+				==> development 
+				==> local or peer testing 
+==> Scenario
+
+	==> "Suppose we have a piece of land, which we refer to as a park, designated for the installation of wind turbines for renewable energy generation. After the physical installation of the wind turbines, they require specific operational signals or parameter values—such as wind speed thresholds, blade angles, or start/stop commands—to begin generating electricity effectively. These necessary signals or configurations are provided by a centralized system called PCMS (Park Control and Monitoring System).
+
+       ==> The PCMS application is responsible for monitoring the entire park, sending real-time operational parameters to each turbine, and ensuring optimal and safe energy production by continuously communicating with all turbines installed in the park." 
+
+
+
+==> 
+
+
+Statuses
+=============
+
+
+
+		Draft 
+		  
+		InApprove 
+
+		Approved
+
+		Archived
+
+
+Signals
+=========
+
+	1> Alarms
+	2> Counters 
+	3> timers 
+	4> analog signals 
+	5> Events 
+	6> info 
+	7> command 
+	8> Parameters 
+
+
+Namespace(Logical Identifiers)--> BaseConfiguration(Create Configurable Items from logical Identifiers )--> Software Functions(If we have 100 ci in bcv and we want only 50 of them then we create sf)--> Recipe(contains only parameters which has actual values) --> Target Configuration 
+
+
+BaseConfiguration 
+=====================
+
+	==>  name 
+	==> predecessor 
+	==> copy ci from predecessor 
+	==> namespace version
+	==> maximum number of ci 
+	
+	
+	Edit 
+	======
+	
+	==> name 
+	==> maximum number of ci 
+
+
+	Overview
+	==========
+	
+	==> configuration name 
+	==> Previous Configuration (version)
+	==> State 
+	==> namespace 
+	==> namespace Version 
+
+
+
+
+java ee 6 -> 9 
+glassfish 3.1 -> 6
+primefaces 5.3 -> 12
+java 8 -> 11
+jsf 2.4
+
+
+

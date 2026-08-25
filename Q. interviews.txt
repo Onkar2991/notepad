@@ -1,39 +1,39 @@
- Q. introduction 
+Q. introduction 
 
 Q.what are technologies you are aware of or worked on ?
 ans: java , java8 , spring , spring boot , hibernate , jpa , junit , microservices (tell the technologies in serial wise or sequence wise)
 
-Q.difference between concurrent hashmap and hashmap
+Q. Difference between concurrent HashMap and HashMap
 
 Q. difference between iterator and list iterator 
 
 Q. what is fail safe and fail fast
 
-Q. contract between hashcode and equals methods
+Q. contract between hash code and equals methods
 
-Q: what is exception prapogation
+Q: what is exception propagation
 
 Q. what is static in java?? 
 Q. how memory management done by static ??
-ans: each object of instance variable has its own copy and for static all the objects share same copy thats how we do memory management 
+Ans: each object of instance variable has its own copy and for static all the objects share same copy thats how we do memory management 
 
 
 Q. difference between static and instance variable 
-ans: each object of instance variable has its own copy and for static all the objects share same copy
+Ans: each object of instance variable has its own copy and for static all the objects share same copy
 
 Q. difference between overloading and overriding 
 
 Q. what is the default first line in the constructor??
-ans: call to super class constructor is the default first line in the constructor.
+Ans: call to super class constructor is the default first line in the constructor.
 
 Q. difference between constructor and method?
 
 Q. what is constructor ? and why we use it ?
-ans: it does two tasks 1> object initialization 
+Ans: it does two tasks 1> object initialization 
 		       2> assigning default values to the data members
 
 
-Q. do you klnow thread class ?? 
+Q. do you know thread class ?? 
 Q. which are the methods of thread class which belongs to thread class and object class ?
 
 Q. why we should we use toString method?

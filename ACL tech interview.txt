@@ -1,0 +1,34 @@
+1> java 8 features 
+2> you have a student object having name , id , course , gender 
+	find students whose id are even numbers and course = java 
+	find students whose gender is female and course = testing 
+	write the list in alphabetical order 
+  write using stream api
+3> Design patterns other than singletone 
+4> parallelism vs Multithreaded application 
+5> techniques to avoid deadlock ? have you heard about stack type deadlock avoidance technique?
+6> what is circular que in collections ?
+7> Input: MyCircularQueue k - new MyCircularQueue(3); 
+	k.enQueue(1): 
+	kenQueue(2): 
+	k.enQueue(3): 
+	k.enQueue(4):
+	k.Rear(); 
+	k.isFull(); 
+	k.deQueue(); 
+	kenQueue(4): 
+	k.Rear();
+ what will be the output of the above ?
+8> do you know about any authorization and authentication techniques ?
+9> what are health matrices ?
+10> how to optimize your application when it is slower due to database queries ?
+11> your application has memory leaks and there is high memory usage of application how to avoid this ?
+12> what is logging ?
+13> do you know any frontend technologies ?
+14> how microservices communicate with each other ? Synchronous and asynchronous 
+15> what is api gateway ?
+16> do you know any cloud technologies ?
+17> solid principles 
+18> how to test your application ? api testing and unit testing 
+19> kubernates and docker 
+

@@ -1,0 +1,66 @@
+You are working as an account manager for a publishing house. You are required to calculate the revenue owed to each author on the basis of the number of books they have written. The database you're working with contains one table: AUTHORS. The table's structure and sample data are shown below.
+
+AUTHORS table:      
+
+Name 			Data type		Primary Key
+
+AUTHOR_ID		  INT			   yes 
+
+AUTHOR_NAME		VARCHAR (50)
+
+NUMBER_BOOK		  INT
+
+AUTHOR REVENUE		  INT
+
+
+AUTHOR_ID		AUTHOR_NAME		NUMBER_BOOK		AUTHOR_REVENUE
+
+1			   MITCH		    0				0
+
+2			    KYLE		   9				0
+
+3			   SHAYNA		   5				0
+
+Note that AUTHOR_REVENUE is in $ and the data provided is only sample data. Remember that the entire database has more rows of data in it, and your queries must return the correct results for all data.
+
+You are required to carry out the following task:
+
+Calculate the AUTHOR_REVENUE on the basis of the number of books they have written, according to the following rules:
+
+• If the author has not written any book, then the AUTHOR_REVENUE will be $20.
+
+• If the author has written two books or fewer, then AUTHOR_REVENUE will be $175.
+
+• If the author has written seven books or fewer but more than two, then AUTHOR_REVENUE will be $80 per book.
+
+If the author has written more than seven books, then AUTHOR_REVENUE will be $700.
+
+Sample Output:
+
+AUTHOR_ID  		AUTHOR_NAME		NUMBER_BOOK		AUTHOR_REVENUE
+
+1 			  MITCH			   2 				175
+
+2			kyle			   9				700
+3			Shayna			   5				400
+
+
+
+
+
+UPDATE AUTHORS
+SET AUTHOR_REVENUE = CASE
+    WHEN NUMBER_BOOK = 0 THEN 20
+    WHEN NUMBER_BOOK <= 2 THEN 175
+    WHEN NUMBER_BOOK <= 7 THEN NUMBER_BOOK * 80
+    ELSE 700
+END;
+
+
+
+
+
+
+======================================================================================================
+
+

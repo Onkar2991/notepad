@@ -1,0 +1,83 @@
+Onkar- Nagarro 2nd round 
+
+1> Introduction 
+2> what is Jenkins pipeline and docker ?
+3> java 8 features 
+4> Convert a List<Student> to a Map<String, List<Integer>> where key = class name, value = list of roll numbers.
+5> what happens when we remove collectors.mapping ? alternative for this 
+6> Convert list of departments (each having a list of students) to a map using flatMap.
+7> What is Junit ? How we use it ?
+8> what is Mockito ?
+9> How to mock a URL to a specific port ?
+10> What are design patterns?
+14> Builder design pattern syntax pseudocode
+15> What are SOLID principles? real time examples of liskov substitution 
+16> suppose you have service with synchronous and asynchronous communication has a db and deployed on cloud and has high load on instances tell me all the ammotations which will be used for such microservice springboot application
+17> What is async communication how to implement?
+18> what annotations need to be used for enabling the above scenario ?
+19> how to restrict specific endpoints ?
+20> what is hibernate ?
+21> what is lazy loading ?
+22> what is eager loading ?
+23> write a queries for eager loading and lazy loading 
+24> What is the N+1 problem?
+25> What is the solution for N+1 problem?
+26> have you seen settings.xml for configuring maven configurations ? what does it contains ?
+27> maven commands?
+28> Can I use a specific Maven repo using settings.xml?
+29> how to generate jasper reports ?
+30> what is jsf ?
+31> how to connect backend with frontend using jsf ?
+32> how does request and response flow in jsf works ?
+33> How to access a class like StudentDao.java in JSF?
+34> What is JSF lifecycle?
+35> How is request and response handled in JSF 
+36> What is a stored procedure?
+37> 
+
+CREATE PROCEDURE sp_InsertAndPivotData
+    @SourceTable NVARCHAR(128),
+    @ColumnToPivot NVARCHAR(128),
+    @ValueColumn NVARCHAR(128)
+AS
+BEGIN
+    SET NOCOUNT ON;
+ 
+    DECLARE @cols NVARCHAR(MAX), @query NVARCHAR(MAX);
+ 
+    -- 1. Insert Data (example - assuming data is already in a source table)
+    -- This section would contain your actual INSERT statements
+    -- For demonstration, we'll assume @SourceTable already has data.
+ 
+    -- 2. Build the dynamic pivot query
+    SELECT @cols = STUFF((SELECT DISTINCT ',' + QUOTENAME(CAST(T.val AS NVARCHAR(MAX)))
+                          FROM (SELECT DISTINCT @ColumnToPivot as val FROM @SourceTable) AS T
+                          FOR XML PATH(''), TYPE
+                         ).value('.', 'NVARCHAR(MAX)') 
+                        ,1,1,'');
+ 
+    SET @query = 'SELECT ' + @ColumnToPivot + ', ' + @cols + '
+                  FROM 
+                  (
+                      SELECT ' + @ColumnToPivot + ', ' + @ValueColumn + '
+                      FROM ' + @SourceTable + '
+                  ) AS SourceTable
+                  PIVOT 
+                  (
+                      SUM(' + @ValueColumn + ') 
+                      FOR ' + @ColumnToPivot + ' IN (' + @cols + ')
+                  ) AS PivotTable;';
+ 
+    EXECUTE(@query);
+END;
+
+explain the above stored procedure 
+
+38> What is a pivot in SQL?
+39> What methodology do u follow ?
+40> How is a Jira story assigned to a developer?
+41> how do you assign story points to the story assigned to u ?
+42> What are the steps to solve a problem that no one has encountered yet and how to fix?
+43> what is facelets in primefaces?
+
+  

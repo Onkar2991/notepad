@@ -1,0 +1,16 @@
+Go Digit Interview  
+
+Introduction 
+idempotent methods 
+java 8 features 
+difference between HashMap and hashTable 
+which collection frmaeworks u use ?
+what is iterators ?
+Put and post Difference
+List iterator and iterator Difference ?
+what is optional class? Strem apis ? Intermediate and Terminal Operations ? Functional interface ?
+what is Enum ? explain with example 
+session factory and session difference 
+do u know cascading types ?
+what is microservices ?
+do u know the circuit breaker ?

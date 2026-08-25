@@ -1,0 +1,99 @@
+You are going to create Online Book Store application
+The application has provided below functionality
+
+• Books have categories like Fiction, Mystery, Science Fiction 
+• The application should allow users to browse books, add them to the cart, place orders 
+• User can add book and remove book from the cart, if book already exists in the cart, then update quantity of books  
+• According to type of user membership discount should be applied on cost of books while purchasing 
+• User Membership are of 3: - Basic, Premium, VIP 
+• Discounts to be applied are Basic User- 0% discount, Premium User - 25% discount, VIP User-50% discount
+
+The focus of this problem statement is to demonstrate your understanding and application of Oops concepts using design patterns
+
+Deliverables
+• List of classes/objects that you see in the problem 
+• Just include class declaration, member variables and method signatures (No need of getters, setters and default constructors) 
+• Using oops principals mention relationships between these classes (annotations are not expected at all) 
+• Do not write any DAO and Controllers and do not write any annotations
+
+
+public class Book{
+private String title;
+private String author;
+private String category;
+private double price;
+
+public void applyDiscount(double discountPercentage){
+
+}
+}
+
+
+public class CartItem{
+
+private Book book;
+private int quantity;
+public void updateQuantity(int newQuantity){}
+public double getItemTotal(){}
+}
+
+public class Cart{
+private List<CartItem> items;
+
+public void addBook(Book book, int quantity){}
+public void removeBook(Book book){}
+public void updateBookQuantity(Book book, int newQuantity){}
+public double calculateTotal(){}
+}
+
+
+public class Order{
+
+private Cart cart;
+private double totalAmount;
+private User user;
+
+public void placeOrder(){}
+public double calculateFinalAmount(){}
+}
+
+
+public abstract class User{
+private String username;
+private String memberShipType;
+private Cart cart;
+
+public abstract double applyMembershipDiscount(double totalAmount);
+}
+
+
+public class BasicUser extends User{
+private final double discountPercentage = 5;
+
+@Override
+public abstract double applyMembershipDiscount(double totalAmount){
+return totalAmount-(totalAmount * discountPercentage/100);
+}
+}
+
+
+
+
+public class PremiumUser extends User{
+private final double discountPercentage = 25;
+
+@Override
+public abstract double applyMembershipDiscount(double totalAmount){
+return totalAmount-(totalAmount * discountPercentage/100);
+}
+}
+
+
+public class VipUser extends User{
+private final double discountPercentage = 50;
+
+@Override
+public abstract double applyMembershipDiscount(double totalAmount){
+return totalAmount-(totalAmount * discountPercentage/100);
+}
+}

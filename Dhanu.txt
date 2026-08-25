@@ -5,22 +5,32 @@
 -23000  --> 20000+3000 Received on 20 Aug 2023
 ------------------------------------------------
  36000
-+9900  --> intrest of 11 months Till 20 July 2024
++10800  --> intrest of 12 months Till 20 august 2024
++1800   --> intrest 6% of sept
++1800   --> intrest 6% of october
++1200	--> intrest till 10 nov
 -------------------------------------------------- 
- 45900 ---> Total Till 20 july
+ 51600 ---> Total Till 10 Nov
 
 
 
 
  50000   --> 23 may 2023
-+21000   --> intrest till 23 July 2024 14 months 
++22500   --> intrest till 23 August 2024 15 months 
++3000    --> intrest 6% of sept
++3000	 --> intrest 6% of October 
++2000	 --> intrest till 10 nov 6%
 --------------------------------------------------
- 71000   --> Total 
+ 80500   --> Total till 10 November
 
 
 
 
- 71000
-+45900
-========
-116900
+
+ 80500
++51600
+----------
+132100 till 10 nov 
+ +7926	--> 6 Percent intrest on 132100
+--------
+140026

@@ -1,0 +1,23 @@
+Redis Cache 
+=================
+
+
+==> Cache is a type of auxiliary memory that is specifically designed to hold data and instructions that are frequently accessed by applications or websites.
+
+==>  In real time or in case of microservices instead of using Eh-Cache we use Redis for caching 
+
+==>  for redis cache u need to add springboot starter data Redis cache dependency in your pom.xml
+	
+	<dependency>
+  	<groupId>org.springframework.boot</groupId>
+  	<artifactId>spring-boot-starter-data-redis</artifactId>
+	</dependency>
+
+==> for storing or accessing Redis cache we need specify the Redis host and Redis port on which we want to store the cache . add that in your application.properties 
+	
+	redis.host=localhost
+	redis.port=6379 
+
+==> 
+
+	
